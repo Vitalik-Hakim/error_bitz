@@ -1,0 +1,26 @@
+---
+title: 'Changing to custom font in angular material 12'
+description: 'Changing to custom font in angular material 12'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [angular-material, css, custom-font, typescript]
+---
+
+**The solution for this is noted below**
+
+## Changing to custom font in angular material 12
+
+### Solution
+
+```css
+@use '~@angular/material' as mat;
+@font-face {
+	font-family: 'custom-font';
+	src: url('assets/custom-font.ttf');
+}
+$custom-typography: mat.define-typography-config($font-family: 'custom-font');
+@include mat.core($custom-typography);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

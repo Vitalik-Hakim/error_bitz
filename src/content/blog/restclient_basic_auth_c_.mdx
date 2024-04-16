@@ -1,0 +1,24 @@
+---
+title: 'restclient basic auth c#'
+description: 'restclient basic auth c#'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [basic, c#, rest-client, csharp, httpclient]
+---
+
+**The solution for this is noted below**
+
+## restclient basic auth c#
+
+### Solution
+
+```csharp
+var client = new RestClient("http://yoururl.com");
+client.Authenticator = new HttpBasicAuthenticator(userName, password);
+
+var request = new RestRequest("resource", Method.GET);
+client.Execute(request);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

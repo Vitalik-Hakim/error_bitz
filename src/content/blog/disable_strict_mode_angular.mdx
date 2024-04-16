@@ -1,0 +1,32 @@
+---
+title: 'disable strict mode angular'
+description: 'disable strict mode angular'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [angular, disable, javascript, strict-mode]
+---
+
+**The solution for this is noted below**
+
+## disable strict mode angular
+
+### Solution
+
+```javascript
+//Following Angular doc, the strict mode can be
+//disabled turning off these flags on tsconfig.json file:
+
+   "forceConsistentCasingInFileNames": false,
+   "strict": false,
+   "noImplicitReturns": false,
+   "noFallthroughCasesInSwitch": false,
+   ...
+   "angularCompilerOptions": {
+      "strictInjectionParameters": false,
+      "strictInputAccessModifiers": false,
+      "strictTemplates": false
+   }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

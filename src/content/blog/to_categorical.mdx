@@ -1,0 +1,22 @@
+---
+title: 'to_categorical'
+description: 'to_categorical'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python]
+---
+
+**The solution for this is noted below**
+
+## to_categorical
+
+### Solution
+
+```python
+from tensorflow.keras.utils import to_categorical
+y_train_cat = to_categorical(y_train, num_classes=None, dtype='float32')
+y_test_cat = to_categorical(y_test, num_classes=None, dtype='float32')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

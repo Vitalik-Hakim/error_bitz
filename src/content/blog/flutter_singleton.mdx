@@ -1,0 +1,31 @@
+---
+title: 'flutter singleton'
+description: 'flutter singleton'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/dart.png'
+category: 'dart'
+tags: [dart, flutter, singleton]
+---
+
+**The solution for this is noted below**
+
+## flutter singleton
+
+### Solution
+
+```dart
+class Singleton {
+  static final Singleton _instance = Singleton._internal();
+
+  factory Singleton() => _instance;
+
+  Singleton._internal();
+}
+
+// Whenever you need to get the singleton, call its factory constructor, e.g.:
+//   var singleton = Singleton();
+//
+// You'll always get the same instance.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,23 @@
+---
+title: 'postgres select duplicate columns'
+description: 'postgres select duplicate columns'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [select, sql, find, se]
+---
+
+**The solution for this is noted below**
+
+## postgres select duplicate columns
+
+### Solution
+
+```sql
+select Column1, Column2, count(*)
+from yourTable
+group by Column1, Column2
+HAVING count(*) > 1
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,60 @@
+---
+title: 'transaction rollback mongoose'
+description: 'transaction rollback mongoose'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, mongoose, rollback]
+---
+
+**The solution for this is noted below**
+
+## transaction rollback mongoose
+
+### Solution
+
+```javascript
+// Using Mongoose's default connection
+const session = await mongoose.startSession()
+
+session.startTransaction() // for starting a new transaction
+await session.commitTransaction() // for committing all operations
+session.endSession()
+await session.abortTransaction() // for rollback the operations
+session.endSession()
+
+await Model.create(
+	[
+		{
+			/* payload */
+		}
+	],
+	{ session }
+)
+await Model.deleteOne(
+	{
+		/* conditions */
+	},
+	{ session }
+)
+await Model.updateOne(
+	{
+		/* conditions */
+	},
+	{
+		/* payload */
+	},
+	{ session }
+)
+await Model.findByIdAndUpdate(
+	_id,
+	{
+		/* payload */
+	},
+	{ session }
+)
+const user = new Model(/* payload */)
+await user.save({ session })
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,28 @@
+---
+title: 'javascript function to generate random alphanumeric string'
+description: 'javascript function to generate random alphanumeric string'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [generate, javascript, random, generat]
+---
+
+**The solution for this is noted below**
+
+## javascript function to generate random alphanumeric string
+
+### Solution
+
+```javascript
+var characters = 'abcdefghijklmnopqrstuvwxyz0123456789'
+var result = ''
+var charactersLength = characters.length
+
+for (var i = 0; i < 5; i++) {
+	result += characters.charAt(Math.floor(Math.random() * charactersLength))
+}
+
+console.log(result)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

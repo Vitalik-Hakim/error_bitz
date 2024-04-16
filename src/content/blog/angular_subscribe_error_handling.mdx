@@ -1,0 +1,24 @@
+---
+title: 'angular subscribe error handling'
+description: 'angular subscribe error handling'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [angular, error-handling, javascript, subscribe]
+---
+
+**The solution for this is noted below**
+
+## angular subscribe error handling
+
+### Solution
+
+```javascript
+of([1, 2, 3]).subscribe({
+	next: (v) => console.log(v),
+	error: (e) => console.error(e),
+	complete: () => console.info('complete')
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

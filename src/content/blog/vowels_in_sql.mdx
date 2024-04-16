@@ -1,0 +1,20 @@
+---
+title: 'vowels in sql'
+description: 'vowels in sql'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [sql]
+---
+
+**The solution for this is noted below**
+
+## vowels in sql
+
+### Solution
+
+```sql
+SELECT DISTINCT CITY FROM STATION WHERE SUBSTR(CITY,1,1) IN ('A','E','I','O','U') AND SUBSTR(CITY,-1,1) in ('A','E','I','O','U');
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

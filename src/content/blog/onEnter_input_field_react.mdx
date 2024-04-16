@@ -1,0 +1,29 @@
+---
+title: 'onEnter input field react'
+description: 'onEnter input field react'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [input-field, javascript]
+---
+
+**The solution for this is noted below**
+
+## onEnter input field react
+
+### Solution
+
+```javascript
+<input
+	onKeyPress={(e) => {
+		if (e.key === 'Enter') {
+			this.setState({ message: e.target.value }, () => {
+				alert(this.state.message)
+			})
+		}
+	}}
+	type='text'
+/>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,25 @@
+---
+title: 'default requires 2 arguments, 1 provided'
+description: 'default requires 2 arguments, 1 provided'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [default, python, requires]
+---
+
+**The solution for this is noted below**
+
+## default requires 2 arguments, 1 provided
+
+### Solution
+
+```python
+You have an extra space which causes the error.
+
+value="{{ form.username.value|default_if_none: '' }}"
+
+should be
+value="{{ form.username.value|default_if_none:'' }}"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

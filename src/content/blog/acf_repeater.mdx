@@ -1,0 +1,24 @@
+---
+title: 'acf repeater'
+description: 'acf repeater'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [php, repeater, count, coun, field, fiel]
+---
+
+**The solution for this is noted below**
+
+## acf repeater
+
+### Solution
+
+```php
+<?php if( have_rows('repeater_field_name') ):
+	while( have_rows('repeater_field_name') ): the_row();
+		$image = get_sub_field('image');
+	endwhile;
+endif; ?>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

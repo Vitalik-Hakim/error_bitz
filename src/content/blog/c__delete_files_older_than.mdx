@@ -1,0 +1,29 @@
+---
+title: 'c# delete files older than x months'
+description: 'c# delete files older than x months'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, csharp, days]
+---
+
+**The solution for this is noted below**
+
+## c# delete files older than x months
+
+### Solution
+
+```csharp
+using System.IO;
+
+string[] files = Directory.GetFiles(dirName);
+
+foreach (string file in files)
+{
+   FileInfo fi = new FileInfo(file);
+   if (fi.LastAccessTime < DateTime.Now.AddMonths(-3))
+      fi.Delete();
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

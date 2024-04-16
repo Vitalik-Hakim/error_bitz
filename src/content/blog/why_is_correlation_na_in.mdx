@@ -1,0 +1,21 @@
+---
+title: 'why is correlation na in r'
+description: 'why is correlation na in r'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/R.png'
+category: 'r'
+tags: [correlation, na, r]
+---
+
+**The solution for this is noted below**
+
+## why is correlation na in r
+
+### Solution
+
+```r
+cor(data, use = "complete.obs")
+# complete.obs ignores the NA's
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

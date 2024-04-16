@@ -1,0 +1,23 @@
+---
+title: 'oracle set date format'
+description: 'oracle set date format'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [date-format, oracle, session, set, sql, date]
+---
+
+**The solution for this is noted below**
+
+## oracle set date format
+
+### Solution
+
+```sql
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD-MM-YYYY HH24:MI:SS';
+SELECT sysdate FROM dual;
+
+SELECT to_char(sysdate,'HH24:MI:SS') FROM dual;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,24 @@
+---
+title: 'flask define template folder'
+description: 'flask define template folder'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [flask, python, pyth]
+---
+
+**The solution for this is noted below**
+
+## flask define template folder
+
+### Solution
+
+```python
+import os
+from flask import Flask
+
+template_dir = os.path.abspath('../../frontend/src')
+app = Flask(__name__, template_folder=template_dir)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

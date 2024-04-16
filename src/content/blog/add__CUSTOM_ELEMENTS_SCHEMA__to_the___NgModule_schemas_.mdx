@@ -1,0 +1,28 @@
+---
+title: 'add `CUSTOM_ELEMENTS_SCHEMA` to the `@NgModule.schemas` of this component to suppress this message'
+description: 'add `CUSTOM_ELEMENTS_SCHEMA` to the `@NgModule.schemas` of this component to suppress this message'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [add, message, suppress, this, typescript]
+---
+
+**The solution for this is noted below**
+
+## add `CUSTOM_ELEMENTS_SCHEMA` to the `@NgModule.schemas` of this component to suppress this message
+
+### Solution
+
+```typescript
+//In the app.module.ts
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+...
+@NgModule({
+  declarations: [ ... ],
+  exports: [ ... ],
+  imports: [ ... ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

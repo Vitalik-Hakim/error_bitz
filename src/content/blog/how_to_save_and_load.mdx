@@ -1,0 +1,32 @@
+---
+title: 'how to save and load model in keras'
+description: 'how to save and load model in keras'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [keras, load, model, python, save, kera, whatever]
+---
+
+**The solution for this is noted below**
+
+## how to save and load model in keras
+
+### Solution
+
+```python
+# To save the model:
+
+from keras.models import save_model
+
+# you can write whatever you desire instead of 'my_model'
+# model = Your trained model
+model.save('my_model')
+
+# To load the model:
+
+from keras.models import load_model
+
+reconstructed_model = load_model("my_model")
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

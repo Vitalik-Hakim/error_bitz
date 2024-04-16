@@ -1,0 +1,25 @@
+---
+title: 'python clear screen'
+description: 'python clear screen'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, screen, py, interpreter, inte, linux, linu, shell, python-cmd, p]
+---
+
+**The solution for this is noted below**
+
+## python clear screen
+
+### Solution
+
+```python
+# There are ANSI Escape Control Characters that can be used to clear the screen
+# https://en.wikipedia.org/wiki/ANSI_escape_code#Control_characters
+# ^H can be used to move the cursor left most (start line)
+# and ^J can be used clear the part of the screen from the cursor to the end of the screen
+# together
+print("\033[H\033[J")
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

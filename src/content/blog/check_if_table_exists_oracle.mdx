@@ -1,0 +1,24 @@
+---
+title: 'check if table exists oracle'
+description: 'check if table exists oracle'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [exists, oracle, sql]
+---
+
+**The solution for this is noted below**
+
+## check if table exists oracle
+
+### Solution
+
+```sql
+SELECT * FROM USER_TABLES WHERE TABLE_NAME = 'my_table';
+-- Tables from schemes you can access
+SELECT * FROM ALL_TABLES WHERE OWNER = 'scheme_name' TABLE_NAME = 'my_table';
+-- Tables from schemes you can access
+SELECT * FROM DBA_TABLES WHERE OWNER = 'scheme_name' TABLE_NAME = 'my_table';
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

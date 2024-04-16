@@ -1,0 +1,34 @@
+---
+title: 'install chance in cypress'
+description: 'install chance in cypress'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [cypress, shell]
+---
+
+**The solution for this is noted below**
+
+## install chance in cypress
+
+### Solution
+
+```shell
+Just install chancejs with npm:
+npm install chance
+Then just use it in your test for example:
+/// <reference types="cypress" />
+import Chance from 'Chance';
+const chance = new Chance();
+describe('Testing chance', function (){
+   const company =chance.company();
+   it('type company in duckduckgo.com', function () {
+        cy.visit('https://duckduckgo.com/')
+        cy.get('#search_form_input_homepage')
+        .should('be.visible')
+        .type(company)
+    })
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

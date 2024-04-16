@@ -1,0 +1,24 @@
+---
+title: 'ffmpeg batch convert ts to mp4 files in a folder'
+description: 'ffmpeg batch convert ts to mp4 files in a folder'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [ffmpeg, mp4, typescript, shell, ff, using]
+---
+
+**The solution for this is noted below**
+
+## ffmpeg batch convert ts to mp4 files in a folder
+
+### Solution
+
+```typescript
+//On Windows CMD
+for %i in (*.ts) do ffmpeg -i "%i"  -c:v libx264 -c:a aac "%~ni.mp4"
+
+// for keeping data rate same to get same file size
+for %i in (*.ts) do ffmpeg -i "%i"  -c:v libx264 -b:v 2M  -maxrate 1.4M -bufsize 1M  -c:a aac "../%~ni.mp4"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

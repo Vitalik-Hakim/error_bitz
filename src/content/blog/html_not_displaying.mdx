@@ -1,0 +1,29 @@
+---
+title: 'html not displaying'
+description: 'html not displaying'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/HTML.png'
+category: 'html'
+tags: [html]
+---
+
+**The solution for this is noted below**
+
+## html not displaying
+
+### Solution
+
+```html
+You must have used the JS document.write() after rendering all the html Example on how it doesn't
+work:
+<!doctype html>
+<html>
+	<body>
+		<p>paragraph</p>
+
+		<button type="button" onclick="document.write(5 + 6)">click to see</button>
+	</body>
+</html>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,26 @@
+---
+title: 'python get image average color'
+description: 'python get image average color'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [average, get, image, python]
+---
+
+**The solution for this is noted below**
+
+## python get image average color
+
+### Solution
+
+```python
+import cv2
+import numpy
+myimg = cv2.imread('image.jpg')
+avg_color_per_row = numpy.average(myimg, axis=0)
+avg_color = numpy.average(avg_color_per_row, axis=0)
+print(avg_color)
+# https://stackoverflow.com/questions/43111029/how-to-find-the-average-colour-of-an-image-in-python-with-opencv
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

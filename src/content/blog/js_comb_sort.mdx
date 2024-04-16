@@ -1,0 +1,43 @@
+---
+title: 'js comb sort'
+description: 'js comb sort'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript]
+---
+
+**The solution for this is noted below**
+
+## js comb sort
+
+### Solution
+
+```javascript
+function combSort(array) {
+	let inc = array.length
+	let swap = true
+
+	while (!inc == 1 || swap) {
+		// recalibrate inc
+		inc = Math.floor(inc / 1.3)
+		if (inc < 1) {
+			inc = 1
+		}
+
+		swap = false
+		for (let i = 0; i < array.length - inc; i++) {
+			if (array[i] > array[i + inc]) {
+				// swap position
+				let tmp = array[i]
+				array[i] = array[i + inc]
+				array[i + inc] = tmp
+				swap = true
+			}
+		}
+	}
+	return array
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

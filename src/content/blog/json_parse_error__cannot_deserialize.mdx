@@ -1,0 +1,27 @@
+---
+title: 'json parse error: cannot deserialize value of type `java.time.localdate` from string'
+description: 'json parse error: cannot deserialize value of type `java.time.localdate` from string'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, json, string, value-of, j]
+---
+
+**The solution for this is noted below**
+
+## json parse error: cannot deserialize value of type `java.time.localdate` from string
+
+### Solution
+
+```javascript
+//There are milliseconds in the input string, so your format should be
+//“yyyy-MM-dd’T’HH:mm:ss.SSS”
+//Update: If the millisecond part consists of 1, 2, 3 digits or is optional,
+//you may use the following format:
+
+
+@JsonFormat(shape=JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss[.SSS][.SS][.S]")
+private LocalDateTime updatedTime;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

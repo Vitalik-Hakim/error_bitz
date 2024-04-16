@@ -1,0 +1,24 @@
+---
+title: 'undefined reference to `sem_init`'
+description: 'undefined reference to `sem_init`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, undefined-reference]
+---
+
+**The solution for this is noted below**
+
+## undefined reference to `sem_init`
+
+### Solution
+
+```shell
+If you are on a linux system, you will need to compile and link with
+the -pthread flag to link the pthreads library.
+
+
+$ gcc -pthread FileName.c
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

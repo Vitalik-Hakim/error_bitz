@@ -1,0 +1,23 @@
+---
+title: 'count columns psql(PostreSQL)'
+description: 'count columns psql(PostreSQL)'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [count, sql]
+---
+
+**The solution for this is noted below**
+
+## count columns psql(PostreSQL)
+
+### Solution
+
+```sql
+select table_name, count(*) as column_count
+from information_schema."columns"
+where table_schema = 'public' 
+GROUP by table_name order by column_count desc;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

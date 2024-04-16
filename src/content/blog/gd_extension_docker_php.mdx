@@ -1,0 +1,34 @@
+---
+title: 'gd extension docker php'
+description: 'gd extension docker php'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [docker, gd, php]
+---
+
+**The solution for this is noted below**
+
+## gd extension docker php
+
+### Solution
+
+```php
+FROM php:5.6-apache
+
+RUN docker-php-ext-install mysql mysqli
+
+RUN apt-get update -y && apt-get install -y sendmail libpng-dev
+
+RUN apt-get update && \
+    apt-get install -y \
+        zlib1g-dev
+
+RUN docker-php-ext-install mbstring
+
+RUN docker-php-ext-install zip
+
+RUN docker-php-ext-install gd
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

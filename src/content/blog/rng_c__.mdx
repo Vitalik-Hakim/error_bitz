@@ -1,0 +1,36 @@
+---
+title: 'rng c++'
+description: 'rng c++'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, cpp]
+---
+
+**The solution for this is noted below**
+
+## rng c++
+
+### Solution
+
+```cpp
+#include <random> // std::uniform_int_distribution and std::mt19937
+#include <ctime> //time for seed
+#include <iostream>
+// as stroustrup says in a tour of c++ "dont use rand()" its limited
+// mt19937 is way better
+int main(){
+  //this one makes the range, yes its a little ugly
+  std::uniform_int_distribution<int> range(1, 11);
+
+  // this one is the engine with seed of time, (why the hell mt19937!!!)
+  std::mt19937 generator(time(nullptr));
+  for(int i = 0; i < 5; ++i){
+    //we combine them and baaaam, there we go
+    std::cout << range(generator) << " ";
+  }
+  return 0;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,24 @@
+---
+title: 'convert image to base64 in swift ui'
+description: 'convert image to base64 in swift ui'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/swift.png'
+category: 'swift'
+tags: [base64, image, swift, ba]
+---
+
+**The solution for this is noted below**
+
+## convert image to base64 in swift ui
+
+### Solution
+
+```swift
+func convertImageToBase64(image: UIImage) -> String? {
+    let imageData = image.jpegData(compressionQuality: 1)
+    return imageData?.base64EncodedString(options:
+    Data.Base64EncodingOptions.lineLength64Characters)
+   }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

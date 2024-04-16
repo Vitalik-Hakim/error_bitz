@@ -1,0 +1,24 @@
+---
+title: 'how to prevent ajax from call twice'
+description: 'how to prevent ajax from call twice'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [ajax, call, javascript]
+---
+
+**The solution for this is noted below**
+
+## how to prevent ajax from call twice
+
+### Solution
+
+```javascript
+$(element)
+	.off('click')
+	.on('click', function () {
+		// function body
+	})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,24 @@
+---
+title: 'Job for mysql.service failed because the control process exited with error code. See "systemctl status mysql.service" and "journalctl -xe" for details.'
+description: 'Job for mysql.service failed because the control process exited with error code. See "systemctl status mysql.service" and "journalctl -xe" for details.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [process, sql, status]
+---
+
+**The solution for this is noted below**
+
+## Job for mysql.service failed because the control process exited with error code. See "systemctl status mysql.service" and "journalctl -xe" for details.
+
+### Solution
+
+```sql
+/etc/init.d/mysql stop
+service mysql stop
+killall -KILL mysql mysqld_safe mysqld
+/etc/init.d/mysql start
+service mysql start
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

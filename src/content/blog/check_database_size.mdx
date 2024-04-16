@@ -1,0 +1,26 @@
+---
+title: 'check database size'
+description: 'check database size'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [database, mysql, size, sql, databas]
+---
+
+**The solution for this is noted below**
+
+## check database size
+
+### Solution
+
+```sql
+// QUERY
+
+SELECT table_schema AS "Database Name",
+  ROUND(SUM(data_length + index_length) / 1024 / 1024, 2)
+  AS "Size in (MB)"
+  FROM information_schema.TABLES
+  GROUP BY table_schema;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

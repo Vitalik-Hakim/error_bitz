@@ -1,0 +1,37 @@
+---
+title: 'django model save method override manytomanyfield'
+description: 'django model save method override manytomanyfield'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django, model, python, save]
+---
+
+**The solution for this is noted below**
+
+## django model save method override manytomanyfield
+
+### Solution
+
+```python
+django does not get the m2mfield in save() method.
+instead use signal(m2m_changed)
+
+from django.db.models.signals import m2m_changed
+
+class Topping(models.Model):
+    # ...
+    pass
+
+class Pizza(models.Model):
+    # ...
+    toppings = models.ManyToManyField(Topping)
+
+def toppings_changed(sender, **kwargs):
+    # Do something
+    pass
+
+m2m_changed.connect(toppings_changed, sender=Pizza.toppings.through)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

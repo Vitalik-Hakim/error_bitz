@@ -1,0 +1,23 @@
+---
+title: 'dynamic component angular parameters'
+description: 'dynamic component angular parameters'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [angular, javascript, parameters]
+---
+
+**The solution for this is noted below**
+
+## dynamic component angular parameters
+
+### Solution
+
+```javascript
+const factory = this.componentFactoryResolver.resolveComponentFactory(LoginComponent);
+    const component: ComponentRef<LoginComponent> = this.viewContainerRef.createComponent(factory);
+    component.instance.user = "prop 1";
+    component.instance.input2 = "prop 2";
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

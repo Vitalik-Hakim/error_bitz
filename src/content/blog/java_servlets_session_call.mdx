@@ -1,0 +1,23 @@
+---
+title: 'java servlets session call'
+description: 'java servlets session call'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [call, java, servlets, session]
+---
+
+**The solution for this is noted below**
+
+## java servlets session call
+
+### Solution
+
+```java
+//force creation of new session
+HttpSession session = req.getSession(true);
+//get session if active, return null otherwise
+HttpSession session = req.getSession(false);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,27 @@
+---
+title: 'get url parameter in react js'
+description: 'get url parameter in react js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, javascript, url, j, class, clas]
+---
+
+**The solution for this is noted below**
+
+## get url parameter in react js
+
+### Solution
+
+```javascript
+import React from 'react'
+import { useLocation } from 'react-router-dom'
+
+const MyComponent = () => {
+	const search = useLocation().search
+	const id = new URLSearchParams(search).get('id')
+	console.log(id) //12345
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

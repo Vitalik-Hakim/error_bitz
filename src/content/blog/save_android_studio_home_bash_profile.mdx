@@ -1,0 +1,27 @@
+---
+title: 'save android studio home bash_profile'
+description: 'save android studio home bash_profile'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [android-studio, save, shell]
+---
+
+**The solution for this is noted below**
+
+## save android studio home bash_profile
+
+### Solution
+
+```shell
+nano ~/.bash_profile
+
+export ANDROID_HOME=/YOUR_PATH_TO/android-sdk
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+
+source ~/.bash_profile
+echo $ANDROID_HOME
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,33 @@
+---
+title: 'latex figure'
+description: 'latex figure'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [figure, latex, whatever]
+---
+
+**The solution for this is noted below**
+
+## latex figure
+
+### Solution
+
+```whatever
+\usepackage{graphicx}
+% inside document:
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=1]{path/name_of_file_inside_directory}
+	\caption{Your caption}
+	\label{label_that_can_be_referenced_later}
+\end{figure}
+
+% use float option [H] after {figure} to place figure exactly as positioned
+	in LeTeX code
+% preferably place file of image inside directory of tex file so
+	no pathway required
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

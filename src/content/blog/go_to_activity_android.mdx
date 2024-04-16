@@ -1,0 +1,30 @@
+---
+title: 'go to activity android'
+description: 'go to activity android'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [android, go, java]
+---
+
+**The solution for this is noted below**
+
+## go to activity android
+
+### Solution
+
+```java
+//going to another activity while ending the
+//previous one so that users cannot go back
+btListe = (ImageButton)findViewById(R.id.Button_Liste);
+    btListe.setOnClickListener(new OnClickListener()
+    {    public void onClick(View v)
+        {
+            intent = new Intent(main.this, ListViewImage.class);
+            startActivity(intent);
+            finish();
+        }
+    });
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

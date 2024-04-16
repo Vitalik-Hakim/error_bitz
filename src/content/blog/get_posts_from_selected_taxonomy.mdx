@@ -1,0 +1,32 @@
+---
+title: 'get posts from selected taxonomy'
+description: 'get posts from selected taxonomy'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [get, posts, selected, taxonomy, typescript]
+---
+
+**The solution for this is noted below**
+
+## get posts from selected taxonomy
+
+### Solution
+
+```typescript
+$posts_array = get_posts(
+    array(
+        'posts_per_page' => -1,
+        'post_type' => 'fabric_building',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'fabric_building_types',
+                'field' => 'term_id',
+                'terms' => $cat->term_id,
+            )
+        )
+    )
+);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

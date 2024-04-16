@@ -1,0 +1,26 @@
+---
+title: 'rror response from daemon: manifest for jenkins:latest not found: manifest unknown: manifest unknown'
+description: 'rror response from daemon: manifest for jenkins:latest not found: manifest unknown: manifest unknown'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [manifest, response, whatever]
+---
+
+**The solution for this is noted below**
+
+## rror response from daemon: manifest for jenkins:latest not found: manifest unknown: manifest unknown
+
+### Solution
+
+```whatever
+The jenkins image has been deprecated for over 2 years in favor of the
+jenkins/jenkins:lts image provided and maintained by the
+Jenkins Community as part of the project's release process.
+
+Use below image:
+docker pull jenkins/jenkins
+docker run -p 8080:8080 --name=jenkins-master -d jenkins/jenkins
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

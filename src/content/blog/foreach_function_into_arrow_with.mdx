@@ -1,0 +1,36 @@
+---
+title: 'foreach function into arrow with addeventlistener'
+description: 'foreach function into arrow with addeventlistener'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [foreach, function, javascript]
+---
+
+**The solution for this is noted below**
+
+## foreach function into arrow with addeventlistener
+
+### Solution
+
+```javascript
+const toggleElements = document.querySelectorAll('.toggle');
+toggleElements.forEach(el => {
+  el.addEventListener('click', () => {
+    this.classList.toggle('active'); // `this` refers to `window`
+    // Error: Cannot read property 'toggle' of undefined
+  });
+});
+This code will throw an error anytime the matching element is clicked, firing the event listener and executing the callback, due to the window object not having a classList property. Oftentimes, however, the code could fail silently as it might for example check for a condition that always evaluates to false for window while it should evaluate to true for a given element, resulting in many headaches and wasted hours until the issue is discovered and fixed.
+
+To deal with this, one could simply use the first argument of the callback function and Event.target or Event.currentTarget depending on their needs:
+
+const toggleElements = document.querySelectorAll('.toggle');
+toggleElements.forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle('active'); // works correctly
+  });
+});
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

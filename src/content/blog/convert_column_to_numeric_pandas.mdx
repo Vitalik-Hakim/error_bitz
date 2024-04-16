@@ -1,0 +1,24 @@
+---
+title: 'convert column to numeric pandas'
+description: 'convert column to numeric pandas'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [numeric, pandas, python, dataframe, data, int, p, pand, pan, panda]
+---
+
+**The solution for this is noted below**
+
+## convert column to numeric pandas
+
+### Solution
+
+```python
+# convert all columns of DataFrame
+df = df.apply(pd.to_numeric) # convert all columns of DataFrame
+
+# convert just columns "a" and "b"
+df[["a", "b"]] = df[["a", "b"]].apply(pd.to_numeric)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

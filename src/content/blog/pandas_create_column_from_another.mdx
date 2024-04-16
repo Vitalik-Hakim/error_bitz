@@ -1,0 +1,24 @@
+---
+title: 'pandas create column from another column'
+description: 'pandas create column from another column'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pandas, python, pa]
+---
+
+**The solution for this is noted below**
+
+## pandas create column from another column
+
+### Solution
+
+```python
+# Creates a new column 'blue_yn' based on the existing 'color' column
+# If the 'color' column value is 'blue' then the new column value is 'YES'
+df['blue_yn'] = np.where(df['color'] == 'blue', 'YES', 'NO')
+# Can also do this using .apply and a lambda function
+df['blue_yn']= df['color'].apply(lambda x: 'YES' if (x == 'blue') else 'NO')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

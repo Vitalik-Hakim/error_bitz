@@ -1,0 +1,24 @@
+---
+title: 'woocommerce check if product is variable'
+description: 'woocommerce check if product is variable'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [product, whatever, woocommerce, php]
+---
+
+**The solution for this is noted below**
+
+## woocommerce check if product is variable
+
+### Solution
+
+```whatever
+global $product;
+
+// $product->is_type( $type ) checks the product type, string/array $type ( 'simple', 'grouped', 'variable', 'external' ), returns boolean
+
+if ( $product->is_type( 'variable' ) ) {}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

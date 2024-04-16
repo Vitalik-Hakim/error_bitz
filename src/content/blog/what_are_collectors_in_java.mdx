@@ -1,0 +1,40 @@
+---
+title: 'what are collectors in java'
+description: 'what are collectors in java'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [collectors, java]
+---
+
+**The solution for this is noted below**
+
+## what are collectors in java
+
+### Solution
+
+```java
+// Java program to implement the
+// collectingAndThen() method
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+   
+public class GFG {
+   
+    public static void main(String[] args)
+    {
+        // Collects the elements and
+        // counts the occurrences
+        System.out.println(prepareTemperature()
+                .stream()
+                .collect(Collectors.groupingBy(
+                            City::getName,
+                            Collectors.collectingAndThen(
+                                    Collectors.counting(),
+                                    f -> f.intValue()))));
+    }
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,34 @@
+---
+title: 'make dataframe from list of tuples'
+description: 'make dataframe from list of tuples'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [dataframe, list, python, tuples]
+---
+
+**The solution for this is noted below**
+
+## make dataframe from list of tuples
+
+### Solution
+
+```python
+# import pandas to use pandas DataFrame
+import pandas as pd
+  
+# data in the form of list of tuples
+data = [('Peter', 18, 7),
+        ('Riff', 15, 6),
+        ('John', 17, 8),
+        ('Michel', 18, 7),
+        ('Sheli', 17, 5) ]
+  
+  
+# create DataFrame using data
+df = pd.DataFrame(data, columns =['Name', 'Age', 'Score'])
+  
+print(df)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

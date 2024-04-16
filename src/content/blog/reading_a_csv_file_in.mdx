@@ -1,0 +1,27 @@
+---
+title: 'reading a csv file in python'
+description: 'reading a csv file in python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [csv, file, python]
+---
+
+**The solution for this is noted below**
+
+## reading a csv file in python
+
+### Solution
+
+```python
+import csv
+
+# open the file
+with open('csvfile.csv' , 'r') as csvfile:
+    # create the object of csv.reader()
+    csv_file_reader = csv.reader(csvfile,delimiter=',')
+    for row in csv_file_reader:
+        print(row)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

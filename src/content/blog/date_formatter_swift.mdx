@@ -1,0 +1,28 @@
+---
+title: 'date formatter swift'
+description: 'date formatter swift'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/swift.png'
+category: 'swift'
+tags: [swift, date-format, date, formats]
+---
+
+**The solution for this is noted below**
+
+## date formatter swift
+
+### Solution
+
+```swift
+func getTimeStampDateString() -> String {
+        let date = Date(timeIntervalSinceNow: self.doubleValue)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(abbreviation: "GMT")
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "d MMM HH:mm:ss"
+        let strDate = dateFormatter.string(from: date)
+        return strDate
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

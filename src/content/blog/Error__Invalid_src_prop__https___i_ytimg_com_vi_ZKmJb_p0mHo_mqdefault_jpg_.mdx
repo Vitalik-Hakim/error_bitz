@@ -1,0 +1,31 @@
+---
+title: 'Error: Invalid src prop (https://i.ytimg.com/vi/ZKmJb_p0mHo/mqdefault.jpg) on `next/image`, hostname "i.ytimg.com" is not configured under images in your `next.config.js`'
+description: 'Error: Invalid src prop (https://i.ytimg.com/vi/ZKmJb_p0mHo/mqdefault.jpg) on `next/image`, hostname "i.ytimg.com" is not configured under images in your `next.config.js`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [hostname, javascript, prop, src]
+---
+
+**The solution for this is noted below**
+
+## Error: Invalid src prop (https://i.ytimg.com/vi/ZKmJb_p0mHo/mqdefault.jpg) on `next/image`, hostname "i.ytimg.com" is not configured under images in your `next.config.js`
+
+### Solution
+
+```javascript
+/** @type {import('next').NextConfig} */
+module.exports = {
+	reactStrictMode: true,
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: '**'
+			}
+		]
+	}
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

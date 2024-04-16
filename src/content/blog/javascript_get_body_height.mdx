@@ -1,0 +1,29 @@
+---
+title: 'javascript get body height'
+description: 'javascript get body height'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, height, javascript]
+---
+
+**The solution for this is noted below**
+
+## javascript get body height
+
+### Solution
+
+```javascript
+var body = document.body,
+	html = document.documentElement
+
+var height = Math.max(
+	body.scrollHeight,
+	body.offsetHeight,
+	html.clientHeight,
+	html.scrollHeight,
+	html.offsetHeight
+)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

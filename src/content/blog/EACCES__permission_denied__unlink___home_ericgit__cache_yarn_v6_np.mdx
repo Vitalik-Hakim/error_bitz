@@ -1,0 +1,21 @@
+---
+title: 'EACCES: permission denied, unlink `/home/ericgit/.cache/yarn/v6/np'
+description: 'EACCES: permission denied, unlink `/home/ericgit/.cache/yarn/v6/np'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, unlink]
+---
+
+**The solution for this is noted below**
+
+## EACCES: permission denied, unlink `/home/ericgit/.cache/yarn/v6/np
+
+### Solution
+
+```shell
+sudo chown -R $USER:$GROUP ~/.npm
+sudo chown -R $USER:$GROUP ~/.config
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,38 @@
+---
+title: 'python split dict into chunks'
+description: 'python split dict into chunks'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [chunks, python]
+---
+
+**The solution for this is noted below**
+
+## python split dict into chunks
+
+### Solution
+
+```python
+# Since the dictionary is so big, it would be better to keep
+# all the items involved to be just iterators and generators, like this
+
+from itertools import islice
+
+def chunks(data, SIZE=10000):
+    it = iter(data)
+    for i in range(0, len(data), SIZE):
+        yield {k:data[k] for k in islice(it, SIZE)}
+
+# Sample run:
+for item in chunks({i:i for i in range(10)}, 3):
+    print item
+
+# Output
+# {0: 0, 1: 1, 2: 2}
+# {3: 3, 4: 4, 5: 5}
+# {8: 8, 6: 6, 7: 7}
+# {9: 9}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

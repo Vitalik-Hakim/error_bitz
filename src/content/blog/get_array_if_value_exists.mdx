@@ -1,0 +1,53 @@
+---
+title: 'get array if value exists in multidimensional array'
+description: 'get array if value exists in multidimensional array'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [exists, get, multidimensional-array, php, typescript]
+---
+
+**The solution for this is noted below**
+
+## get array if value exists in multidimensional array
+
+### Solution
+
+```typescript
+<?php
+$user_array = array(
+    0 => array(
+        "name" => "kumar Sai",
+        "username" => "kskumar",
+        "id" => 1011
+    ),
+    1 => array(
+        "name" => "badri",
+        "username" => "badrikumar",
+        "id" => 1012
+    ),
+    2 => array(
+        "name" => "suresh",
+        "username" => "skumar",
+        "id" => 1013
+    ),
+    3 => array(
+        "name" => "suresh",
+        "username" => "dkumar",
+        "id" => 1013
+    )
+);
+$new_array = array();
+if (array_search('suresh', array_column($user_array, 'name')) !== FALSE)
+{
+  $keys = array_keys(array_column($user_array, 'name'), 'suresh');
+  $new_array = array_map(function($k) use ($user_array){return $user_array[$k];}, $keys);
+}
+else
+    echo 'User Not Available';
+
+print_r($new_array);
+?>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,32 @@
+---
+title: 'golang check file extension'
+description: 'golang check file extension'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [file-extension, go]
+---
+
+**The solution for this is noted below**
+
+## golang check file extension
+
+### Solution
+
+```go
+import (
+	"fmt"
+	"path/filepath"
+ )
+
+func main(){
+	path := "/media/godfather.mp4"
+
+	fileExtension := filepath.Ext(path)
+
+	fmt.Println("File extension ", fileExtension)
+
+  }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

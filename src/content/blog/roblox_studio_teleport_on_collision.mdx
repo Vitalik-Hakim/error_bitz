@@ -1,0 +1,26 @@
+---
+title: 'roblox studio teleport on collision'
+description: 'roblox studio teleport on collision'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/lua.png'
+category: 'lua'
+tags: [collision, lua, roblox, teleport, touch]
+---
+
+**The solution for this is noted below**
+
+## roblox studio teleport on collision
+
+### Solution
+
+```lua
+local telepoint = Vector3.new(0,10,0) --CHANGE THE COORDINATES IN THE PARENTHESIS TO WHAT YOU WANT!
+
+script.Parent.Touched:connect(function(hit)
+	if hit.Parent:findFirstChild("Humanoid") then
+		hit.Parent.Torso.CFrame = CFrame.new(telepoint + Vector3.new(0,3,0))
+	end
+end)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

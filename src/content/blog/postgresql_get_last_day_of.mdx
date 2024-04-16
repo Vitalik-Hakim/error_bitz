@@ -1,0 +1,21 @@
+---
+title: 'postgresql get last day of month'
+description: 'postgresql get last day of month'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [get, postgresql, sql]
+---
+
+**The solution for this is noted below**
+
+## postgresql get last day of month
+
+### Solution
+
+```sql
+SELECT (date_trunc('month', '2017-01-05'::date) + interval '1 month' - interval '1 day')::date
+AS end_of_month;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

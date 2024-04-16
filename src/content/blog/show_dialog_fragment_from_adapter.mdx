@@ -1,0 +1,35 @@
+---
+title: 'show dialog fragment from adapter'
+description: 'show dialog fragment from adapter'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [adapter, dialog, fragment, java, show]
+---
+
+**The solution for this is noted below**
+
+## show dialog fragment from adapter
+
+### Solution
+
+```java
+public class YourPagerAdapter extends PagerAdapter{
+
+   private Context context;
+
+   public YourPagerAdapter(Context c) {
+          this.context = c;
+   }
+
+   @Override
+      public void onClick(View v) {
+            FragmentActivity activity = (FragmentActivity)(context);
+            FragmentManager fm = activity.getSupportFragmentManager();
+            YourDialogFragment alertDialog = new YourDialogFragment();
+            alertDialog.show(fm, "fragment_alert");
+      }
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

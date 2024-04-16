@@ -1,0 +1,29 @@
+---
+title: 'How do I get the parent`s class name in Ruby'
+description: 'How do I get the parent`s class name in Ruby'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/ruby.jpg'
+category: 'ruby'
+tags: [class, get, ruby, parent]
+---
+
+**The solution for this is noted below**
+
+## How do I get the parent`s class name in Ruby
+
+### Solution
+
+```ruby
+class Level1; end
+class Level2 < Level1; end
+class Level3 < Level2; end
+
+Level1.superclass	# Object
+Level2.superclass	# Level1
+Level3.superclass	# Level2
+
+Level3.ancestors
+# [Level3, Level2, Level1, Object, Kernel, BasicObject]
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

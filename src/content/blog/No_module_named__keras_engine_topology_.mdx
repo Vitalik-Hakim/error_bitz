@@ -1,0 +1,25 @@
+---
+title: 'No module named `keras.engine.topology`'
+description: 'No module named `keras.engine.topology`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [module, named, python, whatever, mo]
+---
+
+**The solution for this is noted below**
+
+## No module named `keras.engine.topology`
+
+### Solution
+
+```python
+In the keras_vggface/models.py file, change the import from:
+
+from keras.engine.topology import get_source_inputs
+to:
+
+from keras.utils.layer_utils import get_source_inputs
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

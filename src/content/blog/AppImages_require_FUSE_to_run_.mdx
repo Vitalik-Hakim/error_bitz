@@ -1,0 +1,23 @@
+---
+title: 'AppImages require FUSE to run.'
+description: 'AppImages require FUSE to run.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [fuse, require, shell]
+---
+
+**The solution for this is noted below**
+
+## AppImages require FUSE to run.
+
+### Solution
+
+```shell
+sudo apt-get install fuse libfuse2
+sudo modprobe -v fuse
+sudo addgroup fuse
+sudo adduser $USER fuse
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

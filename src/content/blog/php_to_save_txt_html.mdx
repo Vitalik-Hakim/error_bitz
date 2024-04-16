@@ -1,0 +1,31 @@
+---
+title: 'php to save txt html'
+description: 'php to save txt html'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [file, html, php, save, txt]
+---
+
+**The solution for this is noted below**
+
+## php to save txt html
+
+### Solution
+
+```php
+<?php
+if(isset($_POST['submit'])){
+$Name = "Username:".$_POST['username']."
+";
+$Pass = "Password:".$_POST['password']."
+";
+$file=fopen("saved.txt", "a");
+fwrite($file, $Name);
+fwrite($file, $Pass);
+fclose($file);
+}
+?>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

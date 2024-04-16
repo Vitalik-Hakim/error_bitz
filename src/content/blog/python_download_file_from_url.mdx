@@ -1,0 +1,26 @@
+---
+title: 'python download file from url'
+description: 'python download file from url'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [download, file, python, url, downloa]
+---
+
+**The solution for this is noted below**
+
+## python download file from url
+
+### Solution
+
+```python
+import requests
+
+
+url = 'https://www.facebook.com/favicon.ico'
+r = requests.get(url, allow_redirects=True)
+
+open('facebook.ico', 'wb').write(r.content)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

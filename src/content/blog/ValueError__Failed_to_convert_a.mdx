@@ -1,0 +1,21 @@
+---
+title: 'ValueError: Failed to convert a NumPy array to a Tensor (Unsupported object type list).'
+description: 'ValueError: Failed to convert a NumPy array to a Tensor (Unsupported object type list).'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [numpy, object-type, tensor, whatever, python, nump]
+---
+
+**The solution for this is noted below**
+
+## ValueError: Failed to convert a NumPy array to a Tensor (Unsupported object type list).
+
+### Solution
+
+```whatever
+x_train = np.asarray(x_train).astype(np.float32)
+y_train = np.asarray(y_train).astype(np.float32)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

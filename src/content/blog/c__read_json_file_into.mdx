@@ -1,0 +1,28 @@
+---
+title: 'c# read json file into object'
+description: 'c# read json file into object'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, file, json, object, javascript, c, csharp, return]
+---
+
+**The solution for this is noted below**
+
+## c# read json file into object
+
+### Solution
+
+```csharp
+// read file into a string and deserialize JSON to a type
+Movie movie1 = JsonConvert.DeserializeObject<Movie>(File.ReadAllText(@"c:\movie.json"));
+
+// deserialize JSON directly from a file
+using (StreamReader file = File.OpenText(@"c:\movie.json"))
+{
+    JsonSerializer serializer = new JsonSerializer();
+    Movie movie2 = (Movie)serializer.Deserialize(file, typeof(Movie));
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

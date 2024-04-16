@@ -1,0 +1,22 @@
+---
+title: 'desktop background change with python'
+description: 'desktop background change with python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [desktop-background, python]
+---
+
+**The solution for this is noted below**
+
+## desktop background change with python
+
+### Solution
+
+```python
+import ctypes
+SPI_SETDESKWALLPAPER = 20
+ctypes.windll.user32.SystemParametersInfoA(SPI_SETDESKWALLPAPER, 0, "image.jpg" , 0)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,36 @@
+---
+title: 'Creating a Before Update Trigger'
+description: 'Creating a Before Update Trigger'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [sql, css]
+---
+
+**The solution for this is noted below**
+
+## Creating a Before Update Trigger
+
+### Solution
+
+```sql
+DELIMITER $$
+
+CREATE TRIGGER product_name_validator
+
+BEFORE UPDATE
+
+ON products FOR EACH ROW
+
+IF NEW.product_name<>OLD.product_name
+
+THEN
+
+SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Product name is read-only and it can not be changed.';
+
+END IF $$
+
+DELIMITER ;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

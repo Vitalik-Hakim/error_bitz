@@ -1,0 +1,39 @@
+---
+title: 'JavaScript POST request with XMLHttpRequest object'
+description: 'JavaScript POST request with XMLHttpRequest object'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, object, post, request, j]
+---
+
+**The solution for this is noted below**
+
+## JavaScript POST request with XMLHttpRequest object
+
+### Solution
+
+```javascript
+let xhr = new XMLHttpRequest()
+xhr.open('POST', 'https://reqbin.com/echo/post/json')
+xhr.setRequestHeader('Accept', 'application/json')
+xhr.setRequestHeader('Content-Type', 'application/json')
+
+xhr.onreadystatechange = function () {
+	if (xhr.readyState === 4) {
+		console.log(xhr.status)
+		console.log(xhr.responseText)
+	}
+}
+
+let data = `{
+  "Id": 78912,
+  "Customer": "Jason Sweet",
+  "Quantity": 1,
+  "Price": 18.00
+}`
+
+xhr.send(data)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

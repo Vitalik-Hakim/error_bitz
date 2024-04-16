@@ -1,0 +1,21 @@
+---
+title: '`fopen`: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS'
+description: '`fopen`: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, disable, using]
+---
+
+**The solution for this is noted below**
+
+## `fopen`: This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use \_CRT_SECURE_NO_WARNINGS
+
+### Solution
+
+```cpp
+#define _CRT_SECURE_NO_DEPRECATE
+#include <stdio.h>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

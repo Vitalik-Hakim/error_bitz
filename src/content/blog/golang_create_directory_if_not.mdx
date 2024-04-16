@@ -1,0 +1,28 @@
+---
+title: 'golang create directory if not exists'
+description: 'golang create directory if not exists'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [create-directory, go, not-exists]
+---
+
+**The solution for this is noted below**
+
+## golang create directory if not exists
+
+### Solution
+
+```go
+func createDirIfNotExists(path string) {
+	exists, err := exists(path)
+	if err != nil {
+		panic(err)
+	}
+	if !exists {
+		os.Mkdir(path, 0777)
+	}
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,29 @@
+---
+title: 'Scripts may close only the windows that were opened by them.'
+description: 'Scripts may close only the windows that were opened by them.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, windows, typescript, t]
+---
+
+**The solution for this is noted below**
+
+## Scripts may close only the windows that were opened by them.
+
+### Solution
+
+```javascript
+// You can only close a window that your script made, so this is possible:
+
+window.open('', '_blank', '')
+window.close()
+
+// But otherwise you can change the link, like that:
+
+location.href = 'https://bruh.io'
+
+// Make sure that you have https://
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

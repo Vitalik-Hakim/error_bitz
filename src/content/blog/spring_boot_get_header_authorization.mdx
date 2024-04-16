@@ -1,0 +1,39 @@
+---
+title: 'spring boot get header authorization'
+description: 'spring boot get header authorization'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [authorization, get, header, java, spring-boot]
+---
+
+**The solution for this is noted below**
+
+## spring boot get header authorization
+
+### Solution
+
+```java
+@PostMapping("/get-token")
+    public ResponseEntity ResetPasssword(@RequestHeader HttpHeaders headers){
+
+        String token = headers.getFirst(HttpHeaders.AUTHORIZATION);
+        System.out.print(token);
+      //  String  PassResponse = userServices.ResetPassWithJWT(PostDta,token).toString();
+        return  new ResponseEntity(token, HttpStatus.OK);
+    }
+
+//this is another method you can also get the token with this method
+
+public String GetToken(HttpServletRequest request){
+  String token =null;
+  final String authorizationHeaderValue = request.getHeader("Authorization");
+  if (authorizationHeaderValue != null && authorizationHeaderValue.startsWith("Bearer")) {
+    token = authorizationHeaderValue.substring(7, authorizationHeaderValue.length());
+  }
+
+  return token;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

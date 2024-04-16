@@ -1,0 +1,24 @@
+---
+title: 'get all tables laravel'
+description: 'get all tables laravel'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [css, get, laravel, php, lara]
+---
+
+**The solution for this is noted below**
+
+## get all tables laravel
+
+### Solution
+
+```css
+$tables = DB::select('SHOW TABLES');
+foreach($tables as $table)
+{
+      echo $table->Tables_in_db_name;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

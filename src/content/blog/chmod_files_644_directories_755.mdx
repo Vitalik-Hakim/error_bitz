@@ -1,0 +1,22 @@
+---
+title: 'chmod files 644 directories 755'
+description: 'chmod files 644 directories 755'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [chmod, shell]
+---
+
+**The solution for this is noted below**
+
+## chmod files 644 directories 755
+
+### Solution
+
+```shell
+# . is the path to start the search
+find . -type f -exec chmod 644 {} \;
+find . -type d -exec chmod 755 {} \;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

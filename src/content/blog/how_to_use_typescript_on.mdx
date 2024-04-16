@@ -1,0 +1,30 @@
+---
+title: 'how to use typescript on createRoot'
+description: 'how to use typescript on createRoot'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [typescript]
+---
+
+**The solution for this is noted below**
+
+## how to use typescript on createRoot
+
+### Solution
+
+```typescript
+// Argument of type 'HTMLElement | null' is not assignable to parameter of type 'Element | DocumentFragment'.
+// Type 'null' is not assignable to type 'Element | DocumentFragment'.ts(2345)
+
+// typescript error on createRoot (React 18)
+
+// const root = ReactDOM.createRoot(document.getElementById("root"))
+
+
+--- add non-null assertion
+
+const root = ReactDOM.createRoot(document.getElementById("root")!)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

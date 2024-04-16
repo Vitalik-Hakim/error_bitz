@@ -1,0 +1,33 @@
+---
+title: 'checkbox on click jquery'
+description: 'checkbox on click jquery'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [checkbox, click, javascript, jquery, typescript, checkbo]
+---
+
+**The solution for this is noted below**
+
+## checkbox on click jquery
+
+### Solution
+
+```javascript
+$(document).ready(function () {
+	//set initial state.
+	$('#textbox1').val($(this).is(':checked'))
+
+	$('#checkbox1').change(function () {
+		$('#textbox1').val($(this).is(':checked'))
+	})
+
+	$('#checkbox1').click(function () {
+		if (!$(this).is(':checked')) {
+			return confirm('Are you sure?')
+		}
+	})
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

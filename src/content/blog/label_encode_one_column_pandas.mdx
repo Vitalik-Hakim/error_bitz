@@ -1,0 +1,22 @@
+---
+title: 'label encode one column pandas'
+description: 'label encode one column pandas'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [encode, label, pandas, python]
+---
+
+**The solution for this is noted below**
+
+## label encode one column pandas
+
+### Solution
+
+```python
+from sklearn import preprocessing
+le = preprocessing.LabelEncoder()
+df['label'] = le.fit_transform(df['label'])
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

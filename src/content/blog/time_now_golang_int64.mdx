@@ -1,0 +1,26 @@
+---
+title: 'time now golang int64'
+description: 'time now golang int64'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [go, int64, time]
+---
+
+**The solution for this is noted below**
+
+## time now golang int64
+
+### Solution
+
+```go
+now := time.Now()      // current local time
+sec := now.Unix()      // number of seconds since January 1, 1970 UTC
+nsec := now.UnixNano() // number of nanoseconds since January 1, 1970 UTC
+
+fmt.Println(now)  // time.Time
+fmt.Println(sec)  // int64
+fmt.Println(nsec) // int64
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

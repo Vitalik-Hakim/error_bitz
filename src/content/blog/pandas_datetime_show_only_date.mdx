@@ -1,0 +1,24 @@
+---
+title: 'pandas datetime show only date'
+description: 'pandas datetime show only date'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [date, datetime, pandas, python, show]
+---
+
+**The solution for this is noted below**
+
+## pandas datetime show only date
+
+### Solution
+
+```python
+# Changing object type column to datetime
+df['date_col'] = pd.to_datetime(df.date_col)
+
+# Creating new column with just the date
+df['new_date_col'] = df['date_col'].dt.date
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

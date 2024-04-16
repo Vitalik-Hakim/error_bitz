@@ -1,0 +1,26 @@
+---
+title: 'install azure cli ubuntu'
+description: 'install azure cli ubuntu'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [azure-cli, shell, ubuntu]
+---
+
+**The solution for this is noted below**
+
+## install azure cli ubuntu
+
+### Solution
+
+```shell
+sudo apt-get update
+sudo apt-get install ca-certificates curl apt-transport-https lsb-release gnupg
+curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+AZ_REPO=$(lsb_release -cs); echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+sudo apt-get update
+sudo apt-get install azure-cli
+az --version
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

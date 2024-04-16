@@ -1,0 +1,25 @@
+---
+title: 'rotation facing mouse unity'
+description: 'rotation facing mouse unity'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, mouse, rotation]
+---
+
+**The solution for this is noted below**
+
+## rotation facing mouse unity
+
+### Solution
+
+```csharp
+//Rotate Object to face Mouse (2D, Rotate on Z-Axis)
+
+Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+Vector3 dir = Input.mousePosition - pos;
+float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

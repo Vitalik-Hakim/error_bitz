@@ -1,0 +1,27 @@
+---
+title: 'ctrl c selenium python'
+description: 'ctrl c selenium python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [c, ctrl, python, selenium]
+---
+
+**The solution for this is noted below**
+
+## ctrl c selenium python
+
+### Solution
+
+```python
+from selenium.webdriver.common.action_chains import ActionChains
+
+
+def clear_text(self):
+    webdriver.ActionChains(self.driver).key_down(Keys.CONTROL).perform()
+    webdriver.ActionChains(self.driver).send_keys("a").perform()
+    webdriver.ActionChains(self.driver).key_up(Keys.CONTROL).perform()
+    webdriver.ActionChains(self.driver).send_keys(Keys.DELETE).perform()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

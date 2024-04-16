@@ -1,0 +1,83 @@
+---
+title: 'tabby ai coding assistant macos start on login'
+description: 'tabby ai coding assistant macos start on login'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [assistant, macos, shell]
+---
+
+**The solution for this is noted below**
+
+## tabby ai coding assistant macos start on login
+
+### Solution
+
+```shell
+1) Create a Launch Agent plist file:
+2) Open Terminal.
+3) Create a directory for your launch agents if it doesn't already exist: mkdir -p ~/Library/LaunchAgents
+4) Navigate to this directory: cd ~/Library/LaunchAgents
+5) Create a new plist file for Tabby. You can name it anything, but for clarity, let's call it com.user.tabby.plist: touch com.user.tabby.plist
+6) Open this file with a text editor. You can use nano for simplicity: nano com.user.tabby.plist
+7) Edit the plist file:
+
+8) Copy and paste the following XML content into your editor. This is the configuration that launchd will use to know how to start Tabby:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.user.tabby</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/tabby</string>
+        <string>serve</string>
+        <string>--device</string>
+        <string>metal</string>
+        <string>--model</string>
+        <string>TabbyML/StarCoder-1B</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.user.tabby.err</string>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.user.tabby.out</string>
+</dict>
+</plist>
+
+9) Save and close the file:
+
+If using nano, you can do this by pressing Ctrl + X, then Y to confirm saving, and Enter to exit.
+Load the Launch Agent:
+
+10) Back in the terminal, load your new launch agent with the following command: launchctl load ~/Library/LaunchAgents/com.user.tabby.plist
+
+11) Check the Launch Agent Status:
+Open Terminal and use the following command to check if your launch agent is loaded and running:
+
+launchctl list | grep com.user.tabby
+This command filters the list of all loaded services to show only your Tabby service. If the service is loaded, you'll see an entry for it. The absence of any output means it's not loaded.
+
+12) Check for the Process:
+You can also check if the Tabby process is running by using the ps command:
+
+ps aux | grep tabby
+This command lists all running processes and filters them to show only those that contain "tabby". If Tabby is running, you'll see it listed here. Look specifically for the command line you configured in your launch agent to start the Tabby server.
+
+13) Check the Log Files:
+If you configured your launch agent with StandardErrorPath and StandardOutPath, you can check these files to see if the Tabby server has logged any output or errors:
+
+For standard output, use:
+cat /tmp/com.user.tabby.out
+
+For errors, use:
+cat /tmp/com.user.tabby.err
+If Tabby started successfully, there might be relevant output in these files indicating its status. An empty or non-existent error log file (assuming the path is correctly set) typically indicates a smooth operation.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

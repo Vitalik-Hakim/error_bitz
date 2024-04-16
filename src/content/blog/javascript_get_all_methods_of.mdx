@@ -1,0 +1,35 @@
+---
+title: 'javascript get all methods of object'
+description: 'javascript get all methods of object'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, javascript, methods, object]
+---
+
+**The solution for this is noted below**
+
+## javascript get all methods of object
+
+### Solution
+
+```javascript
+const getMethods = (obj) => {
+	let properties = new Set()
+	let currentObj = obj
+
+	do {
+		Object.getOwnPropertyNames(currentObj).map((item) => properties.add(item))
+	} while ((currentObj = Object.getPrototypeOf(currentObj)))
+
+	return [...properties.keys()].filter((item) => typeof obj[item] === 'function')
+}
+
+// Example usage
+getMethods('')
+getMethods(new String('test'))
+getMethods({})
+getMethods(Date.prototype)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,45 @@
+---
+title: 'remove mysql ubuntu'
+description: 'remove mysql ubuntu'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [mysql, sql, ubuntu, mysq, shell, whatever, whateve, linux]
+---
+
+**The solution for this is noted below**
+
+## remove mysql ubuntu
+
+### Solution
+
+```sql
+# 1\ check and stop the service
+sudo systemctl status mysql
+# if active execute:
+sudo systemctl stop mysql
+
+# 2\ remove the packages
+sudo apt-get remove --purge mysql\*
+# mysql will have traces to mariadb. if you are not using it execute:
+sudo apt-get remove --purge mariadb\*
+
+# 3\ clean remaining traces
+# clean the package repo
+sudo apt-get autoremove
+sudo apt-get autoclean
+
+# clean user's data/confs
+sudo rm -rf /var/lib/mysql #or: sudo mv /var/lib/mysql /var/lib/mysql_old_backup
+sudo rm -rf /etc/mysql #or: sudo mv /etc/mysql /etc/mysql_old_backup
+
+# clean shell references
+# (if you execute the commands on 4\ you still see old references)
+updatedb
+
+# 4\ verify removal
+dpkg -l | grep -i mysql
+locate mysql #you still can see references to mysql, but they are from other programs/shared stuff....
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

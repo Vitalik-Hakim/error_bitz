@@ -1,0 +1,41 @@
+---
+title: 'Shopify blocks'
+description: 'Shopify blocks'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [shopify, whatever]
+---
+
+**The solution for this is noted below**
+
+## Shopify blocks
+
+### Solution
+
+```whatever
+{% for block in section.blocks %}
+  {{ block.settings.setting }}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "Section name",
+    "blocks": [
+      {
+        "name": "name",
+        "type": "type",
+        "settings": [
+          {
+            "type": "type",
+            "id": "id",
+            "label": "label"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

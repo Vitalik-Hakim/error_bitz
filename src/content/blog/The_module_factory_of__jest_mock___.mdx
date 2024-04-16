@@ -1,0 +1,24 @@
+---
+title: 'The module factory of `jest.mock()` is not allowed to reference any out-of-scope variables.'
+description: 'The module factory of `jest.mock()` is not allowed to reference any out-of-scope variables.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [any, factory, module, reference, whatever]
+---
+
+**The solution for this is noted below**
+
+## The module factory of `jest.mock()` is not allowed to reference any out-of-scope variables.
+
+### Solution
+
+```whatever
+I just stumbled upon this while googling and it seems like I've missed this crucial line in the error message along with everyone else:
+
+If it is ensured that the mock is required lazily, variable names prefixed with mock are permitted.
+
+Just change the name of what you're mocking to mockYourComponentName
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

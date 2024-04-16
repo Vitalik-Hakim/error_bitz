@@ -1,0 +1,23 @@
+---
+title: 'sfml local mouse position'
+description: 'sfml local mouse position'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, local, mouse-position, sfml]
+---
+
+**The solution for this is noted below**
+
+## sfml local mouse position
+
+### Solution
+
+```cpp
+// get the current mouse position in the window
+sf::Vector2i pixelPos = sf::Mouse::getPosition(window);
+// convert it to world coordinates
+sf::Vector2f worldPos = window.mapPixelToCoords(pixelPos);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

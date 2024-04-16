@@ -1,0 +1,52 @@
+---
+title: 'react js  usehistory push and pass props'
+description: 'react js  usehistory push and pass props'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, push]
+---
+
+**The solution for this is noted below**
+
+## react js usehistory push and pass props
+
+### Solution
+
+```javascript
+import { useHistory } from "react-router-dom";
+
+const FirstPage = props => {
+    let history = useHistory();
+
+    const someEventHandler = event => {
+       history.push({
+           pathname: '/secondpage',
+           search: '?query=abc',
+           state: { detail: 'some_value' }
+       });
+    };
+
+};
+
+export default FirstPage;
+
+
+Accessing the passed parameter using useLocation from 'react-router-dom':
+
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+const SecondPage = props => {
+    const location = useLocation();
+
+    useEffect(() => {
+       console.log(location.pathname); // result: '/secondpage'
+       console.log(location.search); // result: '?query=abc'
+       console.log(location.state.detail); // result: 'some_value'
+    }, [location]);
+
+};
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

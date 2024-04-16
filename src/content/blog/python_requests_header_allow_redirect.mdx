@@ -1,0 +1,27 @@
+---
+title: 'python requests header allow redirect false'
+description: 'python requests header allow redirect false'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [header, python-requests, redirect, typescript]
+---
+
+**The solution for this is noted below**
+
+## python requests header allow redirect false
+
+### Solution
+
+```typescript
+import requests
+url = "http://mock.kite.com/redirect"
+print requests.get(url, allow_redirects = False).text
+OUTPUT
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>Redirecting...</title>
+<h1>Redirecting...</h1>
+<p>You should be redirected automatically to target URL: <a href="/text">/text</a>.  If not click the link.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

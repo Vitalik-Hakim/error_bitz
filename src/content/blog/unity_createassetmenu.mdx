@@ -1,0 +1,29 @@
+---
+title: 'unity createassetmenu'
+description: 'unity createassetmenu'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, csharp]
+---
+
+**The solution for this is noted below**
+
+## unity createassetmenu
+
+### Solution
+
+```csharp
+using UnityEngine;
+using System.Collections;
+
+[CreateAssetMenu(fileName = "Data", menuName = "Inventory/List", order = 1)]
+public class MyScriptableObjectClass : ScriptableObject {
+    public string objectName = "New MyScriptableObject";
+    public bool colorIsRandom = false;
+    public Color thisColor = Color.white;
+    public Vector3[] spawnPoints;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

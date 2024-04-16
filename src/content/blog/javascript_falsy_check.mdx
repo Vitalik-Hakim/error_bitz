@@ -1,0 +1,38 @@
+---
+title: 'javascript falsy check'
+description: 'javascript falsy check'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [falsy, javascript]
+---
+
+**The solution for this is noted below**
+
+## javascript falsy check
+
+### Solution
+
+```javascript
+//Check if a value is falsy
+
+// Short version
+const isFalsy = (value) => !value
+
+// Long version
+const isFalsy = (value) => {
+	if (
+		value === null ||
+		value === undefined ||
+		value === 0 ||
+		value === false ||
+		value === NaN ||
+		value === ''
+	) {
+		return true
+	}
+	return false
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

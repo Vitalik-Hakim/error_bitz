@@ -1,0 +1,26 @@
+---
+title: 'launch app with pc startup c#'
+description: 'launch app with pc startup c#'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, launch, startup, csharp, add, sta]
+---
+
+**The solution for this is noted below**
+
+## launch app with pc startup c#
+
+### Solution
+
+```csharp
+using Microsoft.Win32;
+    private void SetStartup()
+    {
+        RegistryKey rk = Registry.CurrentUser.OpenSubKey
+            ("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+            rk.SetValue(AppName, Application.ExecutablePath);
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

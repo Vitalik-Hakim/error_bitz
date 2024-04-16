@@ -1,0 +1,48 @@
+---
+title: 'my partition disappeared windows 10'
+description: 'my partition disappeared windows 10'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [driver, letter, loss, partition, shell, windows-10]
+---
+
+**The solution for this is noted below**
+
+## my partition disappeared windows 10
+
+### Solution
+
+```shell
+# if the partition missing could be for loss of drive letter do the
+# steps below to assign a letter to the missing partition and
+# the drive will be back without any issue or data loss.
+
+# Type the steps one by one in command prompt and hit enter
+# You shouldn't type the lines that begin with #
+--------------
+# oepn diskpart
+diskpart
+--------------
+# list the partitions on the selected disk
+list volume
+
+# now this part is important. Now DISKPART is showing you a list of all
+# volumes on your computer. look at the "Ltr" column and see if all of the
+# volumes have a letter( like E,F,G,...). if there is a volume that doesn't
+# have a letter (if the Ltr cell is empty) that volume might be the parition
+# that has disappeared from your computer so we'll assign a letter to it.
+--------------
+# lets say for example volume 0 doesn't have a letter. first we select it:
+select volume 0
+--------------
+# and finally assign the letter you want to it
+assign letter=D
+--------------
+# Done, now exit.
+exit
+--------------
+# Now look in your file explorer to see if the disapeared partition is back
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

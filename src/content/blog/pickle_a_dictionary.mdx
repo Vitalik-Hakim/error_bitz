@@ -1,0 +1,30 @@
+---
+title: 'pickle a dictionary'
+description: 'pickle a dictionary'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [dictionary, pickle, python]
+---
+
+**The solution for this is noted below**
+
+## pickle a dictionary
+
+### Solution
+
+```python
+import pickle #credits to stack overflow user= blender
+
+a = {'hello': 'world'}
+
+with open('filename.pkl', 'wb') as handle:
+    pickle.dump(a, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+with open('filename.pkl', 'rb') as handle:
+    b = pickle.load(handle)
+
+print (a == b)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

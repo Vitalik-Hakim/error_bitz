@@ -1,0 +1,42 @@
+---
+title: 'cache headers express js'
+description: 'cache headers express js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [express, javascript]
+---
+
+**The solution for this is noted below**
+
+## cache headers express js
+
+### Solution
+
+```javascript
+const middelware = (req, res, next) => {
+	// Setting cacheability
+	res.header('Cache-Control', 'public') // All responses may be stored by any cache.
+	res.header('Cache-Control', 'private') // All responses may be stored by a browser's cache.
+	res.header('Cache-Control', 'no-cache') // All responses may be stored by any cache, however, the stored response must always go through validation with the origin server before using it.
+	res.header('Cache-Control', 'no-store') // The response may not be stored by any cache. Use this directive to prevent caching responses. There is no need to set any other directives, for example, max-age=0 is already implied.
+	// Expiration time
+	res.header('Cache-Control', 'max-age=<seconds>') // The maximum amount of time a response is considered fresh. This directive is relative to the time of the request.
+	res.header('Cache-Control', 's-maxage=<seconds>') // Only applicable to shared caches where it overrides max-age or the Expires header, Ignored by private caches.
+	res.header('Cache-Control', 'max-stale[=<seconds>]') // Used by clients in a request header to indicate the client will accept a stale response. An optional value in seconds indicates the upper limit of staleness the client will accept.
+	res.header('Cache-Control', 'min-fresh=<seconds>') // Used by clients in a request header to indicate the client wants a response that will still be fresh for at least the specified number of seconds.
+	res.header('Cache-Control', 'stale-while-revalidate=<seconds>') // Accept a stale response, while asynchronously checking in the background for a fresh one. The seconds value indicates how long the client will accept a stale response.
+	res.header('Cache-Control', 'stale-if-error=<seconds>') // Accept a stale response if the check for a fresh one fails. The seconds value indicates how long the client will accept the stale response after the initial expiration.
+	// Revalidation and reloading
+	res.header('Cache-Control', 'must-revalidate') // Caches may not use the stale copy without successful validation on the origin server.
+	res.header('Cache-Control', 'proxy-revalidate') // Shared caches may not use the stale copy without successful validation on the origin server. Ignored by private caches.
+	res.header('Cache-Control', 'immutable') // Clients will not send revalidation for unexpired resources to check for updates even when the page is refreshed.
+	// Other directives
+	res.header('Cache-Control', 'no-transform') // Prevents shared caches or proxies from modifying responses. For example, proxies are prevented from optimising images for slow connections.
+	res.header('Cache-Control', 'only-if-cached') // Used by clients in requests to prevent using network for getting response. The cache will either return a stored resource or respond with 504 status code.
+
+	next()
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

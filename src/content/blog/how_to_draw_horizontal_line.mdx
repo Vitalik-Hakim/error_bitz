@@ -1,0 +1,30 @@
+---
+title: 'how to draw horizontal line in canvas'
+description: 'how to draw horizontal line in canvas'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [canvas, draw, horizontal-line, javascript, typescript, ca]
+---
+
+**The solution for this is noted below**
+
+## how to draw horizontal line in canvas
+
+### Solution
+
+```javascript
+const canvas = document.querySelector('.main-canvas')
+const ctx = canvas.getContext('2d')
+
+let lineWidth = 33
+let totalWidth = canvas.width
+let middle = canvas.width / 2
+
+ctx.beginPath()
+ctx.moveTo(0, middle)
+ctx.lineTo(totalWidth, middle)
+ctx.stroke()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

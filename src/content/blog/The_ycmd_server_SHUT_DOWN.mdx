@@ -1,0 +1,22 @@
+---
+title: 'The ycmd server SHUT DOWN (restart with `:YcmRestartServer`). YCM core library not detected; you need to compile YCM before using it. Follow the instructions in the documentation.'
+description: 'The ycmd server SHUT DOWN (restart with `:YcmRestartServer`). YCM core library not detected; you need to compile YCM before using it. Follow the instructions in the documentation.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [core, instructions, server, shell, using, whatever]
+---
+
+**The solution for this is noted below**
+
+## The ycmd server SHUT DOWN (restart with `:YcmRestartServer`). YCM core library not detected; you need to compile YCM before using it. Follow the instructions in the documentation.
+
+### Solution
+
+```shell
+cd ~/.vim/bundle/YouCompleteMe/
+sudo pip install cmake
+python install.py
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

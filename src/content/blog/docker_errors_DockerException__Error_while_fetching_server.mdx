@@ -1,0 +1,21 @@
+---
+title: 'docker.errors.DockerException: Error while fetching server API version: (`Connection aborted.`, PermissionError(13, `Permission denied`))'
+description: 'docker.errors.DockerException: Error while fetching server API version: (`Connection aborted.`, PermissionError(13, `Permission denied`))'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [api, server, whatever]
+---
+
+**The solution for this is noted below**
+
+## docker.errors.DockerException: Error while fetching server API version: (`Connection aborted.`, PermissionError(13, `Permission denied`))
+
+### Solution
+
+```whatever
+sudo gpasswd -a $USER docker
+newgrp docker
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

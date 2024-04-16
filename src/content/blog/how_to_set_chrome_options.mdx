@@ -1,0 +1,24 @@
+---
+title: 'how to set chrome options python selenium for a folder'
+description: 'how to set chrome options python selenium for a folder'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [chrome-options, python, selenium, set]
+---
+
+**The solution for this is noted below**
+
+## how to set chrome options python selenium for a folder
+
+### Solution
+
+```python
+chromeOptions = webdriver.ChromeOptions()
+prefs = {"download.default_directory" : "/some/path"}
+chromeOptions.add_experimental_option("prefs",prefs)
+chromedriver = "path/to/chromedriver.exe"
+driver = webdriver.Chrome(executable_path=chromedriver, chrome_options=chromeOptions)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

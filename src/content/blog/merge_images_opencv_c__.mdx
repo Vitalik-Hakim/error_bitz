@@ -1,0 +1,47 @@
+---
+title: 'merge images opencv c++'
+description: 'merge images opencv c++'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, merge, opencv]
+---
+
+**The solution for this is noted below**
+
+## merge images opencv c++
+
+### Solution
+
+```cpp
+#include <opencv2\opencv.hpp>
+using namespace cv;
+
+int main()
+{
+    // Load images
+    Mat3b img1 = imread("path_to_image_1");
+    Mat3b img2 = imread("path_to_image_2");
+
+    // Get dimension of final image
+    int rows = max(img1.rows, img2.rows);
+    int cols = img1.cols + img2.cols;
+
+    // Create a black image
+    Mat3b res(rows, cols, Vec3b(0,0,0));
+
+    // Copy images in correct position
+    img1.copyTo(res(Rect(0, 0, img1.cols, img1.rows)));
+    img2.copyTo(res(Rect(img1.cols, 0, img2.cols, img2.rows)));
+
+    // Show result
+    imshow("Img 1", img1);
+    imshow("Img 2", img2);
+    imshow("Result", res);
+    waitKey();
+
+    return 0;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

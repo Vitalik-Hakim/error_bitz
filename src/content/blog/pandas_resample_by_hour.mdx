@@ -1,0 +1,22 @@
+---
+title: 'pandas resample by hour'
+description: 'pandas resample by hour'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [hour, python]
+---
+
+**The solution for this is noted below**
+
+## pandas resample by hour
+
+### Solution
+
+```python
+df = df1.resample('60min', on='TIME').mean()
+
+df = df1.groupby(df.index.hour).mean()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

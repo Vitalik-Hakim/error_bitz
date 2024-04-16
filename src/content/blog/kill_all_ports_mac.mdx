@@ -1,0 +1,25 @@
+---
+title: 'kill all ports mac'
+description: 'kill all ports mac'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [kill, ports, shell, whatever]
+---
+
+**The solution for this is noted below**
+
+## kill all ports mac
+
+### Solution
+
+```shell
+lsof -n -i TCP:8080
+COMMAND   PID   USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node     54762   user   23u  IPv4 XXXXXXXXX      0t0  TCP 127.0.0.1:http-alt (LISTEN)
+PID // is second field in the response . Then, kill that process:
+
+kill -9 54762 // here put PID number found on the table 54762
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

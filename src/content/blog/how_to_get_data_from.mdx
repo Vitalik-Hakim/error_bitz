@@ -1,0 +1,30 @@
+---
+title: 'how to get data from json web api in python'
+description: 'how to get data from json web api in python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [api, get, json, python, web]
+---
+
+**The solution for this is noted below**
+
+## how to get data from json web api in python
+
+### Solution
+
+```python
+import requests
+import simplejson as json
+
+url = "api_url"
+response = requests.get(url)
+x = json.loads(response.text)
+
+#Note the {} get auto replace by the data you were looking for
+print('protocol: {}'.format(x.get('protocol'))) #replace 'protocol' with the data specific you need like 'id'
+print('responseTime: {}'.format(x.get('responseTime')))
+print('reputation: {}'.format(x.get('reputation')))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

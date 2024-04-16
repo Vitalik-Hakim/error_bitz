@@ -1,0 +1,26 @@
+---
+title: 'how to install vs code on fedora'
+description: 'how to install vs code on fedora'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [fedora, shell, fe]
+---
+
+**The solution for this is noted below**
+
+## how to install vs code on fedora
+
+### Solution
+
+```shell
+// Below code will install Microsoft Visual Studio code on your Fedroa Operating System
+
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
+sudo dnf install code
+
+// Kindly press on upper arrow if you got helped
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

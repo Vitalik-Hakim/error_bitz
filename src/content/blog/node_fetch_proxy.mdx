@@ -1,0 +1,31 @@
+---
+title: 'node-fetch proxy'
+description: 'node-fetch proxy'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, node-fetch, proxy]
+---
+
+**The solution for this is noted below**
+
+## node-fetch proxy
+
+### Solution
+
+```javascript
+// npm install node-fetch
+// npm install https-proxy-agent
+
+const fetch = require('node-fetch')
+const HttpsProxyAgent = require('https-proxy-agent')
+
+;(async () => {
+	const proxyAgent = new HttpsProxyAgent('http://46.250.171.31:8080')
+	const response = await fetch('https://httpbin.org/ip?json', { agent: proxyAgent })
+	const body = await response.text()
+	console.log(body)
+})()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,30 @@
+---
+title: 'jquery ajax type json'
+description: 'jquery ajax type json'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, jquery-ajax, json, j]
+---
+
+**The solution for this is noted below**
+
+## jquery ajax type json
+
+### Solution
+
+```javascript
+$.ajax('/jquery/submitData', {
+	type: 'POST', // http method
+	data: { myData: 'This is my data.' }, // data to submit
+	dataType: 'json',
+	success: function (data, status, xhr) {
+		$('p').append('status: ' + status + ', data: ' + data)
+	},
+	error: function (jqXhr, textStatus, errorMessage) {
+		$('p').append('Error' + errorMessage)
+	}
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

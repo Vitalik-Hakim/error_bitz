@@ -1,0 +1,29 @@
+---
+title: 'how to use bulma in gatsby'
+description: 'how to use bulma in gatsby'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [bulma, css, gatsby]
+---
+
+**The solution for this is noted below**
+
+## how to use bulma in gatsby
+
+### Solution
+
+```css
+yarn add bulma sass gatsby-plugin-sass
+
+Then, add the gatsby-plugin-sass in to gatsby-config.js.
+			plugins: [`gatsby-plugin-sass`],
+
+create a custom scss file with the following configs
+			@charset "utf-8";
+			@import "~bulma/bulma.sass";
+
+Now lastly import your custom scss file into your index.js file or whichever file you want
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

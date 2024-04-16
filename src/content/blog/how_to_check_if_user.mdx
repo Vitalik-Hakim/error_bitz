@@ -1,0 +1,31 @@
+---
+title: 'how to check if user is using main file or importing the file and using in python'
+description: 'how to check if user is using main file or importing the file and using in python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [file, python, using]
+---
+
+**The solution for this is noted below**
+
+## how to check if user is using main file or importing the file and using in python
+
+### Solution
+
+```python
+def calculate_adding(num1,num2):
+    return num1 + num2
+if __name__ == '__main__':
+    print("Hi you are using editor not importing")
+    print(calculate_adding(90,10))
+if __name__ != '__main__':
+    print("You are importing me and using me")
+#output
+'''
+Hi you are using editor not importing
+100
+'''
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

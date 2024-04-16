@@ -1,0 +1,24 @@
+---
+title: 'json dumps datetime'
+description: 'json dumps datetime'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [datetime, json, python]
+---
+
+**The solution for this is noted below**
+
+## json dumps datetime
+
+### Solution
+
+```python
+def myconverter(o):
+    if isinstance(o, datetime.datetime):
+        return o.__str__()
+
+print(json.dumps(d, default = myconverter))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

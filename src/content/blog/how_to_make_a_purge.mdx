@@ -1,0 +1,36 @@
+---
+title: 'how to make a purge command discord.js'
+description: 'how to make a purge command discord.js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [command, discord.js, javascript, purge, d]
+---
+
+**The solution for this is noted below**
+
+## how to make a purge command discord.js
+
+### Solution
+
+```javascript
+var amount = parseInt(args[0])
+
+if (!amount)
+	return message.channel.send('Please specify the amount of messages you want me to delete')
+if (amount > 100 || amount < 1)
+	return message.channel.send('Please select a number *between* 100 and 1')
+
+message.channel.bulkDelete(amount).catch((err) => {
+	message.channel.send(
+		':x: Due to Discord Limitations, I cannot delete messages older than 14 days'
+	)
+})
+
+let msg = await message.channel.send(`Deleted \`${amount}\` messages`)
+setTimeout(() => {
+	msg.delete()
+}, 2000)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

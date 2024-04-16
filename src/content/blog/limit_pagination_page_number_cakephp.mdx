@@ -1,0 +1,43 @@
+---
+title: 'limit pagination page number cakephp'
+description: 'limit pagination page number cakephp'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [cakephp, limit, pagination, php]
+---
+
+**The solution for this is noted below**
+
+## limit pagination page number cakephp
+
+### Solution
+
+```php
+$all_settings = array(
+  'limit' => 100,	// limit pagination page number: 100 record / page
+  'fields' => array(
+    'Product.*',
+  ),
+  'conditions' => $conditions,
+  'order' => array(
+    'Product.is ASC',
+  ),
+  'contain' => array(
+    'ProductLanguage' => array(
+      'conditions' => array(
+        'ProductLanguage.alias' => $this->lang18,
+      ),
+      'fields' => array(
+        'ProductLanguage.title',
+      ),
+    ),
+  ),
+  'recursive' => -1,
+);
+
+$this->Paginator->settings = $all_settings;
+$products = $this->paginate();
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

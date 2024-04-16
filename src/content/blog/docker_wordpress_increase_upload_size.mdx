@@ -1,0 +1,20 @@
+---
+title: 'docker wordpress increase upload size'
+description: 'docker wordpress increase upload size'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [docker, size, upload, whatever, wordpress]
+---
+
+**The solution for this is noted below**
+
+## docker wordpress increase upload size
+
+### Solution
+
+```whatever
+sed -i "11i php_value upload_max_filesize 256M" .htaccess && sed -i "12i php_value post_max_size 256M" .htaccess
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

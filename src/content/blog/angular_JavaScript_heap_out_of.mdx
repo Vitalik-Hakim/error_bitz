@@ -1,0 +1,24 @@
+---
+title: 'angular JavaScript heap out of memory'
+description: 'angular JavaScript heap out of memory'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [angular, heap, javascript, out-of-memory]
+---
+
+**The solution for this is noted below**
+
+## angular JavaScript heap out of memory
+
+### Solution
+
+```javascript
+Add the command to package.json file:
+"build-serve": "node --max_old_space_size=8048 ./node_modules/@angular/cli/bin/ng serve"
+
+and run as:
+ npm run build-serve
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

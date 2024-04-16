@@ -1,0 +1,22 @@
+---
+title: 'node.js error handling process'
+description: 'node.js error handling process'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [error-handling, javascript, node.js, process]
+---
+
+**The solution for this is noted below**
+
+## node.js error handling process
+
+### Solution
+
+```javascript
+process.on('warning', (veri) => console.log(veri))
+process.on('unhandledRejection', (veri) => console.log(veri))
+process.on('uncaughtException', (veri) => console.log(veri))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

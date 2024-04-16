@@ -1,0 +1,27 @@
+---
+title: 'keras callbacks learning rate scheduler'
+description: 'keras callbacks learning rate scheduler'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [keras, learning-rate, python, scheduler]
+---
+
+**The solution for this is noted below**
+
+## keras callbacks learning rate scheduler
+
+### Solution
+
+```python
+def scheduler(epoch, lr):
+	if epoch < 10:
+		return lr
+	else:
+		return lr * tf.math.exp(-0.1)
+callback = tf.keras.callbacks.LearningRateScheduler(scheduler)
+model.fit(np.arange(100).reshape(5, 20), np.zeros(5),
+	epochs=15, callbacks=[callback], verbose=0)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

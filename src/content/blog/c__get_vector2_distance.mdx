@@ -1,0 +1,26 @@
+---
+title: 'c# get vector2 distance'
+description: 'c# get vector2 distance'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, distance, get]
+---
+
+**The solution for this is noted below**
+
+## c# get vector2 distance
+
+### Solution
+
+```csharp
+//For 2D Unity C#
+float GetDistance(Vector2 posA, Vector2 posB) {
+	float dx = posA.x - posB.x;
+    float dy = posA.y - posB.y;
+    float distance = Mathf.Sqrt(dx * dx + dy * dy);
+    return distance;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

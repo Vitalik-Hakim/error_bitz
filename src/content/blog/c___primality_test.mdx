@@ -1,0 +1,32 @@
+---
+title: 'c++ primality test'
+description: 'c++ primality test'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, primality-test, cpp]
+---
+
+**The solution for this is noted below**
+
+## c++ primality test
+
+### Solution
+
+```cpp
+#include <iostream>
+using namespace std;
+bool isPrimeNumber(int n) {
+    if (n <= 1) return false;
+    if (n <= 3) return true;
+    if (n % 2 == 0 || n % 3 == 0) return false;
+
+    for (int i = 5; i * i <= n; i = i + 6)
+        if (n % i == 0 || n % (i + 2) == 0)
+            return false;
+
+    return true;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,27 @@
+---
+title: 'javascript open new window and pass data'
+description: 'javascript open new window and pass data'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, new-window, pass-data]
+---
+
+**The solution for this is noted below**
+
+## javascript open new window and pass data
+
+### Solution
+
+```javascript
+// Store the return of the `open` command in a variable
+var newWindow = window.open('http://www.mydomain.com')
+
+// Access it using its variable
+newWindow.my_childs_special_setting = 'Hello World'
+
+//In the child (popup) window, you could access a parent variable like this:
+window.opener.my_parents_special_setting
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

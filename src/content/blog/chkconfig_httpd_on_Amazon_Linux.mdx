@@ -1,0 +1,28 @@
+---
+title: 'chkconfig httpd on Amazon Linux 2 AMI'
+description: 'chkconfig httpd on Amazon Linux 2 AMI'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [amazon-linux, shell]
+---
+
+**The solution for this is noted below**
+
+## chkconfig httpd on Amazon Linux 2 AMI
+
+### Solution
+
+```shell
+If you using Amazon Linux 2 AMI you need to follow these steps:
+
+- In AMI2 they are using systemctl for managing services check if it is installed on your machine 2.systemctl list-units --type=service by this command check if httpd is listed
+- sudo systemctl enable httpd
+	To eanable httpd start on boot up
+- systemctl is-enabled httpd
+	To check if httpd enabled to start on boot up linux system
+
+After that you can reboot your linux system and httpd will be started.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

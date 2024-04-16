@@ -1,0 +1,48 @@
+---
+title: 'discord.py compress mp4 command'
+description: 'discord.py compress mp4 command'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [command, discord.py, mp4, python]
+---
+
+**The solution for this is noted below**
+
+## discord.py compress mp4 command
+
+### Solution
+
+```python
+import discord # pip install discord.py
+from discord.ext import commands
+import asyncio
+import aiofiles # pip install aiofiles
+import requests # pip install requests
+from aspose_compressor import AsposeCompressor # pip install aspose-compressor
+
+client= commands.Bot(command_prefix='!', self_bot=True)
+
+loop = asyncio.get_event_loop()
+
+# wrap aspose compressor in an asynchronous function
+async def aspose_compress(file_path: str):
+    ac = AsposeCompressor()
+    file = await loop.run_in_executor(None, ac.compress_video, file_path)
+    await loop.run_in_executor(None, file.save, "./compressed.mp4")
+
+@client.command(name="compress-video")
+async def compress_video(ctx):
+    # downloading original video for later compression
+    binaries = requests.get(ctx.message.attachments[0].url).content
+    async with aiofiles.open("original.mp4", mode="wb") as f:
+        await f.write(binaries)
+        await f.close()
+    # compressing the video
+    await aspose_compress("./original.mp4")
+    await ctx.send(file=discord.File("./compressed.mp4")
+
+client.run('token')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

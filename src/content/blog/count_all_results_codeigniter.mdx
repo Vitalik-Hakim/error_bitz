@@ -1,0 +1,23 @@
+---
+title: 'count all results codeigniter'
+description: 'count all results codeigniter'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [codeigniter, count, typescript, php, code]
+---
+
+**The solution for this is noted below**
+
+## count all results codeigniter
+
+### Solution
+
+```typescript
+$this->db->select('id');
+$this->db->from('table');
+$this->db->where($your_conditions);
+$num_results = $this->db->count_all_results();
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

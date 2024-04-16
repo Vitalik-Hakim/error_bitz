@@ -1,0 +1,40 @@
+---
+title: 'star pattern in c'
+description: 'star pattern in c'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/C.png'
+category: 'c'
+tags: [c]
+---
+
+**The solution for this is noted below**
+
+## star pattern in c
+
+### Solution
+
+```c
+#include <stdio.h>
+#include <stdlib.h>                                      INPUT  : 5
+                                                         OUTPUT :
+int main(void)                                                   *
+{                                                               * *
+	int n,k,i,j;                                               * * *
+	setbuf(stdout,NULL);                                      * * * *
+	printf("Enter the limit of the number = ");              * * * * *
+	scanf("%d",&n);
+	for(i=1;i<=n;i++)
+	{
+		printf("\n");
+		for(j=1;j<=n-i;j++)
+		{
+			printf(" ");
+		}
+		for(k=1;k<=i;k++)
+			printf("* ");
+	}
+	return EXIT_SUCCESS;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

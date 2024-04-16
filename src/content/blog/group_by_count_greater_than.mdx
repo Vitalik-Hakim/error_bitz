@@ -1,0 +1,26 @@
+---
+title: 'group by count greater than 1 sql'
+description: 'group by count greater than 1 sql'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [count, group-by, sql]
+---
+
+**The solution for this is noted below**
+
+## group by count greater than 1 sql
+
+### Solution
+
+```sql
+SELECT user_id, user_email, user_phone, first_name, last_name
+FROM user_info,user_contact_info
+WHERE user_id=contact_user_id
+GROUP BY contact_user_id
+HAVING
+COUNT(contact_user_id) > 1
+ORDER BY c_id DESC, id DESC;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

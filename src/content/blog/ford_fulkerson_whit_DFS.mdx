@@ -1,0 +1,166 @@
+---
+title: 'ford-fulkerson whit DFS'
+description: 'ford-fulkerson whit DFS'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [ford-fulkerson, python]
+---
+
+**The solution for this is noted below**
+
+## ford-fulkerson whit DFS
+
+### Solution
+
+```python
+inf = float('inf')
+
+flow_network = [
+	#Ajacency matrix to represent a flow network.
+    #Here:
+    #m[i][j] = capacity of the edge (i, j).
+    #If m[i][j] = 0, then, there is a backward edge from i to j.
+    #If m[i][j] = inf, then, there is no edge from i to j.
+	[inf, 5, 3, inf],
+	[0, inf, inf, 2],
+	[0, inf, inf, 1],
+	[inf, 0, 0, inf],
+]
+
+fn2 = [
+	[inf, 10, 10, inf, inf, inf],
+	[0, inf, inf, 25, 0, inf],
+	[0, inf, inf, inf, 15, inf],
+	[inf, 0, inf, inf, inf, 10],
+	[inf, 6, inf, inf, inf, 10],
+	[inf, inf, inf, 0, 0, inf],
+]
+
+fn3 = [
+	[inf, 7, 4, inf, inf, inf],
+	[0, inf, 0, 5, 3, inf],
+	[0, 3, inf, inf, 2, inf],
+	[inf, 0, inf, inf, 0, 8],
+	[inf, 0, 0, 3, inf, 5],
+	[inf, inf, inf, 0, 0, inf],
+]
+
+
+fn4 = [
+	[inf, 5, 1, inf],
+	[0, inf, 0, 2],
+	[0, 3, inf, 2],
+	[inf, 0, 0, inf]
+]
+
+fn5 = [
+	[inf, 5, 10],
+	[0, inf, 2],
+	[0 ,0, inf],
+]
+
+def show_matrix(matriz):
+    #This function is just for debugging.
+	print('--------------')
+	for fila in matriz:
+		print(fila)
+	print('--------------')
+	return None
+
+def ford_fulkerson(graph):
+    #This function calculates the max flow of a flow network by using the Ford-Fulkerson algorithm with the DFS.
+    #It only takes one argument, the adjacency matrix that represents the flow network,
+    #this is because we assume the source_index = 0 and sink_index = 0.
+
+	graph_len = len(graph)
+	##In this matrix m[i][j] = f(i,j) = flow from node i to j.
+	flow_matrix = [[0] * graph_len for i in range(graph_len)]
+	#The flow starts being zero.
+	max_flow = 0
+
+	#If there is not edge from i to j then there is not flow from i to j:
+	for i in range(graph_len):
+		for j in range(graph_len):
+			if graph[i][j] == inf:
+				flow_matrix[i][j] = inf
+
+	#Variables to use while DFS:
+	souce_index = 0
+	sink_index = graph_len - 1
+	path = []
+	bottle_neck = float('inf')
+	visited = [False] * graph_len
+
+	def DFS(current_node_index):
+    #If it is possible, generates an augmenting path from the source to the sink.
+    #find the bottleneck value that correspond to the augmenting path.
+
+        #Allows to access non local variables from this function.
+		nonlocal visited
+		nonlocal bottle_neck
+		nonlocal path
+
+		#Stopping condition: once we reach the sink, add the current node index to the path and mark every node as visited.
+        #By doing it, the DFS stops.
+		if current_node_index == sink_index:
+			path.append(current_node_index)
+			for i in range(graph_len):
+				visited[i] = True
+
+		#Mark the current node as visited:
+		visited[current_node_index] = True
+		#Get the capacities of the current node:
+		capacities = graph[current_node_index]
+		#Get the current node’s flows:
+		flows = flow_matrix[current_node_index]
+
+		for i in range(graph_len):
+			#rc means remaining capacity
+			rc = capacities[i] - flows[i]
+			#If the remaining capacity is greater than zero and the node has not been visited, then we can go through this node:
+			if rc > 0 and not visited[i]:
+				#Add the node to the path if it is not there:
+				if not current_node_index in path:
+					path.append(current_node_index)
+
+				#Compute the remaining capacity recursively:
+				bottle_neck = min(bottle_neck, rc)
+				#Call the function recursively
+				DFS(i)
+
+	def augment_path(bottle_neck, path):
+		#This function augments the flows of all edges that belongs to an augmenting path.
+        #it also reduce the backward edges flows.
+		for i in range(len(path) - 1):
+			fron = path[i]
+			to = path[i + 1]
+			flow_matrix[fron][to] += bottle_neck
+			flow_matrix[to][fron] -= bottle_neck
+
+	while True:
+		DFS(souce_index)
+		#If the sink_node_index is not in the path then this is not a valid augmenting path and there are no more of them,
+		#so we stop the algorithm.
+		if not sink_index in path:
+			break
+		max_flow += bottle_neck
+		augment_path(bottle_neck, path)
+		#Reset variables so we can use them again.
+		visited = [False] * graph_len
+		path = []
+
+	#show_matrix(flow_matrix)
+	return max_flow
+
+#Examples:
+print(ford_fulkerson(flow_network))
+print(ford_fulkerson(fn2))
+print(ford_fulkerson(fn3))
+print(ford_fulkerson(fn4))
+print(ford_fulkerson(fn5))
+
+#Note: English is not my core idiom, so there can be some gramma mistakes in the code’s comments.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

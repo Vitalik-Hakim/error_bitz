@@ -1,0 +1,31 @@
+---
+title: 'stl for sorting IN C++'
+description: 'stl for sorting IN C++'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, sorting, stl, cpp, using]
+---
+
+**The solution for this is noted below**
+
+## stl for sorting IN C++
+
+### Solution
+
+```cpp
+// STL IN C++ FOR SORING
+#include <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[] = {1, 5, 8, 9, 6, 7, 3, 4, 2, 0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    sort(arr, arr+n);  // ASCENDING SORT
+    reverse(arr,arr+n);   //REVERESE ARRAY
+    sort(arr, arr + n, greater<int>());// DESCENDING SORT
+  }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

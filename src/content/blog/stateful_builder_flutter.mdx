@@ -1,0 +1,43 @@
+---
+title: 'stateful builder flutter'
+description: 'stateful builder flutter'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [builder, flutter, stateful, whatever]
+---
+
+**The solution for this is noted below**
+
+## stateful builder flutter
+
+### Solution
+
+```whatever
+await showDialog<void>(
+  context: context,
+  builder: (BuildContext context) {
+    int? selectedRadio = 0;
+    return AlertDialog(
+      content: StatefulBuilder(
+        builder: (BuildContext context, StateSetter setState) {
+          return Column(
+            mainAxisSize: MainAxisSize.min,
+            children: List<Widget>.generate(4, (int index) {
+              return Radio<int>(
+                value: index,
+                groupValue: selectedRadio,
+                onChanged: (int? value) {
+                  setState(() => selectedRadio = value);
+                },
+              );
+            }),
+          );
+        },
+      ),
+    );
+  },
+);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

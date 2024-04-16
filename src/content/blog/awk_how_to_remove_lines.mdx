@@ -1,0 +1,24 @@
+---
+title: 'awk how to remove lines in one file that are found in another file'
+description: 'awk how to remove lines in one file that are found in another file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [awk, file, lines, shell]
+---
+
+**The solution for this is noted below**
+
+## awk how to remove lines in one file that are found in another file
+
+### Solution
+
+```shell
+# Example 1
+awk 'NR==FNR{a[$0];next} !($0 in a)' file_2 file_1
+# Where:
+#	- this returns all lines in file_1 that are not found in file_2
+# See source for more info on how the command works
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

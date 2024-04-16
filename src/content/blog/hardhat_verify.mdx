@@ -1,0 +1,35 @@
+---
+title: 'hardhat verify'
+description: 'hardhat verify'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [hardhat, verify, whatever]
+---
+
+**The solution for this is noted below**
+
+## hardhat verify
+
+### Solution
+
+```whatever
+npx hardhat verify --network mainnet DEPLOYED_CONTRACT_ADDRESS "Constructor argument 1" --contract contracts/Example.sol:ExampleContract
+
+
+------------------------------- or -----------------------------
+module.exports = [
+  50,
+  "a string argument",
+  {
+    x: 10,
+    y: 5,
+  },
+  // bytes have to be 0x-prefixed
+  "0xabcdef",
+];
+
+npx hardhat verify --constructor-args arguments.js DEPLOYED_CONTRACT_ADDRESS
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

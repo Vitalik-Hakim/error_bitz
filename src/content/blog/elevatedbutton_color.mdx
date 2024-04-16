@@ -1,0 +1,30 @@
+---
+title: 'elevatedbutton color'
+description: 'elevatedbutton color'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [whatever, button, bu, csharp, c#, c]
+---
+
+**The solution for this is noted below**
+
+## elevatedbutton color
+
+### Solution
+
+```whatever
+Expanded buildPlayButton({Color color, int soundNumber}){
+return Expanded(
+  child: ElevatedButton(
+    onPressed: () {
+      playSound(soundNumber);
+    },
+    style: ButtonStyle(
+      backgroundColor: MaterialStateProperty.all<Color>(color),
+    ),
+  ),
+);}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,26 @@
+---
+title: 'java add commas to numbers'
+description: 'java add commas to numbers'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [add, java, numbers]
+---
+
+**The solution for this is noted below**
+
+## java add commas to numbers
+
+### Solution
+
+```java
+String number = "1000500000.574";
+double amount = Double.parseDouble(number);
+DecimalFormat formatter = new DecimalFormat("#,###.00");
+// the zeroes after the point are the number of digits shown after the period
+// you can also switch point and commas and get for example 1.002,45
+System.out.println(formatter.format(amount));
+// this prints 1,000,500,000.57
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

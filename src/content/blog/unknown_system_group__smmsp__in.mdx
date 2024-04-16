@@ -1,0 +1,30 @@
+---
+title: 'unknown system group `smmsp` in statoverride file; the system group got removed'
+description: 'unknown system group `smmsp` in statoverride file; the system group got removed'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [got, group, system, whatever]
+---
+
+**The solution for this is noted below**
+
+## unknown system group `smmsp` in statoverride file; the system group got removed
+
+### Solution
+
+```whatever
+I know this question is a little old, but have come across this twice now. Once with puppet, once with virtualbox. It cropped up again and I found something that worked. It's a variation on serverfault.com.
+
+Instead of relying on dpkg-statoverride --remove /path/to/offending/file.ext which, throws the error
+
+dpkg: unrecoverable fatal error, aborting:
+syntax error: unknown group offendinggroup in statoverride file
+You can get fancy with sed, or you can simply open /var/lib/dpkg/statoverride in your favorite text editor and remove only the lines containing the item(s) that were causing the error. I found that this is a documented bug, for both Debian, and Ubuntu,
+
+https://bugs.launchpad.net/ubuntu/+source/dpkg/+bug/593615
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=705752
+That said, I just fixed mine by manually editing out any entry that threw an error, and I am happily downloading packages again. Hope this helps the next person, who visits this number 1 Google search result for this problem.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

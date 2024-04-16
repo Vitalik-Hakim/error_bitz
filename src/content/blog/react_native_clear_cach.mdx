@@ -1,0 +1,26 @@
+---
+title: 'react native clear cach'
+description: 'react native clear cach'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, react-native, j, shell, clear-cache, clea]
+---
+
+**The solution for this is noted below**
+
+## react native clear cach
+
+### Solution
+
+```javascript
+watchman watch-del-all &&
+rm -rf $TMPDIR/react-native-packager-cache-* &&
+rm -rf $TMPDIR/metro-bundler-cache-* &&
+rm -rf node_modules/
+&& npm cache clean --force &&
+npm install &&
+npm start -- --reset-cache
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

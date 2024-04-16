@@ -1,0 +1,20 @@
+---
+title: 'Delete all local branches except main'
+description: 'Delete all local branches except main'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [except, local, shell, ex, php, branch, br, git-branch, g, shel, git, loca, lo]
+---
+
+**The solution for this is noted below**
+
+## Delete all local branches except main
+
+### Solution
+
+```shell
+git branch | grep -v 'main' | xargs git branch -D
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

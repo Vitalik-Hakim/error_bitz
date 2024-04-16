@@ -1,0 +1,28 @@
+---
+title: '2442. Count Number of Distinct Integers After Reverse OperationsMy SubmissionsBack to Contest'
+description: '2442. Count Number of Distinct Integers After Reverse OperationsMy SubmissionsBack to Contest'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [count, distinct, python, reverse]
+---
+
+**The solution for this is noted below**
+
+## 2442. Count Number of Distinct Integers After Reverse OperationsMy SubmissionsBack to Contest
+
+### Solution
+
+```python
+class Solution:
+    def countDistinctIntegers(self, nums: List[int]) -> int:
+        reverseList = []
+        for i in nums:
+            temp = str(i)
+            temp = temp[::-1]
+            reverseList.append(int(temp))
+        nums = nums + reverseList
+        return len(set(nums))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,31 @@
+---
+title: 'python - prime number generator'
+description: 'python - prime number generator'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [generator, python, generate, generat, gene]
+---
+
+**The solution for this is noted below**
+
+## python - prime number generator
+
+### Solution
+
+```python
+# Prime number generator
+def prime_generator(end):
+    for n in range(2, end):     # n starts from 2 to end
+        for x in range(2, n):   # check if x can be divided by n
+            if n % x == 0:      # if true then n is not prime
+                break
+        else:                   # if x is found after exhausting all values of x
+            yield n             # generate the prime
+
+
+g = prime_generator(1000)       # give firt 1000 prime numbers
+print(list(g))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

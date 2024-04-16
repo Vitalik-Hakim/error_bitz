@@ -1,0 +1,45 @@
+---
+title: 'javascript fetch post sending empty body'
+description: 'javascript fetch post sending empty body'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [fetch, fetch-api, get-request, is-empty, javascript, json, post, request, using, when]
+---
+
+**The solution for this is noted below**
+
+## javascript fetch post sending empty body
+
+### Solution
+
+```javascript
+let datastring =  {
+                submit: true,
+				firstname: 'Kumar',
+				lastname: 'D',
+				email: 'kumar@test.com'
+            }
+            fetch('http://localhost.com/index_json_data.php', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datastring),
+            }).then(res => res.json())
+              .then(res => console.log('after submit', res));
+
+///// index_json_data.php PHP Code //////////
+<?php
+$json = file_get_contents('php://input');
+// Converts it into a PHP object
+$data = json_decode($json);
+print_r($data);
+// Converts it into a PHP Array
+$data = json_decode($json,true);
+exit;
+?>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

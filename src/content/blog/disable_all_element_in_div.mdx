@@ -1,0 +1,29 @@
+---
+title: 'disable all element in div angular 12'
+description: 'disable all element in div angular 12'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [angular, disable, element, javascript]
+---
+
+**The solution for this is noted below**
+
+## disable all element in div angular 12
+
+### Solution
+
+```javascript
+<div formGroupName="address" [ngClass]="{'disableDiv': isDisabled}">
+<label class="accordion-header">Address:</label>
+  <input type="radio" name="address" value="true" formControlName="address" [checked]="settingsForm.controls.address.controls.booleanAddress.value === 'true'">Inherit
+  <input type="radio" name="address" value="false" formControlName="address" [checked]="settingsForm.controls.adddress.controls.booleanAddress.value === 'false'">Override
+
+    css
+
+    .disableDiv{
+    pointer-events:none;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

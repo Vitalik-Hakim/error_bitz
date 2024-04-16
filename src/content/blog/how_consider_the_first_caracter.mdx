@@ -1,0 +1,29 @@
+---
+title: 'how consider the first caracter in Split c#'
+description: 'how consider the first caracter in Split c#'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, csharp, character, string, instance, char]
+---
+
+**The solution for this is noted below**
+
+## how consider the first caracter in Split c#
+
+### Solution
+
+```csharp
+Considerar somente a primeira string especificada para realizar o split
+You can specify how many substrings to return using string.Split:
+
+string myString = "101.a.b.c.d"
+
+var pieces = myString.Split(new[] { '.' }, 2);
+Returns:
+
+101
+a.b.c.d
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

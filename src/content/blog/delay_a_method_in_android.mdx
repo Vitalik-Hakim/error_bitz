@@ -1,0 +1,26 @@
+---
+title: 'delay a method in android'
+description: 'delay a method in android'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [android, delay, java, add]
+---
+
+**The solution for this is noted below**
+
+## delay a method in android
+
+### Solution
+
+```java
+final Handler handler = new Handler(Looper.getMainLooper());
+    handler.postDelayed(new Runnable() {
+      @Override
+      public void run() {
+        //Do something after 100ms
+      }
+    }, 100);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

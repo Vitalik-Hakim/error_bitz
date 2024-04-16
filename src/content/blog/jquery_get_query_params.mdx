@@ -1,0 +1,29 @@
+---
+title: 'jquery get query params'
+description: 'jquery get query params'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, jquery-get]
+---
+
+**The solution for this is noted below**
+
+## jquery get query params
+
+### Solution
+
+```javascript
+//Assuming URL is "https://example.com/test/?post=1234&action=edit"
+var base_url = window.location.origin //https://example.com
+var host = window.location.host //example.com
+var pathArray = window.location.pathname.split('/') //returns object ['', 'test', '']
+var urlParams = new URLSearchParams(window.location.search)
+console.log(urlParams.has('post')) // true
+console.log(urlParams.get('action')) // "edit"
+console.log(urlParams.getAll('action')) // ["edit"]
+console.log(urlParams.toString()) // "?post=1234&action=edit"
+console.log(urlParams.append('active', '1')) // "?
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

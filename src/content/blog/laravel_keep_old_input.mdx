@@ -1,0 +1,28 @@
+---
+title: 'laravel keep old input'
+description: 'laravel keep old input'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [input, laravel, php]
+---
+
+**The solution for this is noted below**
+
+## laravel keep old input
+
+### Solution
+
+```php
+You can access the last inputs like so:
+
+$username = Request::old('username');
+
+<input type="text" ... value="{{ old('username') }}" ... >.
+
+As described in the docs it is more convenient in a blade view.
+
+Check: https://laravel.com/docs/5.3/requests#old-input
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

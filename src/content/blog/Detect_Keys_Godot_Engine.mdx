@@ -1,0 +1,32 @@
+---
+title: 'Detect Keys Godot Engine'
+description: 'Detect Keys Godot Engine'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [detect, godot, whatever]
+---
+
+**The solution for this is noted below**
+
+## Detect Keys Godot Engine
+
+### Solution
+
+```whatever
+1. Click on project
+2. Click on project settings
+3. Click on Input Map
+4. Enter a name of custom key in action bar ("move_right", for this example)
+5. Click on add event on the side of the custom key ("move_right", for this example)
+7. Choose one and click on that ("key", for this example)
+8. Press the button you want to add (right arrow key for this example)
+
+THIS IS GDScript
+
+func _process():
+	if Input.is_action_pressed("move_right"):
+		velocity.x += 1
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

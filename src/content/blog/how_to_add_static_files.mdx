@@ -1,0 +1,24 @@
+---
+title: 'how to add static files in django'
+description: 'how to add static files in django'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [add, django, python, static-files, dj, py, html]
+---
+
+**The solution for this is noted below**
+
+## how to add static files in django
+
+### Solution
+
+```python
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

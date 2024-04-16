@@ -1,0 +1,25 @@
+---
+title: 'load prefab in script unity'
+description: 'load prefab in script unity'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, load, prefab, script]
+---
+
+**The solution for this is noted below**
+
+## load prefab in script unity
+
+### Solution
+
+```csharp
+/*
+To use Resources.Load,
+the object must be in a Resources folder.(there can be multiple).
+So your folder structure could look like "Assets/Resources/Prefabs/prefabName"
+Then to load it use*/
+Resources.Load("Prefabs/prefabName") as GameObject;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,20 @@
+---
+title: 'kubernetes delete all resources everywhere'
+description: 'kubernetes delete all resources everywhere'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [kubernetes, resources, whatever, shell]
+---
+
+**The solution for this is noted below**
+
+## kubernetes delete all resources everywhere
+
+### Solution
+
+```whatever
+kubectl delete "$(kubectl api-resources --namespaced=true --verbs=delete -o name | tr "\n" "," | sed -e 's/,$//')" --all
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

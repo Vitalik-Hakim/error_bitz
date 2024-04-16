@@ -1,0 +1,25 @@
+---
+title: 'MongooseServerSelectionError: connect ECONNREFUSED ::1:27017'
+description: 'MongooseServerSelectionError: connect ECONNREFUSED ::1:27017'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [connect, econnrefused, javascript, button, bu, whatever, java]
+---
+
+**The solution for this is noted below**
+
+## MongooseServerSelectionError: connect ECONNREFUSED ::1:27017
+
+### Solution
+
+```javascript
+If you are using latest nodejs -v > v17,
+ then try updating mongodb url from localhost to 127.0.0.1 This worked for me
+
+ const MONGODB_URL = "mongodb://127.0.0.1:27017";
+ /or
+ const MONGODB_URL = "mongodb://0.0.0.0:27017"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

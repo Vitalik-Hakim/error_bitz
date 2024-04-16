@@ -1,0 +1,52 @@
+---
+title: 'tmux how to scroll in history'
+description: 'tmux how to scroll in history'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [history, scroll, shell, tmux]
+---
+
+**The solution for this is noted below**
+
+## tmux how to scroll in history
+
+### Solution
+
+```shell
+# Short answer:
+# to use the mouse, add this to your ~/.tmux.conf file
+set -g mouse on
+
+# Long answer (shamelessly recycled from Dennis Williamson):
+# You can use your normal navigation keys (e.g. Up Arrow, PgDn, etc) to scroll
+# in copy mode:
+# 	Type Ctrl-b then [ to enter copy mode. Press q to quit copy mode
+
+# Alternatively you can press Ctrl-b PgUp to go directly into copy mode and
+# scroll one page up
+
+# If you've added "set-window-option -g mode-keys vi" to your .tmux.conf file,
+# once in copy mode you can also scroll the page up/down line by line using
+# Shift-k and Shift-j. Unshifted, the cursor moves instead of the page.
+
+# Other vi/emacs navigation commands from the man page:
+
+Function                     vi              emacs
+--------                     --              -----
+Top of history               g               M->
+Bottom of history            G               M-<
+Half page down               C-d             M-Down
+Half page up                 C-u             M-Up
+Next page                    C-f             Page down
+Previous page                C-b             Page up
+Scroll down                  C-Down or C-e   C-Down
+Scroll up                    C-Up or C-y     C-Up
+Go to line                   :               g
+Search backward              ?               C-r
+Search forward               /               C-s
+Search again                 n               n
+Search again in reverse      N               N
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

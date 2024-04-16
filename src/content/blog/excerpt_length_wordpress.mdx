@@ -1,0 +1,23 @@
+---
+title: 'excerpt length wordpress'
+description: 'excerpt length wordpress'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [php, wordpress, whatever]
+---
+
+**The solution for this is noted below**
+
+## excerpt length wordpress
+
+### Solution
+
+```php
+function wp_example_excerpt_length( $length ) {
+    return 30;
+}
+add_filter( 'excerpt_length', 'wp_example_excerpt_length');
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

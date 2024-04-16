@@ -1,0 +1,32 @@
+---
+title: 'how to pass an array value to a pthread in c'
+description: 'how to pass an array value to a pthread in c'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/C.png'
+category: 'c'
+tags: [c]
+---
+
+**The solution for this is noted below**
+
+## how to pass an array value to a pthread in c
+
+### Solution
+
+```c
+void* my_Func(void *received_arr_Val){
+
+	int single_val = (int *)received_arr_Val;
+    printf("Value: %d\n", single_val);
+	//Now use single_val as you wish
+}
+//In main:
+	int values[n];
+    pthread_create(&thread, NULL, my_Func, values[i]);
+	//i is the index number of the array value you want to send
+	//n is the total number of indexes you want (array size)
+
+//Grepper profile: https://www.codegrepper.com/app/profile.php?id=9192
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

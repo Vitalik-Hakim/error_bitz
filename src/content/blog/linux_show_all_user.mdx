@@ -1,0 +1,22 @@
+---
+title: 'linux show all user'
+description: 'linux show all user'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [linux, shell, show, linu]
+---
+
+**The solution for this is noted below**
+
+## linux show all user
+
+### Solution
+
+```shell
+awk -F: '{ print $1}' /etc/passwd
+#or
+cut -d: -f1 /etc/passwd
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,45 @@
+---
+title: 'PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes")  laravel 8'
+description: 'PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes")  laravel 8'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags:
+  [
+    key,
+    laravel-8,
+    max,
+    php,
+    syntax-error,
+    was,
+    alter-table,
+    alte,
+    javascript,
+    add,
+    whatever,
+    laravel
+  ]
+---
+
+**The solution for this is noted below**
+
+## PDOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 1000 bytes") laravel 8
+
+### Solution
+
+```php
+// Update your /app/Providers/AppServiceProvider.php to contain:
+
+use Illuminate\Support\Facades\Schema;
+
+public function boot()
+{
+    Schema::defaultStringLength(191);
+}
+
+//ON this error
+//   PDOException::("SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'users' already exists")
+// After run ->  php artisan migrate:fresh  <- ! Note this will reset all tables in db
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

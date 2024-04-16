@@ -1,0 +1,29 @@
+---
+title: 'ggplot2 remove legend'
+description: 'ggplot2 remove legend'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [ggplot2, legend, whatever, le]
+---
+
+**The solution for this is noted below**
+
+## ggplot2 remove legend
+
+### Solution
+
+```whatever
+### Three options (where p is the plot object)
+
+# Remove the legend title:
+p + theme(legend. title = element_blank())
+
+# Hide the entire legend to create a ggplot with no legend.
+p + theme(legend. position = "none")
+
+# Hide legend for a specific geometry, say geom_text().
+p + geom_text(show.legend = FALSE)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

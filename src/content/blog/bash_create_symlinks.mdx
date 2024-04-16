@@ -1,0 +1,32 @@
+---
+title: 'bash create symlinks'
+description: 'bash create symlinks'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [bash, directory, shell, symlink]
+---
+
+**The solution for this is noted below**
+
+## bash create symlinks
+
+### Solution
+
+```shell
+# Basic syntax:
+ln -s /path/to/source/directory/* /path/to/symlink/directory/
+# Where:
+#	- -s means symlink
+#	- The /path/to/source/directory/ is where the "real" files are stored
+#	- The /path/to/symlink/directory/ is where the symlinks will be created
+#	- Glob patterns can be used to specify which files to link to
+# Note, some other useful ln flags include:
+#	- -f and -i, -f removes existing symlinks and -i prompts before replacement
+#	- -r, which creates symbolic links with paths that are relative to the
+#		source directory
+#	- to delete all symlinks in the current directory, run:
+#		find . -maxdepth 1 -type l -delete
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,32 @@
+---
+title: 'Climbing Stairs Problem (JS)'
+description: 'Climbing Stairs Problem (JS)'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript]
+---
+
+**The solution for this is noted below**
+
+## Climbing Stairs Problem (JS)
+
+### Solution
+
+```javascript
+var climbStairs = function (n) {
+	if (n == 1 || n == 0) return 1 // our base cases
+
+	let first = 1
+	let second = 2
+
+	for (let i = 3; i <= n; i++) {
+		let third = first + second
+		first = second
+		second = third
+	}
+	return second
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

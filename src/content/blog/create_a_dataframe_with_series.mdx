@@ -1,0 +1,31 @@
+---
+title: 'create a dataframe with series'
+description: 'create a dataframe with series'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [dataframe, python, series, pandas, pa, frame, fram]
+---
+
+**The solution for this is noted below**
+
+## create a dataframe with series
+
+### Solution
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+author = ['Jitender', 'Purnima', 'Arpit', 'Jyoti']
+article = [210, 211, 114, 178]
+
+auth_series = pd.Series(author)
+article_series = pd.Series(article)
+
+frame = { 'Author': auth_series, 'Article': article_series }
+
+result = pd.DataFrame(frame)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,40 @@
+---
+title: 'react native multiline text box grow with content'
+description: 'react native multiline text box grow with content'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [box, javascript, multiline, react-native, text]
+---
+
+**The solution for this is noted below**
+
+## react native multiline text box grow with content
+
+### Solution
+
+```javascript
+// You can capture the size of your content with
+// the onContentSizeChange() event listener.
+
+const AutoExpandingTextInput = ({ ...props }) => {
+	const [text, setText] = useState('')
+	const [minHeight, setMinHeight] = useState()
+	return (
+		<TextInput
+			{...props}
+			multiline={true}
+			onChangeText={(text) => {
+				setText(text)
+			}}
+			onContentSizeChange={(event) => {
+				setMinHeight(event.nativeEvent.contentSize.height)
+			}}
+			style={[styles.default, { minHeight: minHeight }]}
+			value={text}
+		/>
+	)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

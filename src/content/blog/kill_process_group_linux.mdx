@@ -1,0 +1,23 @@
+---
+title: 'kill process group linux'
+description: 'kill process group linux'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [linux, shell]
+---
+
+**The solution for this is noted below**
+
+## kill process group linux
+
+### Solution
+
+```shell
+# Find process group ID using child process name
+PGID=$(ps -ej | grep some-process-child | head -1 | awk '{print $2}')
+# Kill process group using group ID
+kill -- -$PGID
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,27 @@
+---
+title: 'aws sdk s3 copy object bucket not found'
+description: 'aws sdk s3 copy object bucket not found'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [aws-sdk, bucket, copy, object, whatever]
+---
+
+**The solution for this is noted below**
+
+## aws sdk s3 copy object bucket not found
+
+### Solution
+
+```whatever
+You have to specify the bucket inside the copy source
+
+// Copy an object.
+$s3->copyObject(array(
+    'Bucket'     => $targetBucket,
+    'Key'        => $targetKeyname,
+    'CopySource' => "{$sourceBucket}/{$sourceKeyname}",
+));
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

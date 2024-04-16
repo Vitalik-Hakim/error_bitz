@@ -1,0 +1,27 @@
+---
+title: 'unity find closest point on line'
+description: 'unity find closest point on line'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, closest, find, line, point]
+---
+
+**The solution for this is noted below**
+
+## unity find closest point on line
+
+### Solution
+
+```csharp
+public Vector2 FindNearestPointOnLine(Vector2 origin, Vector2 direction, Vector2 point)
+{
+    direction.Normalize();
+    Vector2 lhs = point - origin;
+
+    float dotP = Vector2.Dot(lhs, direction);
+    return origin + direction * dotP;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

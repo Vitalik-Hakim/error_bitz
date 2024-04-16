@@ -1,0 +1,26 @@
+---
+title: 'envelope routines::unsupported'
+description: 'envelope routines::unsupported'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [envelope, shell, whatever, digital]
+---
+
+**The solution for this is noted below**
+
+## envelope routines::unsupported
+
+### Solution
+
+```shell
+# Linux / MacOS
+export NODE_OPTIONS=--openssl-legacy-provider
+
+# Windows cmd
+set NODE_OPTIONS=--openssl-legacy-provider
+# pwrsh
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'tensorflow error load model weight decay is not a valid argument, kwargs should be empty for `optimizer_experimental.Optimizer`'
+description: 'tensorflow error load model weight decay is not a valid argument, kwargs should be empty for `optimizer_experimental.Optimizer`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [load, model, python, tensorflow]
+---
+
+**The solution for this is noted below**
+
+## tensorflow error load model weight decay is not a valid argument, kwargs should be empty for `optimizer_experimental.Optimizer`
+
+### Solution
+
+```python
+pip install tensorflow-text # Install tensorflow-text
+import tensorflow_text # Inside the code where you load_model
+model = load_model('\model.model', compile=False)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

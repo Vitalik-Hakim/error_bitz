@@ -1,0 +1,23 @@
+---
+title: 'jquery close popup when click outside'
+description: 'jquery close popup when click outside'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [click, javascript, jquery, popup, when]
+---
+
+**The solution for this is noted below**
+
+## jquery close popup when click outside
+
+### Solution
+
+```javascript
+$(document).click(function (e) {
+	if ($(e.target).closest('#popupdivID').length != 0) return false
+	$('#popupdivID').hide()
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,26 @@
+---
+title: 'get keys wher value is true in object in javascript'
+description: 'get keys wher value is true in object in javascript'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, javascript, object]
+---
+
+**The solution for this is noted below**
+
+## get keys wher value is true in object in javascript
+
+### Solution
+
+```javascript
+var obj = { 1001: true, 1002: false }
+
+var keys = Object.keys(obj)
+
+var filtered = keys.filter(function (key) {
+	return obj[key]
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

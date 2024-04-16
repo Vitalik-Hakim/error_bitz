@@ -1,0 +1,29 @@
+---
+title: 'how to call a method from html in angular'
+description: 'how to call a method from html in angular'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/HTML.png'
+category: 'html'
+tags: [angular, call, html]
+---
+
+**The solution for this is noted below**
+
+## how to call a method from html in angular
+
+### Solution
+
+```html
+//Calling a method from markup //HTML
+<div class="row">
+	<div class="col-md-2" id="col">
+		<label class="numlbl">{{convertNumber(t.total)}}</label>
+	</div>
+</div>
+
+//.ts //This method takes the number, has it round to 2 decimal places and adds //thousand
+seperators using regex public convertNumber(x: number | undefined) { return
+x?.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "); }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

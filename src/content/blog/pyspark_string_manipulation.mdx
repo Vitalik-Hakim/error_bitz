@@ -1,0 +1,53 @@
+---
+title: 'pyspark string manipulation'
+description: 'pyspark string manipulation'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pyspark, python, string]
+---
+
+**The solution for this is noted below**
+
+## pyspark string manipulation
+
+### Solution
+
+```python
+# lowercase the strings in a column
+df = df.select(lower(col('col_name')))
+# replace string or characters
+df = df1.select(regexp_replace('col_name', 'old', 'new').alias('new_col'))
+# Split a string on space
+df = df.select(split('string_col', '[ ]').alias('word_list'))
+# Split string using any given symbol
+punctuation = "_|.\?\!\",\'\[\]\*()"
+df = df.select(split('string_col', '[ %s]' % punctuation).alias('word_list'))
+# Filter out empty strings from the resulting list
+df = df.filter(col('word_list') != '')
+# Explode the string list column so that each row contains one value of list
+df = df.select(explode('word_list').alias('word'))
+pivot_df = df.groupBy('col1', 'col2').pivot('word').count()
+
+### dealing with NLP related features
+# replace unwanted characters
+from pyspark.sql.functions import regexp_replace
+REGEX = '[,\\-]'
+df = df.withColumn('text', regexp_replace(df.text, REGEX, ' '))
+# Tokenize words
+from pyspark.ml.feature import Tokenizer
+df = Tokenizer(inputCol="text", outputCol="tokens").transform(df)
+from pyspark.ml.feature import StopWordsRemover
+stopwords = StopWordsRemover(inputCol='tokens', outputCol='words')
+stopwords.getStopWords() # Take a look at the list of stop words when stopwords = StopWordsRemover()
+df = stopwords.transform(df)
+# Hash the features
+from pyspark.ml.feature import HashingTF
+hasher = HashingTF(inputCol="words", outputCol="hash", numFeatures=32)
+df = hasher.transform(df)
+# Normalize the text features (TF-IDF)
+from pyspark.ml.feature import IDF
+df = IDF(inputCol="hash", outputCol="features").fit(df).transform(df)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

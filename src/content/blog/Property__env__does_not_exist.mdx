@@ -1,0 +1,31 @@
+---
+title: 'Property `env` does not exist on type `ImportMeta`'
+description: 'Property `env` does not exist on type `ImportMeta`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [typescript]
+---
+
+**The solution for this is noted below**
+
+## Property `env` does not exist on type `ImportMeta`
+
+### Solution
+
+```typescript
+// Create a new file in your root with the name "vite-env.d.ts"
+// if you're using vite input the name "VITE_" in front of your variables
+// for next.js use "NEXT_"
+interface ImportMetaEnv {
+	VITE_API_URL_EXAMPLE: string
+	VITE_SECRET_KEY_EXAMPLE: string
+	// Add other environment variables here...
+}
+
+interface ImportMeta {
+	env: ImportMetaEnv
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

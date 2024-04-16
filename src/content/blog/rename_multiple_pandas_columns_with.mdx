@@ -1,0 +1,23 @@
+---
+title: 'rename multiple pandas columns with list'
+description: 'rename multiple pandas columns with list'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [list, pandas, python, rename, multiple-columns, mult]
+---
+
+**The solution for this is noted below**
+
+## rename multiple pandas columns with list
+
+### Solution
+
+```python
+for j in range(len(df.columns)):
+    old = df.columns[j]
+    new = new_columns[j]
+    df = df.rename(columns = {old:new})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

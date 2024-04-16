@@ -1,0 +1,35 @@
+---
+title: 'install php8.1 debian'
+description: 'install php8.1 debian'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [debian, php-8.1, shell]
+---
+
+**The solution for this is noted below**
+
+## install php8.1 debian
+
+### Solution
+
+```shell
+# Debian 9/10/11
+
+## Install required temporary packages:
+sudo apt install -y lsb-release ca-certificates apt-transport-https software-properties-common gnupg2 curl
+
+## Add Surý Debian PPA repository to your Debian system.
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/sury-php.list
+
+## Import packages signing GPG key;
+curl -fsSL  https://packages.sury.org/php/apt.gpg| sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/sury-keyring.gpg
+
+## Update with all the packages imported
+sudo apt update
+
+## Install php8.1 and its modules
+sudo apt install php8.1-fpm php8.1-common php8.1-mysql php8.1-xml php8.1-xmlrpc php8.1-curl php8.1-gd php8.1-imagick php8.1-cli php8.1-dev php8.1-imap php8.1-mbstring php8.1-opcache php8.1-soap php8.1-zip php8.1-intl php8.1-bcmath
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

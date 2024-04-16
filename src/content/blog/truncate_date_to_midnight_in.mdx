@@ -1,0 +1,22 @@
+---
+title: 'truncate date to midnight in pandas column'
+description: 'truncate date to midnight in pandas column'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [date, pandas, python, truncate]
+---
+
+**The solution for this is noted below**
+
+## truncate date to midnight in pandas column
+
+### Solution
+
+```python
+df['START_DATETIME'] = pd.to_datetime(df['START_DATETIME']).dt.normalize()
+# -or-
+df['START_DATETIME'] = pd.to_datetime(df['START_DATETIME']).dt.floor('D')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

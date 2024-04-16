@@ -1,0 +1,26 @@
+---
+title: 'sveltekit redirect'
+description: 'sveltekit redirect'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, redirect, sveltekit, redirec, whatever, j]
+---
+
+**The solution for this is noted below**
+
+## sveltekit redirect
+
+### Solution
+
+```javascript
+// in +page.js
+import { redirect } from '@sveltejs/kit'
+
+// Redirect this route to /hello
+export function load() {
+	throw redirect(302, '/hello')
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

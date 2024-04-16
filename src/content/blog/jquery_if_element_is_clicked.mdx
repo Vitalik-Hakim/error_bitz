@@ -1,0 +1,28 @@
+---
+title: 'jquery if element is clicked'
+description: 'jquery if element is clicked'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [element, javascript, jquery]
+---
+
+**The solution for this is noted below**
+
+## jquery if element is clicked
+
+### Solution
+
+```javascript
+$('#element').click(function () {
+	var $this = $(this)
+	if ($this.data('clicked')) {
+		func(some, other, parameters)
+	} else {
+		$this.data('clicked', true)
+		func(some, parameter)
+	}
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

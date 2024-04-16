@@ -1,0 +1,25 @@
+---
+title: 'php loop through every day of the year'
+description: 'php loop through every day of the year'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [date, php]
+---
+
+**The solution for this is noted below**
+
+## php loop through every day of the year
+
+### Solution
+
+```php
+$begin = new DateTime( "2015-07-03" );
+$end   = new DateTime( "2015-07-09" );
+
+for($i = $begin; $i <= $end; $i->modify('+1 day')){
+    echo $i->format("Y-m-d");
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

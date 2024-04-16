@@ -1,0 +1,22 @@
+---
+title: 'Delete table ignore foreign key check - check foreign key 0'
+description: 'Delete table ignore foreign key check - check foreign key 0'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [check-constraint, ignore, key, sql, truncate]
+---
+
+**The solution for this is noted below**
+
+## Delete table ignore foreign key check - check foreign key 0
+
+### Solution
+
+```sql
+SET FOREIGN_KEY_CHECKS=0;
+TRUNCATE TABLE `table_name`;
+SET FOREIGN_KEY_CHECKS=1;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

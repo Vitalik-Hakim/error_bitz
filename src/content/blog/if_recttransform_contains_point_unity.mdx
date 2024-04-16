@@ -1,0 +1,42 @@
+---
+title: 'if recttransform contains point unity'
+description: 'if recttransform contains point unity'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, contains, point]
+---
+
+**The solution for this is noted below**
+
+## if recttransform contains point unity
+
+### Solution
+
+```csharp
+public static bool HasPoint(this RectTransform rt, Vector2 point)
+    {
+        // Get the rectangular bounding box of your UI element
+        Rect rect = rt.rect;
+
+        // Get the left, right, top, and bottom boundaries of the rect
+        float leftSide = rt.anchoredPosition.x - rect.width / 2;
+        float rightSide = rt.anchoredPosition.x + rect.width / 2;
+        float topSide = rt.anchoredPosition.y + rect.height / 2;
+        float bottomSide = rt.anchoredPosition.y - rect.height / 2;
+
+        //Debug.Log(leftSide + ", " + rightSide + ", " + topSide + ", " + bottomSide);
+
+        // Check to see if the point is in the calculated bounds
+        if (point.x >= leftSide &&
+            point.x <= rightSide &&
+            point.y >= bottomSide &&
+            point.y <= topSide)
+        {
+            return true;
+        }
+        return false;
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'how to rewrite minute in datetime python'
+description: 'how to rewrite minute in datetime python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [datetime, minute, python, rewrite]
+---
+
+**The solution for this is noted below**
+
+## how to rewrite minute in datetime python
+
+### Solution
+
+```python
+from datetime import datetime
+date = datetime.strptime('26 Sep 2012', '%d %b %Y')
+newdate = date.replace(hour=11, minute=59)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

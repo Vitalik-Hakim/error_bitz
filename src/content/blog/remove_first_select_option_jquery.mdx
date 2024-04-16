@@ -1,0 +1,22 @@
+---
+title: 'remove first select option jquery'
+description: 'remove first select option jquery'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, jquery, select]
+---
+
+**The solution for this is noted below**
+
+## remove first select option jquery
+
+### Solution
+
+```javascript
+$(document).on('click', 'select', function () {
+	$(this).find('option').get(0).remove()
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

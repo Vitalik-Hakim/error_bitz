@@ -1,0 +1,27 @@
+---
+title: 'change device wise font size swift'
+description: 'change device wise font size swift'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/swift.png'
+category: 'swift'
+tags: [device, font-size, height, ios, swift, wise]
+---
+
+**The solution for this is noted below**
+
+## change device wise font size swift
+
+### Solution
+
+```swift
+let SCREEN_HEIGHT = UIScreen.main.bounds.height
+
+// Height of the Device that you're using currently in storyboard
+let SCREEN_HEIGHT_DESIGN = 926 //iPhone 14 Plus, iPhone 13 Pro Max, iPhone 12 Pro Max Screen Height in Points
+
+func getDynamicHeight(size:CGFloat) -> CGFloat {
+    return (SCREEN_HEIGHT * size) / CGFloat(SCREEN_HEIGHT_DESIGN)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,35 @@
+---
+title: 'grocery crud order by'
+description: 'grocery crud order by'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [grocery-crud, whatever]
+---
+
+**The solution for this is noted below**
+
+## grocery crud order by
+
+### Solution
+
+```whatever
+function customers_example() {
+    $crud = new grocery_CRUD();
+ 
+    $crud->set_table('customers')
+        ->set_subject('Customer')
+        ->columns('customerName','contactLastName','creditLimit');
+ 
+    $crud->fields('customerName','contactLastName','city','creditLimit');
+ 
+    //To Order Table
+    $crud->order_by('creditLimit','desc');
+ 
+    $output = $crud->render();
+ 
+    $this->_example_output($output);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,21 @@
+---
+title: 'number_format() expects parameter 1 to be float, string given'
+description: 'number_format() expects parameter 1 to be float, string given'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [string, typescript]
+---
+
+**The solution for this is noted below**
+
+## number_format() expects parameter 1 to be float, string given
+
+### Solution
+
+```typescript
+$tot_tapas = float($number_of_persons) * float($tapas);
+$tot_tapas = number_format((float)$tot_tapas , 2, '.', '');
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

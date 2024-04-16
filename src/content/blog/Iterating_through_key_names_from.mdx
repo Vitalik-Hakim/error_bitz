@@ -1,0 +1,25 @@
+---
+title: 'Iterating through key names from a PSCustomObject Powershell'
+description: 'Iterating through key names from a PSCustomObject Powershell'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [key, names, powershell, shell]
+---
+
+**The solution for this is noted below**
+
+## Iterating through key names from a PSCustomObject Powershell
+
+### Solution
+
+```shell
+$ipinfo = Invoke-WebRequest 'http://ipinfo.io/json' -UseBasicParsing | ConvertFrom-Json
+foreach ($info in $ipinfo.PSObject.Properties) {
+    $info.Name
+    $info.Value
+    '--' # <-- Seeing this double hash proves we're iterating fully.
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

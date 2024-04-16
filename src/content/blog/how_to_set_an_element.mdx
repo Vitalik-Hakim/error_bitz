@@ -1,0 +1,27 @@
+---
+title: 'how to set an element affected by tab'
+description: 'how to set an element affected by tab'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/HTML.png'
+category: 'html'
+tags: [element, html, set]
+---
+
+**The solution for this is noted below**
+
+## how to set an element affected by tab
+
+### Solution
+
+```html
+<div tabindex="0">
+	<div>
+		<!-- Affected by tab -->
+		<div tabindex="-1">
+			<div><!-- Not affected by tab --></div>
+		</div>
+	</div>
+</div>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

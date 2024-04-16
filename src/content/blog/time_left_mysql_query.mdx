@@ -1,0 +1,20 @@
+---
+title: 'time left mysql query'
+description: 'time left mysql query'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [mysql, sql, time]
+---
+
+**The solution for this is noted below**
+
+## time left mysql query
+
+### Solution
+
+```sql
+SELECT ((UNIX_TIMESTAMP(field_with_date_in_table) - UNIX_TIMESTAMP(NOW()))/3600) AS hoursleft
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

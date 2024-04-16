@@ -1,0 +1,30 @@
+---
+title: 'python tqdm while loop'
+description: 'python tqdm while loop'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, tqdm, while-loop]
+---
+
+**The solution for this is noted below**
+
+## python tqdm while loop
+
+### Solution
+
+```python
+import tqdm
+import time
+
+goal = 256
+progress = 0
+pbar = tqdm.tqdm(total=goal)
+while progress < goal:
+    time.sleep(0.1)
+    pbar.update(1)
+    progress += 1
+pbar.close()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

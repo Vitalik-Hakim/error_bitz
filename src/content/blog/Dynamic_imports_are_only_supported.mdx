@@ -1,0 +1,41 @@
+---
+title: 'Dynamic imports are only supported when the `--module` flag is set to `es2020`, `esnext`, `commonjs`, `amd`, `system`, or `umd`.'
+description: 'Dynamic imports are only supported when the `--module` flag is set to `es2020`, `esnext`, `commonjs`, `amd`, `system`, or `umd`.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [set, typescript, when]
+---
+
+**The solution for this is noted below**
+
+## Dynamic imports are only supported when the `--module` flag is set to `es2020`, `esnext`, `commonjs`, `amd`, `system`, or `umd`.
+
+### Solution
+
+```typescript
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esnext", // add this line
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  }
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

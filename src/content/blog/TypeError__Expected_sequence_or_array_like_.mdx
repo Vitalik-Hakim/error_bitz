@@ -1,0 +1,35 @@
+---
+title: 'TypeError: Expected sequence or array-like, got class `sklearn.tree._classes.DecisionTreeClassifier`'
+description: 'TypeError: Expected sequence or array-like, got class sklearn.tree._classes.DecisionTreeClassifier`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [got, python, sequence]
+---
+
+**The solution for this is noted below**
+
+## TypeError: Expected sequence or array-like, got class `sklearn.tree._classes.DecisionTreeClassifier`
+
+### Solution
+
+```python
+#It depends on your case but for me it was this
+#   WRONG CODE IS BELOW
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+acc = accuracy_score(y_test, predictions)
+# you dont test the accuracy of the model directly what you need to do is this:
+# RIGHT CODE
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+predictions = model.predict(X_test)
+acc = accuracy_score(y_test, predictions)
+print(acc)
+# you can see that I made a prediction and then measured the (next line =)
+# accuracy of this prediction
+#If you have any other issues checkout this link
+https://stackoverflow.com/questions/39745807/typeerror-expected-sequence-or-array-like-got-estimator
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

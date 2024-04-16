@@ -1,0 +1,35 @@
+---
+title: 'react-query devtools'
+description: 'react-query devtools'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [devtools, react-query, typescript, javascript, devtool, j]
+---
+
+**The solution for this is noted below**
+
+## react-query devtools
+
+### Solution
+
+```typescript
+$ npm i @tanstack/react-query-devtools
+# or
+$ pnpm add @tanstack/react-query-devtools
+# or
+$ yarn add @tanstack/react-query-devtools
+
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      {/* The rest of your application */}
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  )
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

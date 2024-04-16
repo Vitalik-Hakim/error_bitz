@@ -1,0 +1,28 @@
+---
+title: 'interactive rebase in progress'
+description: 'interactive rebase in progress'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [interactive, progress, rebase, shell]
+---
+
+**The solution for this is noted below**
+
+## interactive rebase in progress
+
+### Solution
+
+```shell
+Step 1: Keep going git rebase --continue
+
+Step 2: fix CONFLICTS then git add .
+
+Back to step 1, now if it says no changes .. then run git rebase --skip and go back to step 1
+
+If you just want to quit rebase run git rebase --abort
+
+Once all changes are done run git commit -m "rebase complete" and you are done.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

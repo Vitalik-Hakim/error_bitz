@@ -1,0 +1,33 @@
+---
+title: 'E: Unable to locate package python3-pip docker file'
+description: 'E: Unable to locate package python3-pip docker file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [docker, file, locate, package, python]
+---
+
+**The solution for this is noted below**
+
+## E: Unable to locate package python3-pip docker file
+
+### Solution
+
+```python
+....
+
+# use this for ubuntu 14.04 or 16.04
+RUN apt-get update -y && apt-get install -y software-properties-common && add-apt-repository ppa:deadsnakes/ppa
+
+RUN apt-get update -y && apt-get install -y \
+ python3.6 \
+ python3-pip \
+ curl \
+ git
+
+RUN pip3 install --upgrade pip
+
+...
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,27 @@
+---
+title: 'debounce on search vue'
+description: 'debounce on search vue'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [debounce, javascript, search]
+---
+
+**The solution for this is noted below**
+
+## debounce on search vue
+
+### Solution
+
+```javascript
+debounce(func, delay) {
+      let timeoutId
+      return (...args) => {
+        clearTimeout(timeoutId)
+        timeoutId = setTimeout(() => {
+          func.apply(this, args)
+        }, delay)
+      }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

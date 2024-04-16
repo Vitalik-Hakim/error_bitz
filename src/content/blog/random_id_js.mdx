@@ -1,0 +1,25 @@
+---
+title: 'random id js'
+description: 'random id js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, random, j, generate, generat, generator, gene]
+---
+
+**The solution for this is noted below**
+
+## random id js
+
+### Solution
+
+```javascript
+var ID = function () {
+	// Math.random should be unique because of its seeding algorithm.
+	// Convert it to base 36 (numbers + letters), and grab the first 9 characters
+	// after the decimal.
+	return '_' + Math.random().toString(36).substr(2, 9)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

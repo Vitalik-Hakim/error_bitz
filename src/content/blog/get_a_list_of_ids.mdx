@@ -1,0 +1,25 @@
+---
+title: 'get a list of ids from queryset django'
+description: 'get a list of ids from queryset django'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django, get, ids, list, python]
+---
+
+**The solution for this is noted below**
+
+## get a list of ids from queryset django
+
+### Solution
+
+```python
+author = Blog.objects.filter(author=author)
+ids    = author.values_list('pk', flat=True)
+
+# list method get ids without parse the returning queryset
+
+print(list(ids))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

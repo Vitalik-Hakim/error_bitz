@@ -1,0 +1,32 @@
+---
+title: 'node:internal/crypto/hash:71 this[kHandle] = new _Hash(algorithm, xofLen); ^ Error: error:0308010C:digital envelope routines::unsupported'
+description: 'node:internal/crypto/hash:71 this[kHandle] = new _Hash(algorithm, xofLen); ^ Error: error:0308010C:digital envelope routines::unsupported'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [envelope, shell, whatever]
+---
+
+**The solution for this is noted below**
+
+## node:internal/crypto/hash:71 this[kHandle] = new \_Hash(algorithm, xofLen); ^ Error: error:0308010C:digital envelope routines::unsupported
+
+### Solution
+
+```shell
+# 1. Downgrade to Node.js v16.
+nvm use 16.0.0 # With nvm
+
+# 2. Enable legacy OpenSSL provider
+On Unix-like (Linux, macOS, Git bash....)
+
+export NODE_OPTIONS=--openssl-legacy-provider
+
+# On Windows command prompts
+set NODE_OPTIONS=--openssl-legacy-provider
+
+# On PowerShell
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

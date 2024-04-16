@@ -1,0 +1,26 @@
+---
+title: 'javascript store array in localstorage'
+description: 'javascript store array in localstorage'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, local-storage, j]
+---
+
+**The solution for this is noted below**
+
+## javascript store array in localstorage
+
+### Solution
+
+```javascript
+//storing array in localStorage
+
+var colors = ['red', 'blue', 'green']
+
+localStorage.setItem('my_colors', JSON.stringify(colors)) //store colors
+
+var storedColors = JSON.parse(localStorage.getItem('my_colors')) //get them back
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

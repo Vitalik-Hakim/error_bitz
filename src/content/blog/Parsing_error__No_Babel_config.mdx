@@ -1,0 +1,25 @@
+---
+title: 'Parsing error: No Babel config file detected for /Users/nelson/Desktop/cashetizer/frontend/App.js. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files.eslint'
+description: 'Parsing error: No Babel config file detected for /Users/nelson/Desktop/cashetizer/frontend/App.js. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files.eslint'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [config, configure, disable, either, file, find, whatever]
+---
+
+**The solution for this is noted below**
+
+## Parsing error: No Babel config file detected for /Users/nelson/Desktop/cashetizer/frontend/App.js. Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files.eslint
+
+### Solution
+
+```whatever
+parserOptions: {
+  parser: '@babel/eslint-parser',
+  requireConfigFile: false, // <== ADD THIS
+  ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
+  sourceType: 'module' // Allows for the use of imports
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

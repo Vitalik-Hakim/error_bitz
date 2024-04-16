@@ -1,0 +1,23 @@
+---
+title: 'get output of ps aux grep python'
+description: 'get output of ps aux grep python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [get, grep, output, ps, python]
+---
+
+**The solution for this is noted below**
+
+## get output of ps aux grep python
+
+### Solution
+
+```python
+import subprocess
+cmd = "ps -ef | grep script.py | awk '{print $1,$2,$3,$4}’”
+stdoutdata = subprocess.getoutput(cmd)
+print("stdoutdata: " + stdoutdata.split()[0])
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

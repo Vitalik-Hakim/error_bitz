@@ -1,0 +1,20 @@
+---
+title: 'Property `value` does not exist on type `EventTarget & Element`.'
+description: 'Property `value` does not exist on type `EventTarget & Element`.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [typescript, t, javascript, j]
+---
+
+**The solution for this is noted below**
+
+## Property `value` does not exist on type `EventTarget & Element`.
+
+### Solution
+
+```typescript
+;(e.target as HTMLButtonElement).value
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

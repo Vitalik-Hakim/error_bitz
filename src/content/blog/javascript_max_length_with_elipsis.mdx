@@ -1,0 +1,26 @@
+---
+title: 'javascript max length with elipsis'
+description: 'javascript max length with elipsis'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [ellipsis, javascript, max, truncate]
+---
+
+**The solution for this is noted below**
+
+## javascript max length with elipsis
+
+### Solution
+
+```javascript
+function truncate_with_ellipsis(s, maxLength) {
+	if (s.length > maxLength) {
+		return s.substring(0, maxLength) + '...'
+	}
+	return s
+}
+alert(truncate_with_ellipsis('hello how are you today?', 9)) //hello how...
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

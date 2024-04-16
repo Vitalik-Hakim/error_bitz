@@ -1,0 +1,26 @@
+---
+title: 'identify the common columns between two dataframes pandas python'
+description: 'identify the common columns between two dataframes pandas python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [between, identify, pandas, python]
+---
+
+**The solution for this is noted below**
+
+## identify the common columns between two dataframes pandas python
+
+### Solution
+
+```python
+a = np.intersect1d(df2.columns, df1.columns)
+print (a)
+['B' 'C']
+
+a = df2.columns.intersection(df1.columns)
+print (a)
+Index(['B', 'C'], dtype='object')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,45 @@
+---
+title: 'laravel ajax delete'
+description: 'laravel ajax delete'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [ajax, javascript, laravel]
+---
+
+**The solution for this is noted below**
+
+## laravel ajax delete
+
+### Solution
+
+```javascript
+This is a User delete example :
+
+$(".userBtn").click(function(){
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    $.ajax(
+    {
+        url: "user/delete/"+id,
+        type: 'delete', // replaced from put
+        dataType: "JSON",
+        data: {
+            "id": id // method and token not needed in data
+        },
+        success: function (response)
+        {
+            console.log(response); // see the reponse sent
+        },
+        error: function(xhr) {
+         console.log(xhr.responseText); // this line will save you tons of hours while debugging
+        // do something here because of error
+       }
+    });
+});
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

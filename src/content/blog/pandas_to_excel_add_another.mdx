@@ -1,0 +1,29 @@
+---
+title: 'pandas to excel add another sheet in existing excel file'
+description: 'pandas to excel add another sheet in existing excel file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [add, excel, file, pandas, python]
+---
+
+**The solution for this is noted below**
+
+## pandas to excel add another sheet in existing excel file
+
+### Solution
+
+```python
+import pandas as pd
+from openpyxl import load_workbook
+ 
+FilePath = "your excel path"
+ExcelWorkbook = load_workbook(FilePath)
+writer = pd.ExcelWriter(FilePath, engine = 'openpyxl')
+writer.book = ExcelWorkbook
+df.to_excel(writer, sheet_name = 'your sheet name')
+writer.save()
+writer.close()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

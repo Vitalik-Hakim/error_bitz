@@ -1,0 +1,51 @@
+---
+title: 'django user form'
+description: 'django user form'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django, python]
+---
+
+**The solution for this is noted below**
+
+## django user form
+
+### Solution
+
+```python
+### in forms.py ###
+from django import forms
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
+
+
+class RegisterForm(UserCreationForm):
+    email = forms.EmailField(required=True)
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'password1', 'password2']
+
+
+### in views.py ###
+from django.contrib.auth import login as auth_login
+from .forms import RegisterForm
+
+def sign_up(request):
+    if request.method == 'POST':
+        form = RegisterForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            auth_login(request, user)
+    else:
+        form = RegisterForm()
+
+    return render(request, 'sign_up.html', {'form': form})
+
+### add the following line in settings.py ###
+LOGIN_REDIRECT_URL = "/home"
+### /home is the page user will be redirected to after login
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

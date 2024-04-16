@@ -1,0 +1,41 @@
+---
+title: 'waffle chart python'
+description: 'waffle chart python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, waffle-chart]
+---
+
+**The solution for this is noted below**
+
+## waffle chart python
+
+### Solution
+
+```python
+# python program to generate Waffle Chart
+  
+# importing all necessary requirements
+import pandas as pd
+import matplotlib.pyplot as plt
+from pywaffle import Waffle
+  
+# creation of a dataframe
+data ={'phone': ['Xiaomi', 'Samsung',
+                 'Apple', 'Nokia', 'Realme'],
+       'stock': [44, 12, 8, 5, 3]
+     }
+  
+df = pd.DataFrame(data)
+  
+# To plot the waffle Chart
+fig = plt.figure(
+    FigureClass = Waffle,
+    rows = 5,
+    values = df.stock,
+    labels = list(df.phone)
+)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

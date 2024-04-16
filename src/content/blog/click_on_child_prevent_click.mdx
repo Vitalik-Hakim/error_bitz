@@ -1,0 +1,23 @@
+---
+title: 'click on child prevent click on parent'
+description: 'click on child prevent click on parent'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [click, javascript, parent, whatever, clic]
+---
+
+**The solution for this is noted below**
+
+## click on child prevent click on parent
+
+### Solution
+
+```javascript
+// Use `.stopPropagation();`, even if you're not using JQuery
+$('#clickable a').click(function (e) {
+	e.stopPropagation()
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

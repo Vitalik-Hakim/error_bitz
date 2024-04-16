@@ -1,0 +1,27 @@
+---
+title: 'django cors allow all'
+description: 'django cors allow all'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [cors, django, python]
+---
+
+**The solution for this is noted below**
+
+## django cors allow all
+
+### Solution
+
+```python
+#pip install django-cors-headers
+#'django.middleware.csrf.CsrfViewMiddleware', – comment out this middlewire
+MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
+	……
+]
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

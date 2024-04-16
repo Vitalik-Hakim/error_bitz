@@ -1,0 +1,29 @@
+---
+title: 'move object in pygame when keydown and stop when keyup'
+description: 'move object in pygame when keydown and stop when keyup'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [keydown, keyup, move, object, pygame, python, when]
+---
+
+**The solution for this is noted below**
+
+## move object in pygame when keydown and stop when keyup
+
+### Solution
+
+```python
+x = 0
+x_move = 0
+while True:
+	for event in pygame.event.get():
+		if event.type == KEYDOWN:
+    		if event.key == K_RIGHT:
+        		x_move = 5
+        elif event.type == KEYUP:
+        	x_move = 0
+     x += x_move
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

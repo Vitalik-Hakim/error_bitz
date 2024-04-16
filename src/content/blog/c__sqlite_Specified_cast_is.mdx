@@ -1,0 +1,27 @@
+---
+title: 'c# sqlite Specified cast is not valid.'
+description: 'c# sqlite Specified cast is not valid.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, sqlite]
+---
+
+**The solution for this is noted below**
+
+## c# sqlite Specified cast is not valid.
+
+### Solution
+
+```csharp
+// Mostly likely, that you read DbNull from database, which cannot be cast
+// to bool.
+
+// Solution below
+if (reader.IsDBNull(2) == false)
+{
+	brandName = reader.GetString(2);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

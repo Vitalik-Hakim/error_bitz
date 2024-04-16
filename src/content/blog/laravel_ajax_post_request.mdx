@@ -1,0 +1,49 @@
+---
+title: 'laravel ajax post request'
+description: 'laravel ajax post request'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [ajax, javascript, laravel, post, request, php, ajax-request, ajax-reque, l]
+---
+
+**The solution for this is noted below**
+
+## laravel ajax post request
+
+### Solution
+
+```javascript
+let route = "{{ route('srcname') }}";
+            let token = "{{ csrf_token()}}";
+            $.ajax({
+                url: route,
+                type: 'POST',
+                data: {
+                    _token:token,
+                    name:'name',
+                    email:'email'
+                    phone:'09876767'
+
+                },
+                success: function(response) {
+                    console.log(response)
+
+                },
+                error: function(xhr) {
+                    //Do Something to handle error
+                }});
+
+        }
+
+
+
+
+        // laravel web
+        Route::post('srcname', [Controllername::class, 'filter'])->name('srcname');
+
+        // Controller
+         public function filter(Request $request){ return $request->name ;}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,26 @@
+---
+title: 'java create file in folder'
+description: 'java create file in folder'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [file, java]
+---
+
+**The solution for this is noted below**
+
+## java create file in folder
+
+### Solution
+
+```java
+File file = new File("src/resources/run.txt");
+
+file.getParentFile().mkdirs();
+
+FileWriter writer = new FileWriter(file);
+writer.append("this is a test");
+writer.close();
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

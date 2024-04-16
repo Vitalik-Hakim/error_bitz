@@ -1,0 +1,24 @@
+---
+title: 'spring serve robots.txt'
+description: 'spring serve robots.txt'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [java, robots.txt, serve, spring, whatever]
+---
+
+**The solution for this is noted below**
+
+## spring serve robots.txt
+
+### Solution
+
+```java
+@Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+            .antMatchers("/robots.txt").permitAll()
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

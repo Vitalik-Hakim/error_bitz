@@ -1,0 +1,24 @@
+---
+title: 'ubuntu error: EACCES: permission denied, symlink `../lib/node_modules/yarn/bin/yarn.js` -> `/usr/local/bin/yarn`'
+description: 'ubuntu error: EACCES: permission denied, symlink `../lib/node_modules/yarn/bin/yarn.js` -> `/usr/local/bin/yarn`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, symlink, ubuntu]
+---
+
+**The solution for this is noted below**
+
+## ubuntu error: EACCES: permission denied, symlink `../lib/node_modules/yarn/bin/yarn.js` -> `/usr/local/bin/yarn`
+
+### Solution
+
+```shell
+WORKING SOLUTION
+
+sudo chown -R $USER /usr/local
+
+This will fix the issue.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

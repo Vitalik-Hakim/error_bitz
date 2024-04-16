@@ -1,0 +1,50 @@
+---
+title: 'rust dictionary'
+description: 'rust dictionary'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/rust.png'
+category: 'rust'
+tags: [dictionary, rust]
+---
+
+**The solution for this is noted below**
+
+## rust dictionary
+
+### Solution
+
+```rust
+// Rust does not include dict in its std library.
+// You can use `hashmap`
+
+use std::collections::Hashmap;
+
+fn main() {
+	let x = Hashmap::from(["a", "foo"], ["b", "bar"]);
+
+    println!("{}", x["a"]);
+
+    // If you don't like the above syntax you can create a macro:
+    macro_rules! dict {
+    	{$($key:ident => $value:expr),*} => {
+        	{
+              let mut temp = Hashmap::new();
+              $(
+              temp.insert(stringify!($key), $value);
+              )*
+
+              temp
+            }
+        };
+    }
+
+    let y = dict! {
+    	a => "foo",
+        b => "bar"
+    };
+
+    println!("{}", y["a"]);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

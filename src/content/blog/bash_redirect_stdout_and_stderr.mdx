@@ -1,0 +1,36 @@
+---
+title: 'bash redirect stdout and stderr to the same file'
+description: 'bash redirect stdout and stderr to the same file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [bash, file, redirect, shell, stderr, stdout]
+---
+
+**The solution for this is noted below**
+
+## bash redirect stdout and stderr to the same file
+
+### Solution
+
+```shell
+# Basic syntax:
+command &> output_and_error_file
+
+# Note, in Bash and other Linux shells, when a program is executed, it
+#	uses one of three standard I/O streams. Each stream is represented
+#	by a numeric file descriptor:
+#		- 0, or stdin, the standard input stream
+#		- 1, or stdout, the standard output stream
+#		- 2, or stderr, the standard error stream
+#	By default the ">" operator uses 1 and is equivalent to "1>"
+
+# Example uses:
+# Redirect the standard error to a specific file:
+command 2> error_file
+
+# Redirect the standard output and standard error to different files:
+command 1> output_file 2> error_file
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

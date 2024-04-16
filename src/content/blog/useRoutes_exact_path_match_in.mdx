@@ -1,0 +1,76 @@
+---
+title: 'useRoutes exact path match in react'
+description: 'useRoutes exact path match in react'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, match, path]
+---
+
+**The solution for this is noted below**
+
+## useRoutes exact path match in react
+
+### Solution
+
+```javascript
+import {Outlet, useRoutes} from "react-router-dom"
+
+    const App = () => {
+
+      let routeElement = useRoutes([
+        {
+          path: "/",
+          element: <GlobalPageTemplate />,
+          children: [
+            {
+              path: "users",
+              element: <Outlet />,
+              children: [
+                { path: "/", element:<h1>LIST USERS <h1/> },
+                {
+                  path: "/:id",
+                  children: [
+                    { path: "/", element: <h1>USER ID</h1> },
+                    { path: "/settings", element: <h1>USER SETTINGS</h1> },
+                  ],
+                },
+              ],
+            },
+            {
+              path: "posts",
+              element: <Outlet />,
+              children: [
+                { path: "/", element: <h1>LIST POSTS</h1> },
+                {
+                  path: "/:id",
+                  children: [
+                    { path: "/", element: <h1>POST ID</h1> },
+                    { path: "/settings", element: <h1>POST SETTINGS</h1> },
+                  ],
+                },
+              ],
+            },
+            {
+              path: "teams",
+              element: <Outlet />,
+              children: [
+                { path: "/", element: <h1>LIST TEAMS</h1> },
+                {
+                  path: "/:id",
+                  children: [
+                    { path: "/", element: <h1>TEAMS ID</h1> },
+                    { path: "/settings", element: <h1>TEAM SETTINGS</h1> },
+                  ],
+                },
+              ],
+            },
+          ]
+        }
+      ]);
+
+      return routeElement
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

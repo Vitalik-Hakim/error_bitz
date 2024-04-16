@@ -1,0 +1,28 @@
+---
+title: 'how to delete a specific line in a file'
+description: 'how to delete a specific line in a file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [file, line, python]
+---
+
+**The solution for this is noted below**
+
+## how to delete a specific line in a file
+
+### Solution
+
+```python
+searched = "snow" # every line containing the variable "searched" will be deleted
+
+with open("file.txt","r+") as f: # open your file
+    new_f = f.readlines()
+    f.seek(0)
+    for line in new_f:
+        if searched not in line:
+            f.write(line)
+    f.truncate() # close your file
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

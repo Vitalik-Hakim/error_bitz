@@ -1,0 +1,23 @@
+---
+title: 'javascript generate unique id'
+description: 'javascript generate unique id'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [generate, javascript, unique-id, j, generat, generator, using, uuid]
+---
+
+**The solution for this is noted below**
+
+## javascript generate unique id
+
+### Solution
+
+```javascript
+function randomId(): string {
+  const uint32 = window.crypto.getRandomValues(new Uint32Array(1))[0];
+  return uint32.toString(16);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

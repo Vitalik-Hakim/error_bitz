@@ -1,0 +1,33 @@
+---
+title: 'python open new chrome tab'
+description: 'python open new chrome tab'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python]
+---
+
+**The solution for this is noted below**
+
+## python open new chrome tab
+
+### Solution
+
+```python
+import webbrowser
+
+url = 'http://docs.python.org/'
+
+# MacOS
+chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
+
+# Windows
+# chrome_path = 'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe %s'
+
+# Linux
+# chrome_path = '/usr/bin/google-chrome %s'
+
+webbrowser.get(chrome_path).open(url)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

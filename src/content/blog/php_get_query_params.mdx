@@ -1,0 +1,24 @@
+---
+title: 'php get query params'
+description: 'php get query params'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [get, php]
+---
+
+**The solution for this is noted below**
+
+## php get query params
+
+### Solution
+
+```php
+// http://www.example.com/page.php?x=100&y=200
+$queries = array();
+parse_str($_SERVER['QUERY_STRING'], $queries);
+echo $queries['x']; // 100
+echo $queries['y']; // 200
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

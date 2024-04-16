@@ -1,0 +1,22 @@
+---
+title: 'rails delete child on parent delete'
+description: 'rails delete child on parent delete'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/ruby.jpg'
+category: 'ruby'
+tags: [parent, ruby]
+---
+
+**The solution for this is noted below**
+
+## rails delete child on parent delete
+
+### Solution
+
+```ruby
+class Widgets < ActiveRecord::Base
+  has_many :whatevers, :dependent => :destroy
+end
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

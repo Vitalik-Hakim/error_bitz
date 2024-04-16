@@ -1,0 +1,28 @@
+---
+title: 'tsql goup by clause in merge statement'
+description: 'tsql goup by clause in merge statement'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [clause, merge-statement, sql, tsql]
+---
+
+**The solution for this is noted below**
+
+## tsql goup by clause in merge statement
+
+### Solution
+
+```sql
+MERGE dbo.MyTarget targ
+USING (SELECT ... FROM dbo.MySource GROUP BY .....) src
+ON (targ.Identifier = src.Identifier
+    AND targ.Name = src.ConstituentName
+    AND targ.Ticker = src.ConstituentTicker
+    AND (targ.CUSIP = src.CUSIP OR targ.ISIN = src.ISIN OR targ.SEDOL = src.SEDOL))
+WHEN MATCHED THEN
+-- update values
+;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

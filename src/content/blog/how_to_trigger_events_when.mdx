@@ -1,0 +1,26 @@
+---
+title: 'how to trigger events when the document loads in js'
+description: 'how to trigger events when the document loads in js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [document, events, javascript, when]
+---
+
+**The solution for this is noted below**
+
+## how to trigger events when the document loads in js
+
+### Solution
+
+```javascript
+document.addEventListener('DOMContentLoaded', ready)
+function ready() {
+	alert('DOM is ready')
+
+	// image is not yet loaded (unless it was cached), so the size is 0x0
+	alert(`Image size: ${img.offsetWidth}x${img.offsetHeight}`)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

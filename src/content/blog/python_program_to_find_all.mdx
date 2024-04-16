@@ -1,0 +1,37 @@
+---
+title: 'python program to find all prime numbers within a given range'
+description: 'python program to find all prime numbers within a given range'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [find, numbers, python, range, list]
+---
+
+**The solution for this is noted below**
+
+## python program to find all prime numbers within a given range
+
+### Solution
+
+```python
+rng = int(input("please enter lowest number: "))
+RNG = int(input("please enter higest number: "))
+listofprime = []
+
+def primecheck(x):
+    flag = True
+    for i in range(2, x):
+        if (x % i) == 0:
+            flag = False
+            break
+    if flag:
+       listofprime.append(x)
+
+
+for x in range(rng, RNG):
+     primecheck(x)
+print (listofprime)
+print ("there are ",len(listofprime),"prime number between",rng,"and",RNG)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

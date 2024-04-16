@@ -1,0 +1,29 @@
+---
+title: 'python date from string'
+description: 'python date from string'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [date, python, string, py]
+---
+
+**The solution for this is noted below**
+
+## python date from string
+
+### Solution
+
+```python
+from datetime import datetime, timezone
+
+timestamp_str = str(datetime.now(timezone.utc))
+print(timestamp_str, type(timestamp_str))   # 2022-05-06 11:23:00.718012+00:00 <class 'str'>
+
+timestamp = datetime.fromisoformat(timestamp_str) # Python 3.7+:
+print(timestamp, type(timestamp))   # 2022-05-06 11:23:00.718012+00:00 <class 'datetime.datetime'>
+
+timestamp = datetime.strptime(timestamp_str, '%Y-%m-%d %H:%M:%S.%f%z')
+print(timestamp, type(timestamp))   # 2022-05-06 11:23:00.718012+00:00 <class 'datetime.datetime'>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

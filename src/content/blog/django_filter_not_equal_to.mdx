@@ -1,0 +1,23 @@
+---
+title: 'django filter not equal to'
+description: 'django filter not equal to'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django-filter, python, dj]
+---
+
+**The solution for this is noted below**
+
+## django filter not equal to
+
+### Solution
+
+```python
+from myapp.models import Entry
+from django.db.models import Q
+# Returns all entries except those with 3 as their id
+Entry.objects.filter(~Q(id=3))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

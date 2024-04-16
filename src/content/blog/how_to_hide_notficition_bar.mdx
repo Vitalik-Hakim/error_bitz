@@ -1,0 +1,29 @@
+---
+title: 'how to hide notficition bar in flutter'
+description: 'how to hide notficition bar in flutter'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/dart.png'
+category: 'dart'
+tags: [dart, flutter, hide]
+---
+
+**The solution for this is noted below**
+
+## how to hide notficition bar in flutter
+
+### Solution
+
+```dart
+import 'package:flutter/services.dart';
+ SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+
+*** Example***
+
+class _AppPageState extends State<AppPage> {
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.leanBack);
+    return Scaffold(
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,37 @@
+---
+title: 'create a sequence in oracle sql'
+description: 'create a sequence in oracle sql'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [oracle, sequence, sql, or]
+---
+
+**The solution for this is noted below**
+
+## create a sequence in oracle sql
+
+### Solution
+
+```sql
+# Sequence Syntax:
+CREATE SEQUENCE sequence_name
+  [INCREMENT BY increment_value]
+  [START WITH start_value]
+  [MAXVALUE max_value | NOMAXVALUE]
+  [MINVALUE min_value | NOMINVALUE]
+  [CYCLE | NOCYCLE]
+  [CACHE cache_size | NOCACHE]
+  [ORDER | NOORDER];
+
+# Usage Example:
+CREATE SEQUENCE customer_id_seq
+  INCREMENT BY 1
+  START WITH 1000
+  MAXVALUE 9999
+  NOCYCLE
+  CACHE 50
+  ORDER;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

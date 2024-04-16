@@ -1,0 +1,27 @@
+---
+title: 'excel vba determine number of elements in a 1D array'
+description: 'excel vba determine number of elements in a 1D array'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/vba.jpg'
+category: 'vb'
+tags: [2d, elements, excel, vba, vb]
+---
+
+**The solution for this is noted below**
+
+## excel vba determine number of elements in a 1D array
+
+### Solution
+
+```vb
+'Since VBA arrays can have any integer value for the base element,
+'the only sure fire way to determine how many elements is in the array
+'is to calculate the value:
+
+MsgBox UBound(Arr) - LBound(Arr) + 1		'<--for elems in 1D array
+
+MsgBox UBound(Arr, 1) - LBound(Arr, 1) + 1	'<--for rows in 2D array
+MsgBox UBound(Arr, 2) - LBound(Arr, 2) + 1	'<--for cols in 2D array
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

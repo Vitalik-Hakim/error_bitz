@@ -1,0 +1,22 @@
+---
+title: 'cannot be used as a jsx component'
+description: 'cannot be used as a jsx component'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [jsx, typescript, javascript, j]
+---
+
+**The solution for this is noted below**
+
+## cannot be used as a jsx component
+
+### Solution
+
+```typescript
+//Adding @types/react to resolutions in package.json fixed it:
+
+"resolutions": { "@types/react": "17.0.43" }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

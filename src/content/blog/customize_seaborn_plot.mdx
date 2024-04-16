@@ -1,0 +1,33 @@
+---
+title: 'customize seaborn plot'
+description: 'customize seaborn plot'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [plot, python, seaborn, customization]
+---
+
+**The solution for this is noted below**
+
+## customize seaborn plot
+
+### Solution
+
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Create containers for Subplots
+fig, (ax0, ax1) = plt.subplots(nrows=1, ncols=2,
+sharey=True, figsize=(7,4))
+# Put plots into containers
+sns.histplot(df['col1'], stat='density', ax=ax0)
+sns.histplot(df['col2'], stat='density', ax=ax1)
+ax1.set(xlabel="X axis label", ylabel="Y axis label", xlim=(0, 50000),
+    title="Some title")
+ax1.axvline(x=20000, label='Vertical legend', linestyle='--')
+ax1.legend()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

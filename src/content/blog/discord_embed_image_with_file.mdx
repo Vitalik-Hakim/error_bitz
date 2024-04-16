@@ -1,0 +1,27 @@
+---
+title: 'discord embed image with file discord js'
+description: 'discord embed image with file discord js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [discord, embed, file, image, javascript, add, discord.js]
+---
+
+**The solution for this is noted below**
+
+## discord embed image with file discord js
+
+### Solution
+
+```javascript
+// Before v13
+const embed = new Discord.MessageEmbed()
+	.setTitle('Attachments')
+	.attachFiles(['./image1.png', './image2.jpg'])
+channel.send(embed)
+// v13
+const embed = new Discord.MessageEmbed().setTitle('Attachment').setImage('attachment://image.png')
+channel.send({ embeds: [embed], files: ['./image.png'] })
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

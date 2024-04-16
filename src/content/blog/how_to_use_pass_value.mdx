@@ -1,0 +1,22 @@
+---
+title: 'how to use pass value to the function that was called onchange in react'
+description: 'how to use pass value to the function that was called onchange in react'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [function, javascript, onchange, was]
+---
+
+**The solution for this is noted below**
+
+## how to use pass value to the function that was called onchange in react
+
+### Solution
+
+```javascript
+// This will not call handleChange on render cycle
+// insted will call the function on change in the input field
+<fieldset onChange={(e) => this.handleChange("tags", e)}>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

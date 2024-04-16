@@ -1,0 +1,22 @@
+---
+title: 'replace value column by another if missing pandas'
+description: 'replace value column by another if missing pandas'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pandas, python, replace]
+---
+
+**The solution for this is noted below**
+
+## replace value column by another if missing pandas
+
+### Solution
+
+```python
+import numpy as np
+
+df['column'] = np.where(df['column'].isnull(), 'value_if_true', 'value_if_false')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

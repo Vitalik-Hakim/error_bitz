@@ -1,0 +1,38 @@
+---
+title: 'write variable to file cpp'
+description: 'write variable to file cpp'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, file, cpp]
+---
+
+**The solution for this is noted below**
+
+## write variable to file cpp
+
+### Solution
+
+```cpp
+int main()
+{
+    char name[20], phone[20];
+
+    cout<< "Enter your name: ";
+    cin>> name;
+    cout<< "Enter you phone number: ";
+    cin>> phone;
+
+    ofstream file_w ("test.txt");
+
+    file_w << name <<endl
+           << phone<<endl;
+
+    cout << "Process complete";
+    file_w.close();
+
+    return 0;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

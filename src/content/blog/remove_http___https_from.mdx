@@ -1,0 +1,28 @@
+---
+title: 'remove http / https from link php'
+description: 'remove http / https from link php'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [http, https, php]
+---
+
+**The solution for this is noted below**
+
+## remove http / https from link php
+
+### Solution
+
+```php
+function remove_http($url) {
+   $disallowed = array('http://', 'https://');
+   foreach($disallowed as $d) {
+      if(strpos($url, $d) === 0) {
+         return str_replace($d, '', $url);
+      }
+   }
+   return $url;
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

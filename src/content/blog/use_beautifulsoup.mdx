@@ -1,0 +1,27 @@
+---
+title: 'use beautifulsoup'
+description: 'use beautifulsoup'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [beautifulsoup, python]
+---
+
+**The solution for this is noted below**
+
+## use beautifulsoup
+
+### Solution
+
+```python
+#start
+
+
+from bs4 import BeautifulSoup
+import requests
+
+req = requests.get('https://www.slickcharts.com/sp500')
+soup = BeautifulSoup(req.text, 'html.parser')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

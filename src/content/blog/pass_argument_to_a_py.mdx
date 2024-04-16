@@ -1,0 +1,30 @@
+---
+title: 'pass argument to a py file'
+description: 'pass argument to a py file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [file, python]
+---
+
+**The solution for this is noted below**
+
+## pass argument to a py file
+
+### Solution
+
+```python
+import sys
+
+def hello(a,b):
+    print "hello and that's your sum:", a + b
+
+if __name__ == "__main__":
+    a = int(sys.argv[1])
+    b = int(sys.argv[2])
+    hello(a, b)
+# If you type : py main.py 1 5
+# It should give you "hello and that's your sum:6"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,31 @@
+---
+title: 'perl exit loop'
+description: 'perl exit loop'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/perl.png'
+category: 'perl'
+tags: [exit, perl]
+---
+
+**The solution for this is noted below**
+
+## perl exit loop
+
+### Solution
+
+```perl
+# Basic syntax:
+last;
+# Where last is analogous to break in Python, Bash, R, etc
+
+# Example usage:
+for my $i (0 .. 5) {
+	print "index is $i\n";
+    # Exit the for loop if the index equals 3
+	if ($i == 3) {
+		last;
+    }
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

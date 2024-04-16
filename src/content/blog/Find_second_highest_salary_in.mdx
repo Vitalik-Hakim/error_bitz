@@ -1,0 +1,20 @@
+---
+title: 'Find second highest salary in MySQL?'
+description: 'Find second highest salary in MySQL?'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [find, highest, sql, highe, mysql, sq, h, high]
+---
+
+**The solution for this is noted below**
+
+## Find second highest salary in MySQL?
+
+### Solution
+
+```sql
+SELECT MAX(salary) From emp_table WHERE salary < ( SELECT Max(salary) FROM emp_table);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

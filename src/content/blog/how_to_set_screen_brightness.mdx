@@ -1,0 +1,27 @@
+---
+title: 'how to set screen brightness automatically depending on battery percentage using python'
+description: 'how to set screen brightness automatically depending on battery percentage using python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [battery, percentage, python, screen-brightness, set, using]
+---
+
+**The solution for this is noted below**
+
+## how to set screen brightness automatically depending on battery percentage using python
+
+### Solution
+
+```python
+import psutil
+import screen_brightness_control as screen
+while True:
+    battery =  psutil.sensors_battery()
+    if battery.power_plugged == True:
+        screen.set_brightness(50)
+    elif battery.percent >= 30 and battery.power_plugged == False:
+        screen.set_brightness(0)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

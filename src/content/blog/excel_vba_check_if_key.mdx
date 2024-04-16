@@ -1,0 +1,32 @@
+---
+title: 'excel vba check if key is in collection'
+description: 'excel vba check if key is in collection'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/vba.jpg'
+category: 'vb'
+tags: [excel, key, vba]
+---
+
+**The solution for this is noted below**
+
+## excel vba check if key is in collection
+
+### Solution
+
+```vb
+'A Dictionary is a better choice when you need to determine if a key
+'is already in the collection. But here is a VBA function that
+'reports True or False for Collections:
+
+Function KeyExists(key$, c As Collection)
+  On Error Resume Next
+  c.Item key
+  KeyExists = Err = 0: Err.Clear
+End Function
+
+'--------------------------------------------------------------------
+
+MsgBox KeyExists("Netflix", colFANG)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

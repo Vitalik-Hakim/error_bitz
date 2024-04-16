@@ -1,0 +1,26 @@
+---
+title: 'unity check collider layer'
+description: 'unity check collider layer'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, collider, layer]
+---
+
+**The solution for this is noted below**
+
+## unity check collider layer
+
+### Solution
+
+```csharp
+function OnCollisionEnter(collision : Collision)
+ {
+     if (collision.collider.gameObject.layer == LayerMask.NameToLayer("LAYER_NAME"))
+     {
+          Debug.Log("Touched a rail");
+     }
+ }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

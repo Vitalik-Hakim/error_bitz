@@ -1,0 +1,24 @@
+---
+title: 'how to remove characters from string  in mysql'
+description: 'how to remove characters from string  in mysql'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [mysql, sql, string]
+---
+
+**The solution for this is noted below**
+
+## how to remove characters from string in mysql
+
+### Solution
+
+```sql
+#query
+UPDATE tableName SET columnName = REPLACE(columnName, 'charactersToBeReplaced', 'charactersToBeReplacedWith');
+
+#you can use like this
+UPDATE student_enroll_data SET student_name = REPLACE(student_name, '-gyg-', '');
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,24 @@
+---
+title: 'django queryset group by count'
+description: 'django queryset group by count'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [count, django-queryset, group-by, python]
+---
+
+**The solution for this is noted below**
+
+## django queryset group by count
+
+### Solution
+
+```python
+from django.db.models import Count
+
+ result = Books.objects.values('author')
+                       .order_by('author')
+                       .annotate(count=Count('author'))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

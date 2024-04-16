@@ -1,0 +1,24 @@
+---
+title: 'How to center text in console application'
+description: 'How to center text in console application'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, center, text]
+---
+
+**The solution for this is noted below**
+
+## How to center text in console application
+
+### Solution
+
+```csharp
+//copy this into your IDE
+    //write your own text instead of "Custom Text" and run
+    string textToEnter = "Custom Text";
+    Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (textToEnter.Length / 2)) + "}", textToEnter));
+    Console.Read();
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

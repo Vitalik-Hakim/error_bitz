@@ -1,0 +1,23 @@
+---
+title: '!unzip command for rar file in google colab'
+description: '!unzip command for rar file in google colab'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [command, file, rar, whatever]
+---
+
+**The solution for this is noted below**
+
+## !unzip command for rar file in google colab
+
+### Solution
+
+```whatever
+!pip install pyunpack
+!pip install patool
+from pyunpack import Archive
+Archive('Location of the rar file').extractall('Location where you want to have the folder')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,27 @@
+---
+title: 'unity movetowards'
+description: 'unity movetowards'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, csharp, c]
+---
+
+**The solution for this is noted below**
+
+## unity movetowards
+
+### Solution
+
+```csharp
+float speed;
+Vector3 goalPosition;
+
+void Update()
+{
+	transform.position = Vector3.MoveTowards(transform.position, goalPosition, speed * Time.deltaTime); //goes from the position of the gameObject to the goalPosition in a strait line with a speed of "speed"
+  	//Also works with Vector2
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

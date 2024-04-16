@@ -1,0 +1,32 @@
+---
+title: 'golang time difference in milliseconds'
+description: 'golang time difference in milliseconds'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [difference, go, milliseconds, time]
+---
+
+**The solution for this is noted below**
+
+## golang time difference in milliseconds
+
+### Solution
+
+```go
+package main
+import (
+        "log"
+        "time"
+)
+func main() {
+        start := time.Now().UnixNano() / int64(time.Millisecond)
+        // do something
+        time.Sleep(1 * time.Second)
+        end := time.Now().UnixNano() / int64(time.Millisecond)
+        diff := end - start
+        log.Printf("Duration(ms): %d", diff)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

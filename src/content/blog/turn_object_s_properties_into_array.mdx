@@ -1,0 +1,29 @@
+---
+title: 'turn object`s properties into array of objects js'
+description: 'turn object`s properties into array of objects js'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, properties, turn]
+---
+
+**The solution for this is noted below**
+
+## turn object`s properties into array of objects js
+
+### Solution
+
+```javascript
+let data = {
+	1536135941922: 'true',
+	1536135962942: 'false',
+	1536135986966: 'false',
+	1536135989968: 'true'
+}
+
+let result = Object.entries(data).map(([k, v]) => ({ [k]: v }))
+
+console.log(result)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

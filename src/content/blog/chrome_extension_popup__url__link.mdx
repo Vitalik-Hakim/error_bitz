@@ -1,0 +1,24 @@
+---
+title: 'chrome extension popup ~url ~link ~open tab'
+description: 'chrome extension popup ~url ~link ~open tab'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, popup, popu, whatever]
+---
+
+**The solution for this is noted below**
+
+## chrome extension popup ~url ~link ~open tab
+
+### Solution
+
+```javascript
+window.addEventListener('click', function (e) {
+	if (e.target.href !== undefined) {
+		chrome.tabs.create({ url: e.target.href })
+	}
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

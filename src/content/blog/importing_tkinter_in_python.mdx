@@ -1,0 +1,31 @@
+---
+title: 'importing tkinter in python'
+description: 'importing tkinter in python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, tkinter, import, im]
+---
+
+**The solution for this is noted below**
+
+## importing tkinter in python
+
+### Solution
+
+```python
+import tkinter as tk
+
+master_window = tk.Tk()
+master_window.geometry("150x150")
+master_window.title("StringVar Example")
+
+string_variable = tk.StringVar(master_window, "Hello Everyone!!")
+
+label = tk.Label(master_window, textvariable=string_variable, height=150)
+label.pack()
+
+master_window.mainloop()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

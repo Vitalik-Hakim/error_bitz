@@ -1,0 +1,24 @@
+---
+title: 'images subplot python'
+description: 'images subplot python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, subplot]
+---
+
+**The solution for this is noted below**
+
+## images subplot python
+
+### Solution
+
+```python
+_, axs = plt.subplots(n_row, n_col, figsize=(12, 12))
+axs = axs.flatten()
+for img, ax in zip(imgs, axs):
+    ax.imshow(img)
+plt.show()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

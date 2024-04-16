@@ -1,0 +1,22 @@
+---
+title: 'rails rollback a migration'
+description: 'rails rollback a migration'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/ruby.jpg'
+category: 'ruby'
+tags: [migration, rollback, ruby, migr]
+---
+
+**The solution for this is noted below**
+
+## rails rollback a migration
+
+### Solution
+
+```ruby
+rake db:rollback STEP=1 #mention the number of migrations to rollback in STEP
+# OR
+rake db:migrate VERSION=20100905201547 # migration version
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

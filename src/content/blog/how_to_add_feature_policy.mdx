@@ -1,0 +1,24 @@
+---
+title: 'how to add feature policy header'
+description: 'how to add feature policy header'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [add, feature-policy, header, whatever]
+---
+
+**The solution for this is noted below**
+
+## how to add feature policy header
+
+### Solution
+
+```whatever
+//Add this in the .htaccess file.
+
+<IfModule mod_headers.c>
+Header always set Permissions-Policy "geolocation=(), midi=(),sync-xhr=(),accelerometer=(), gyroscope=(), magnetometer=(), camera=(), fullscreen=(self)"
+</IfModule>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

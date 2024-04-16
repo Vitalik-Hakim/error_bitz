@@ -1,0 +1,30 @@
+---
+title: 'gcloud logout'
+description: 'gcloud logout'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [gcloud, logout, whatever]
+---
+
+**The solution for this is noted below**
+
+## gcloud logout
+
+### Solution
+
+```whatever
+$ unset GOOGLE_APPLICATION_CREDENTIALS
+
+$ gcloud auth revoke --all
+Revoked credentials:
+  - [my account]
+$ gcloud auth list
+
+No credentialed accounts.
+
+To login, run:
+  $ gcloud auth login `ACCOUNT`
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

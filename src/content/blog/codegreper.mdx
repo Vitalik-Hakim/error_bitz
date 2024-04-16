@@ -1,0 +1,32 @@
+---
+title: 'codegreper'
+description: 'codegreper'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, php, whatever]
+---
+
+**The solution for this is noted below**
+
+## codegreper
+
+### Solution
+
+```javascript
+How to make check all and uncheck all with jquery
+HTML
+<input type="checkbox" id="checkAll">Select All
+
+<input type="checkbox" class="candidates">Ola
+<input type="checkbox" class="candidates">Brainwave
+<input type="checkbox" class="candidates">Mubarak
+<input type="checkbox" class="candidates">Atom Bear
+
+JS
+$("#checkAll").click(function(){
+	$('.candidates').not(this).prop('checked', this.checked);
+});
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

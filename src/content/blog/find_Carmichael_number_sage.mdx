@@ -1,0 +1,28 @@
+---
+title: 'find Carmichael number sage'
+description: 'find Carmichael number sage'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [find, python, sage]
+---
+
+**The solution for this is noted below**
+
+## find Carmichael number sage
+
+### Solution
+
+```python
+for n in range(2,7000):
+    if not is_prime(n):
+        carmichael = True
+        for a in range(1,n):
+            if Mod(a,n)^n != Mod(a,n):
+                carmichael = False
+                break
+        if carmichael:
+            print n
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

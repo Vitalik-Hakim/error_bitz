@@ -1,0 +1,34 @@
+---
+title: 'get video duration opencv python'
+description: 'get video duration opencv python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [duration, get, opencv-python, python, video]
+---
+
+**The solution for this is noted below**
+
+## get video duration opencv python
+
+### Solution
+
+```python
+import cv2
+
+cap = cv2.VideoCapture("./video.mp4")
+fps = cap.get(cv2.CAP_PROP_FPS)      # OpenCV2 version 2 used "CV_CAP_PROP_FPS"
+frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+duration = frame_count/fps
+
+print('fps = ' + str(fps))
+print('number of frames = ' + str(frame_count))
+print('duration (S) = ' + str(duration))
+minutes = int(duration/60)
+seconds = duration%60
+print('duration (M:S) = ' + str(minutes) + ':' + str(seconds))
+
+cap.release()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,24 @@
+---
+title: 'kubectl completion zsh'
+description: 'kubectl completion zsh'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [completion, kubectl, shell, zsh]
+---
+
+**The solution for this is noted below**
+
+## kubectl completion zsh
+
+### Solution
+
+```shell
+echo 'source <(kubectl completion zsh)' >>~/.zshrc
+
+# If you want to enable it with an alias
+echo 'alias k=kubectl' >>~/.zshrc
+echo 'complete -F __start_kubectl k' >>~/.zshrc
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

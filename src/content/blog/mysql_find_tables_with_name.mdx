@@ -1,0 +1,22 @@
+---
+title: 'mysql find tables with name'
+description: 'mysql find tables with name'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [find, mysql, sql]
+---
+
+**The solution for this is noted below**
+
+## mysql find tables with name
+
+### Solution
+
+```sql
+SELECT table_name
+FROM information_schema.tables
+WHERE table_type = 'base table' AND table_name like '%YOUR TABLE NAME%';
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

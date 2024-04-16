@@ -1,0 +1,26 @@
+---
+title: 'run celery on windows'
+description: 'run celery on windows'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [celery, python, windows]
+---
+
+**The solution for this is noted below**
+
+## run celery on windows
+
+### Solution
+
+```python
+run celery on windows - #django #celery #redis
+--------------------------------
+pip install eventlet
+celery -A <project-name> worker -l info -P eventlet
+
+pip install gevent
+celery -A <project-name> worker -l info -P gevent
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

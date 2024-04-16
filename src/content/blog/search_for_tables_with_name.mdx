@@ -1,0 +1,28 @@
+---
+title: 'search for tables with name postgresql'
+description: 'search for tables with name postgresql'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [postgresql, search, sql]
+---
+
+**The solution for this is noted below**
+
+## search for tables with name postgresql
+
+### Solution
+
+```sql
+select table_schema,
+       table_name
+from information_schema.tables
+where table_name like 'payment%'
+      and table_schema not in ('information_schema', 'pg_catalog')
+      and table_type = 'BASE TABLE'
+order by table_name,
+         table_schema;
+Code has been copied
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

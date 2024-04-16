@@ -1,0 +1,28 @@
+---
+title: 'add ssh'
+description: 'add ssh'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [add, shell, ssh, whatever, whateve]
+---
+
+**The solution for this is noted below**
+
+## add ssh
+
+### Solution
+
+```shell
+# before doing below steps please make your you have generated --
+# public and private keys file in the .ssh folder.
+# To generate agent pid run this below line
+eval "$(ssh-agent -s)"
+# Output: Agent pid 15939  # Note: in your case output will be different.
+# then run this
+ssh-add ~/.ssh/your_id_where_key_is_saved
+# if output contains below result it means You're done.
+# Identity added: /Users/basitkhan/.ssh/your_id_where_key_is_saved (your_email.com)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,20 @@
+---
+title: 'vim save read only file'
+description: 'vim save read only file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [file, save, shell, vim]
+---
+
+**The solution for this is noted below**
+
+## vim save read only file
+
+### Solution
+
+```shell
+:w !sudo tee % >/dev/null
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

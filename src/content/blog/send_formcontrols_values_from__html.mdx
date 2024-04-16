@@ -1,0 +1,47 @@
+---
+title: 'send formcontrols values from .html to .ts file'
+description: 'send formcontrols values from .html to .ts file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [file, send, typescript]
+---
+
+**The solution for this is noted below**
+
+## send formcontrols values from .html to .ts file
+
+### Solution
+
+```typescript
+if (this.auditSearchForm.valid) {
+	// Create an instance of FormData and map the form values
+	const formData: AuditHistoryFilterModel = {
+		modifiedField: this.auditSearchForm.get('fieldName').value,
+		memberId: this.auditSearchForm.get('memberID').value,
+		beforeValue: '',
+		afterValue: '',
+		fromDate: this.auditSearchForm.get('fromDate').value,
+		toDate: this.auditSearchForm.get('toDate').value,
+		modifiedBy: '',
+		source: '',
+		mBI: ''
+	}
+	this.memberEnrollmentService.getAuditHistory(formData).subscribe({
+		next: (res) => {
+			this.auditList = res
+		},
+		error: (err) => {
+			console.log(err)
+		}
+	})
+	// Now you can use the formData object in your TypeScript code
+	console.log(formData)
+	// Use other form values from the formData object as needed
+} else {
+	// Handle form errors if needed
+	console.log('Form is invalid')
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'if field is filled out acf'
+description: 'if field is filled out acf'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [field, out, php]
+---
+
+**The solution for this is noted below**
+
+## if field is filled out acf
+
+### Solution
+
+```php
+<?php if( get_field('field_name') ): ?>
+	<p>My field value: <?php the_field('field_name'); ?></p>
+<?php endif; ?>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

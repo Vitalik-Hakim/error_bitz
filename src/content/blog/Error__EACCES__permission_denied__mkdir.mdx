@@ -1,0 +1,22 @@
+---
+title: 'Error: EACCES: permission denied, mkdir `/Users/f5238390/Sites/pyramid-ui/node_modules/node-sass/build'
+description: 'Error: EACCES: permission denied, mkdir `/Users/f5238390/Sites/pyramid-ui/node_modules/node-sass/build'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [mkdir, shell]
+---
+
+**The solution for this is noted below**
+
+## Error: EACCES: permission denied, mkdir `/Users/f5238390/Sites/pyramid-ui/node_modules/node-sass/build
+
+### Solution
+
+```shell
+sudo chown -R root:YOUR_USERNAME /usr/local/lib/node_modules/
+
+sudo chmod -R 775 /usr/local/lib/node_modules/
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,28 @@
+---
+title: 'random string go'
+description: 'random string go'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [go, random, string, generate, generat, g]
+---
+
+**The solution for this is noted below**
+
+## random string go
+
+### Solution
+
+```go
+const letterBytes = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+func RandStringBytes(n int) string {
+    b := make([]byte, n)
+    for i := range b {
+        b[i] = letterBytes[rand.Intn(len(letterBytes))]
+    }
+    return string(b)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

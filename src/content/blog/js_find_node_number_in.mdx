@@ -1,0 +1,23 @@
+---
+title: 'js find node number in div'
+description: 'js find node number in div'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [find, javascript]
+---
+
+**The solution for this is noted below**
+
+## js find node number in div
+
+### Solution
+
+```javascript
+const child = document.getElementById('my_element')
+const parent = child.parentNode
+// The equivalent of parent.children.indexOf(child)
+const index = Array.prototype.indexOf.call(parent.children, child)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

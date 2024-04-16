@@ -1,0 +1,24 @@
+---
+title: 'DateTime previous day c#'
+description: 'DateTime previous day c#'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, datetime]
+---
+
+**The solution for this is noted below**
+
+## DateTime previous day c#
+
+### Solution
+
+```csharp
+public DateTime GetLastDayPrevMonth(int month, int year)
+{
+    return new DateTime(year, month, 1).AddDays(-1);
+  // AddMonth(-1) for previous month
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

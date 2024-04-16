@@ -1,0 +1,25 @@
+---
+title: 'wordpress get fiture image'
+description: 'wordpress get fiture image'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [get, image, php, wordpress]
+---
+
+**The solution for this is noted below**
+
+## wordpress get fiture image
+
+### Solution
+
+```php
+if ( has_post_thumbnail()) {
+   $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large');
+   echo '<a href="' . $large_image_url[0] . '">';
+   the_post_thumbnail('thumbnail');
+   echo '</a>';
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,54 @@
+---
+title: 'pascal timsort'
+description: 'pascal timsort'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/pascal.png'
+category: 'pascal'
+tags: [pascal, timsort]
+---
+
+**The solution for this is noted below**
+
+## pascal timsort
+
+### Solution
+
+```pascal
+function timsort(a: array of integer): array of integer;
+var
+  n, i, j, min, temp: integer;
+begin
+  n := length(a);
+
+  // Insertion sort for small arrays
+  for i := 1 to n-1 do
+  begin
+    min := i;
+    for j := i+1 to n do
+    begin
+      if a[j] < a[min] then
+      begin
+        min := j;
+      end;
+    end;
+    temp := a[i];
+    a[i] := a[min];
+    a[min] := temp;
+  end;
+
+  // Merge the sorted subarrays
+  for i := 1 to n-1 do
+  begin
+    if a[i] > a[i+1] then
+    begin
+      temp := a[i];
+      a[i] := a[i+1];
+      a[i+1] := temp;
+    end;
+  end;
+
+  result := a;
+end;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

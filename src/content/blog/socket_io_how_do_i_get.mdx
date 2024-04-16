@@ -1,0 +1,21 @@
+---
+title: 'socket.io how do i get a list of connected sockets clients'
+description: 'socket.io how do i get a list of connected sockets clients'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [clients, get, javascript, list, socket.io, sockets]
+---
+
+**The solution for this is noted below**
+
+## socket.io how do i get a list of connected sockets clients
+
+### Solution
+
+```javascript
+const sockets = Array.from(io.sockets.sockets).map((socket) => socket[0])
+console.log(sockets)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

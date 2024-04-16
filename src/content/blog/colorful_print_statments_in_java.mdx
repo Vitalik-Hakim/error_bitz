@@ -1,0 +1,24 @@
+---
+title: 'colorful print statments in java'
+description: 'colorful print statments in java'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [java]
+---
+
+**The solution for this is noted below**
+
+## colorful print statments in java
+
+### Solution
+
+```java
+import org.fusesource.jansi.Ansi;
+
+System.out.println(Ansi.ansi().fg(Ansi.Color.RED).a("This text is red").reset());
+// You can use Ansi.ansi().bg(Ansi.Color.RED) to change the background color and Ansi.ansi().a(Ansi.Attribute.BLINK) to make text blink.
+// Many other color codes you can use, like Ansi.Color.GREEN, Ansi.Color.BLUE, Ansi.Color.YELLOW
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

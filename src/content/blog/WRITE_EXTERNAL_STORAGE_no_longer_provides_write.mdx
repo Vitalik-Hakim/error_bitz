@@ -1,0 +1,23 @@
+---
+title: 'WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 10+'
+description: 'WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 10+'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [android, java, targeting, when]
+---
+
+**The solution for this is noted below**
+
+## WRITE_EXTERNAL_STORAGE no longer provides write access when targeting Android 10+
+
+### Solution
+
+```java
+<uses-permission
+    android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="28"
+    tools:ignore="ScopedStorage" />
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

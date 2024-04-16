@@ -1,0 +1,41 @@
+---
+title: 'multer rename file'
+description: 'multer rename file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [file, javascript, multer, rename, javasc]
+---
+
+**The solution for this is noted below**
+
+## multer rename file
+
+### Solution
+
+```javascript
+const multer = require('multer')
+
+const storage = multer.diskStorage({
+	destination: function (req, file, cb) {
+		cb(null, 'uploads/')
+	},
+	filename: function (req, file, cb) {
+		cb(null, file.filename + '-' + Date.now())
+	}
+})
+
+const upload = multer({ storage: storage })
+
+// For Single uploads
+router.route('/upload').post(upload.single('file'), (req, res, next) => {
+	return res.json(req.file)
+})
+
+// For multiple file uploads (using FormData)
+router.route('/upload').post(upload.array('file[]'), (req, res, next) => {
+	return res.json(req.file)
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

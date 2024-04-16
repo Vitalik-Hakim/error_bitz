@@ -1,0 +1,25 @@
+---
+title: 'python ascii caesar cipher'
+description: 'python ascii caesar cipher'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [ascii, caesar-cipher, python, ca, encryption]
+---
+
+**The solution for this is noted below**
+
+## python ascii caesar cipher
+
+### Solution
+
+```python
+def ascii_caesar_shift(message, distance):
+    encrypted = ""
+    for char in message:
+        value = ord(char) + distance
+        encrypted += chr(value % 128) #128 for ASCII
+    return encrypted
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

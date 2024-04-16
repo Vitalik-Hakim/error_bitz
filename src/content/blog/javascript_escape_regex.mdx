@@ -1,0 +1,29 @@
+---
+title: 'javascript escape regex'
+description: 'javascript escape regex'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, regex, j]
+---
+
+**The solution for this is noted below**
+
+## javascript escape regex
+
+### Solution
+
+```javascript
+// Vanilla JS
+function escapeRegex(string) {
+	return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
+// Or with npm: npm install escape-string-regexp
+const escapeRegex = require('escape-string-regexp')
+
+// Usage:
+const regex = new RegExp(escapeRegex('How much $ is that?'))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

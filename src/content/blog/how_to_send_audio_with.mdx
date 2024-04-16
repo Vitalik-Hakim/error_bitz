@@ -1,0 +1,34 @@
+---
+title: 'how to send audio with inline telebot'
+description: 'how to send audio with inline telebot'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [audio, inline, python, send, telebot]
+---
+
+**The solution for this is noted below**
+
+## how to send audio with inline telebot
+
+### Solution
+
+```python
+import telebot
+from telebot import types
+
+
+bot = telebot.TeleBot("YOUR TOKEN")
+
+@bot.inline_handler(lambda query: query.query == 'test')
+
+def query_text(inline_query):
+
+	s = append(types.InlineQueryResultVoice(id = '0',voice_url = 'https://t.me/yourchanell/5.ogg',title = 'Your title'))
+
+	bot.answer_inline_query(inline_query.id, [s])
+
+bot.infinity_polling()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

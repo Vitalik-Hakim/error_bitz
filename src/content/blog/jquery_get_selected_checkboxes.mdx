@@ -1,0 +1,23 @@
+---
+title: 'jquery get selected checkboxes'
+description: 'jquery get selected checkboxes'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, jquery-get, selected, checkbox, checkbo, j]
+---
+
+**The solution for this is noted below**
+
+## jquery get selected checkboxes
+
+### Solution
+
+```javascript
+var selected = []
+$('#checkboxes input:checked').each(function () {
+	selected.push($(this).attr('name'))
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

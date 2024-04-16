@@ -1,0 +1,27 @@
+---
+title: 'TypeError: undefined is not an object (evaluating `socket.emit`)'
+description: 'TypeError: undefined is not an object (evaluating `socket.emit`)'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, object, undefined]
+---
+
+**The solution for this is noted below**
+
+## TypeError: undefined is not an object (evaluating `socket.emit`)
+
+### Solution
+
+```javascript
+const joinRoom = () => {
+	if (name && roomId) {
+		socket.emit('join-room', {
+			roomId: roomId,
+			userName: name
+		})
+	}
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

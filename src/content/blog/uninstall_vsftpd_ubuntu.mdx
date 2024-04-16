@@ -1,0 +1,36 @@
+---
+title: 'uninstall vsftpd ubuntu'
+description: 'uninstall vsftpd ubuntu'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, ubuntu, vsftpd]
+---
+
+**The solution for this is noted below**
+
+## uninstall vsftpd ubuntu
+
+### Solution
+
+```shell
+You can uninstall or removes an installed vsftpd package itself from Ubuntu 17.04 (Zesty Zapus) through the terminal,
+
+$ sudo apt-get remove vsftpd
+
+Uninstall vsftpd including dependent package
+If you would like to remove vsftpd and its dependent packages which are no longer needed from Ubuntu,
+
+$ sudo apt-get remove --auto-remove vsftpd
+
+Use Purging vsftpd
+If you use with purge options to vsftpd package all the configuration and dependent packages will be removed.
+
+$ sudo apt-get purge vsftpd
+
+If you use purge options along with auto remove, will be removed everything regarding the package, Its really useful when you want to reinstall again.
+
+$ sudo apt-get purge --auto-remove vsftpd
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

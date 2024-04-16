@@ -1,0 +1,22 @@
+---
+title: 'fix excel file wrong language php'
+description: 'fix excel file wrong language php'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [excel, file, php]
+---
+
+**The solution for this is noted below**
+
+## fix excel file wrong language php
+
+### Solution
+
+```php
+Add below row to header export excel/csv file
+
+fputs($fp, “\xEF\xBB\xBF”);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

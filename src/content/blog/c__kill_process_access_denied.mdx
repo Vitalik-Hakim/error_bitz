@@ -1,0 +1,32 @@
+---
+title: 'c# kill process access denied'
+description: 'c# kill process access denied'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [access-denied, c#, kill-process]
+---
+
+**The solution for this is noted below**
+
+## c# kill process access denied
+
+### Solution
+
+```csharp
+string processName = "ProcessName.exe";
+Process[] processes = Process.GetProcessesByName(processName);
+foreach (Process process in processes)
+{
+    try
+    {
+        Process.Start("taskkill", $"/pid {process.Id} /f");
+    }
+    catch (Exception ex)
+    {
+        // Handle the exception
+    }
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

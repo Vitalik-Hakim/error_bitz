@@ -1,0 +1,29 @@
+---
+title: 'MPI_file_open'
+description: 'MPI_file_open'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++]
+---
+
+**The solution for this is noted below**
+
+## MPI_file_open
+
+### Solution
+
+```cpp
+#include <mpi.h>
+int MPI_File_open(MPI_Comm comm, const char *filename,
+    int amode, MPI_Info info,
+    MPI_File *fh)
+ //MPI_File_open opens the file identified by the filename filename on all
+  //processes in the comm communicator group.
+  //MPI_File_open is a collective routine;
+  //all processes must provide the same value for amode,
+  //and all processes must provide filenames that reference the same file
+  //which are textually identical
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

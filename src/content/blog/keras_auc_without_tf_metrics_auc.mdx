@@ -1,0 +1,28 @@
+---
+title: 'keras auc without tf.metrics.auc'
+description: 'keras auc without tf.metrics.auc'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [auc, keras, python]
+---
+
+**The solution for this is noted below**
+
+## keras auc without tf.metrics.auc
+
+### Solution
+
+```python
+import tensorflow as tf
+from sklearn.metrics import roc_auc_score
+
+def auroc(y_true, y_pred):
+    return tf.py_func(roc_auc_score, (y_true, y_pred), tf.double)
+
+# Build Model...
+
+model.compile(loss='categorical_crossentropy', optimizer='adam',metrics=['accuracy', auroc])
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

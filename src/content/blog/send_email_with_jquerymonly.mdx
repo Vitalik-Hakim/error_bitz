@@ -1,0 +1,46 @@
+---
+title: 'send email with jquerymonly'
+description: 'send email with jquerymonly'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [email, javascript, send]
+---
+
+**The solution for this is noted below**
+
+## send email with jquerymonly
+
+### Solution
+
+```javascript
+function sendRequest() {
+	var method = 'POST'
+	var serviceUrl = 'https://api.enginemailer.com/RESTAPI/Submission/SendEmail'
+	var email = {
+		UserKey: 'your_userID_given_by_Enginemailer',
+		ToEmail: $('#ToEmail').val(),
+		Subject: $('#Subject').val(),
+		SenderEmail: $('#SenderEmail').val(),
+		SenderName: $('#SenderName').val(),
+		SubmittedContents: $('#SubmittedContent').val(),
+		Attachments: $('#Attachments').val()
+	}
+
+	$.ajax({
+		type: method,
+		url: serviceUrl,
+		data: JSON.stringify(email),
+		contentType: 'application/json; charset=utf-8',
+		traditional: true
+	})
+		.done(function (data) {
+			$('#value1').text(data)
+		})
+		.error(function (jqXHR, textStatus, errorThrown) {
+			$('#value1').text(jqXHR.responseText || textStatus)
+		})
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

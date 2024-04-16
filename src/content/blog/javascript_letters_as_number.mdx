@@ -1,0 +1,26 @@
+---
+title: 'javascript letters as number'
+description: 'javascript letters as number'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, letters]
+---
+
+**The solution for this is noted below**
+
+## javascript letters as number
+
+### Solution
+
+```javascript
+const toChars = (n) =>
+	`${n >= 26 ? toChars(Math.floor(n / 26) - 1) : ''}${'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[n % 26]}`
+
+// Examples
+toChars(0) // A
+toChars(1) // B
+toChars(25) // Z
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

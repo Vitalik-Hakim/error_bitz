@@ -1,0 +1,21 @@
+---
+title: 'alter table to ad timestamp mysql'
+description: 'alter table to ad timestamp mysql'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [alter-table, mysql, sql, timestamp]
+---
+
+**The solution for this is noted below**
+
+## alter table to ad timestamp mysql
+
+### Solution
+
+```sql
+ALTER TABLE `Table`
+ADD COLUMN `datetime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP AFTER `some_column`
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

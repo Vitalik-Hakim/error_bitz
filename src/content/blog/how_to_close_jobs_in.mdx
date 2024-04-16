@@ -1,0 +1,24 @@
+---
+title: 'how to close jobs in linux'
+description: 'how to close jobs in linux'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [jobs, linux, shell]
+---
+
+**The solution for this is noted below**
+
+## how to close jobs in linux
+
+### Solution
+
+```shell
+$ jobs
+[1]+  Running                 sleep 100 &
+
+$ kill %1
+[1]+  Terminated              sleep 100
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'drupal 8 get taxonomy terms by vocabulary name'
+description: 'drupal 8 get taxonomy terms by vocabulary name'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [drupal-8, get, php, taxonomy-terms, vocabulary]
+---
+
+**The solution for this is noted below**
+
+## drupal 8 get taxonomy terms by vocabulary name
+
+### Solution
+
+```php
+$terms = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+  'vid' => 'vocabulary__machine_name'
+]);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

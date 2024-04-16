@@ -1,0 +1,22 @@
+---
+title: 'cannot truncate a table referenced in a foreign key constraint'
+description: 'cannot truncate a table referenced in a foreign key constraint'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [key, sql, truncate]
+---
+
+**The solution for this is noted below**
+
+## cannot truncate a table referenced in a foreign key constraint
+
+### Solution
+
+```sql
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE table $table_name;
+SET FOREIGN_KEY_CHECKS = 1;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

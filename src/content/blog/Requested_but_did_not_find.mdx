@@ -1,0 +1,38 @@
+---
+title: 'Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation'
+description: 'Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [find, identifier, point, whatever]
+---
+
+**The solution for this is noted below**
+
+## Requested but did not find extension point with identifier Xcode.IDEKit.ExtensionPointIdentifierToBundleIdentifier for extension Xcode.DebuggerFoundation
+
+### Solution
+
+```whatever
+Fixed this by running.
+
+	xcrun -sdk macosx --show-sdk-path
+
+1. This outputs your current skd path.
+
+2. /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+
+3. Add this to your .zshrc file.
+
+    export SDKROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
+
+4. Source it
+
+    source ~/.zshrc
+
+5. Now run
+
+    xcrun -sdk macosx --show-sdk-version
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

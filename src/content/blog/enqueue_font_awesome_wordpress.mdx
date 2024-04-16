@@ -1,0 +1,24 @@
+---
+title: 'enqueue font awesome wordpress'
+description: 'enqueue font awesome wordpress'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [enqueue, font-awesome, php, wordpress]
+---
+
+**The solution for this is noted below**
+
+## enqueue font awesome wordpress
+
+### Solution
+
+```php
+function enqueue_load_fa() {
+  wp_enqueue_style( 'load-fa', 'https://use.fontawesome.com/releases/v5.5.0/css/all.css' );
+}
+
+add_action( 'wp_enqueue_scripts', 'enqueue_load_fa');
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

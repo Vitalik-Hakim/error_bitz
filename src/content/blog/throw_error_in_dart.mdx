@@ -1,0 +1,35 @@
+---
+title: 'throw error in dart'
+description: 'throw error in dart'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/dart.png'
+category: 'dart'
+tags: [dart, throw, flutter, th, whatever, exception, exce]
+---
+
+**The solution for this is noted below**
+
+## throw error in dart
+
+### Solution
+
+```dart
+class CustomException implements Exception {
+  String cause;
+  CustomException(this.cause);
+}
+
+void main() {
+  try {
+    throwException();
+  } on CustomException {
+    print("custom exception has been obtained");
+  }
+}
+
+throwException() {
+  throw new CustomException('This is my first custom exception');
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

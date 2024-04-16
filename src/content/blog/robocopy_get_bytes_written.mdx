@@ -1,0 +1,24 @@
+---
+title: 'robocopy get bytes written'
+description: 'robocopy get bytes written'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [get, robocopy, shell]
+---
+
+**The solution for this is noted below**
+
+## robocopy get bytes written
+
+### Solution
+
+```shell
+$SourceFolder = C:\Source
+$DestFolder = D:\Destination
+
+$output = robocopy $SourceFolder $DestFolder /mir /l /bytes /nc /nfl /ndl /np /tee /Z /e /xx /njh | select-string -pattern "Bytes : "
+$output = $output -replace '\D+([0-9]*).*','$1'
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

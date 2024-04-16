@@ -1,0 +1,36 @@
+---
+title: 'How to Create a Pie Chart in Seaborn'
+description: 'How to Create a Pie Chart in Seaborn'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pie-chart, python, seaborn]
+---
+
+**The solution for this is noted below**
+
+## How to Create a Pie Chart in Seaborn
+
+### Solution
+
+```python
+Pie chart in Seaborn
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# car sales data
+total_sales = [3000, 2245, 1235, 5330, 4200]
+explode = [0, 0, 0, 0.2, 0]
+
+location = ['Bangalore', 'Delhi', 'Chennai', 'Mumbai', 'Kolkatta']
+
+# Seaborn color palette to plot pie chart
+colors = sns.color_palette('bright')
+
+# create pie chart using matplotlib
+plt.pie(total_sales, labels=location, colors=colors,
+        autopct='%.0f%%', explode=explode, shadow=True, rotatelabels='true')
+plt.show()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

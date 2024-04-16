@@ -1,0 +1,38 @@
+---
+title: 'useEffect syhntax react'
+description: 'useEffect syhntax react'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, use-effect]
+---
+
+**The solution for this is noted below**
+
+## useEffect syhntax react
+
+### Solution
+
+```javascript
+// remember to import this
+import React, { useState, useEffect } from 'react';
+
+function Example() {
+  const [count, setCount] = useState(0);
+//use effect
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  }, [//dependencies array]);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

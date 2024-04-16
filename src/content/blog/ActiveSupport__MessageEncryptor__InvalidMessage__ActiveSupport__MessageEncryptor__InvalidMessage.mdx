@@ -1,0 +1,24 @@
+---
+title: 'ActiveSupport::MessageEncryptor::InvalidMessage (ActiveSupport::MessageEncryptor::InvalidMessage'
+description: 'ActiveSupport::MessageEncryptor::InvalidMessage (ActiveSupport::MessageEncryptor::InvalidMessage'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell]
+---
+
+**The solution for this is noted below**
+
+## ActiveSupport::MessageEncryptor::InvalidMessage (ActiveSupport::MessageEncryptor::InvalidMessage
+
+### Solution
+
+```shell
+# 1. Remove the credentials:
+rm -rf config/credentials.yml.enc
+
+# 2. Create a new credentials:
+EDITOR="mate --wait" bin/rails credentials:edit
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

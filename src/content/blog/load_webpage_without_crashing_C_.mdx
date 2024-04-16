@@ -1,0 +1,28 @@
+---
+title: 'load webpage without crashing C#'
+description: 'load webpage without crashing C#'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, load, webpage]
+---
+
+**The solution for this is noted below**
+
+## load webpage without crashing C#
+
+### Solution
+
+```csharp
+public void LoadDocument(string html, string link)
+{
+  	string html = "<html><head>";
+  	html += "<meta content='IE=Edge' http-equiv='X-UA-Compatible'/>\n" +
+      "\n<body>" +
+      "<iframe id='video' src='{0}' width='600' height='600' frameborder='0'></iframe>\n" +
+      "</body>";
+  webBrowser1.DocumentText = string.Format(html, link);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

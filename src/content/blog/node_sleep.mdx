@@ -1,0 +1,34 @@
+---
+title: 'node sleep'
+description: 'node sleep'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, sleep, j]
+---
+
+**The solution for this is noted below**
+
+## node sleep
+
+### Solution
+
+```javascript
+// one liner
+await new Promise((resolve) => setTimeout(resolve, 5000))
+
+// or re-usable `sleep` function:
+async function init() {
+	console.log(1)
+	await sleep(1000)
+	console.log(2)
+}
+
+function sleep(ms) {
+	return new Promise((resolve) => {
+		setTimeout(resolve, ms)
+	})
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

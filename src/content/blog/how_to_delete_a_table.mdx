@@ -1,0 +1,26 @@
+---
+title: 'how to delete a table in rails'
+description: 'how to delete a table in rails'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/ruby.jpg'
+category: 'ruby'
+tags: [ruby]
+---
+
+**The solution for this is noted below**
+
+## how to delete a table in rails
+
+### Solution
+
+```ruby
+rails g migration DropProducts
+
+class DropProducts < ActiveRecord::Migration
+  def change
+    drop_table :products
+  end
+end
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

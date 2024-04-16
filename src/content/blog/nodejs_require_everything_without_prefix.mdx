@@ -1,0 +1,25 @@
+---
+title: 'nodejs require everything without prefix'
+description: 'nodejs require everything without prefix'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, prefix, require]
+---
+
+**The solution for this is noted below**
+
+## nodejs require everything without prefix
+
+### Solution
+
+```javascript
+// file1.js
+module.exports = { foo, bar, baz }
+// file2.js
+const { foo, bar, baz } = require('./file1')
+foo()
+baz()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

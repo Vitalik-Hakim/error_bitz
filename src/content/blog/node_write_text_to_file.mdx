@@ -1,0 +1,32 @@
+---
+title: 'node write text to file'
+description: 'node write text to file'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [file, javascript, text, string]
+---
+
+**The solution for this is noted below**
+
+## node write text to file
+
+### Solution
+
+```javascript
+JS
+copy
+const fs = require('fs')
+
+const content = 'Some content!'
+
+fs.writeFile('/Users/joe/test.txt', content, (err) => {
+	if (err) {
+		console.error(err)
+		return
+	}
+	//file written successfully
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

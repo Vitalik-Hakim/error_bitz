@@ -1,0 +1,26 @@
+---
+title: 'bash copy files but exclude some directories'
+description: 'bash copy files but exclude some directories'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [bash, copy, shell]
+---
+
+**The solution for this is noted below**
+
+## bash copy files but exclude some directories
+
+### Solution
+
+```shell
+# Basic syntax:
+rsync -a /directory/to/copy --exclude=directory_to_ignore
+
+# Note, the directory_to_ignore can be anywhere within the
+#	/directory/to/copy
+# Note, to add additional directories to ignore, add more --exclude
+#	statements
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

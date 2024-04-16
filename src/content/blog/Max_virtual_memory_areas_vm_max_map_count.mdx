@@ -1,0 +1,23 @@
+---
+title: 'Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]'
+description: 'Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [areas, max, shell, virtual-memory, whatever, area, elk]
+---
+
+**The solution for this is noted below**
+
+## Max virtual memory areas vm.max_map_count [65530] is too low, increase to at least [262144]
+
+### Solution
+
+```shell
+# Execute:
+sudo sysctl -w vm.max_map_count=262144
+# Execute:
+sudo echo 'vm.max_map_count=262144' >> /etc/sysctl.conf
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

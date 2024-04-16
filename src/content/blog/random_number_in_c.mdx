@@ -1,0 +1,32 @@
+---
+title: 'random number in c'
+description: 'random number in c'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/C.png'
+category: 'c'
+tags: [c, random, pick, p]
+---
+
+**The solution for this is noted below**
+
+## random number in c
+
+### Solution
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+    #define randnum(min, max) \
+        ((rand() % (int)(((max) + 1) - (min))) + (min))
+
+int main()
+{
+    srand(time(NULL));
+
+    printf("%d\n", randnum(1, 70));
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

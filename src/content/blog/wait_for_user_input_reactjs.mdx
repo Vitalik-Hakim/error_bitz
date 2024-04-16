@@ -1,0 +1,37 @@
+---
+title: 'wait for user input reactjs'
+description: 'wait for user input reactjs'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, reactjs, user-input, wait]
+---
+
+**The solution for this is noted below**
+
+## wait for user input reactjs
+
+### Solution
+
+```javascript
+import React, { useEffect, useState } from 'react'
+
+function App() {
+	const [query, setQuery] = useState('')
+	const [displayMessage, setDisplayMessage] = useState('')
+
+	useEffect(() => {
+		const timeOutId = setTimeout(() => setDisplayMessage(query), 500)
+		return () => clearTimeout(timeOutId)
+	}, [query])
+
+	return (
+		<>
+			<input type='text' value={query} onChange={(event) => setQuery(event.target.value)} />
+			<p>{displayMessage}</p>
+		</>
+	)
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

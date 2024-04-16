@@ -1,0 +1,29 @@
+---
+title: 'django 3.2 show messages template'
+description: 'django 3.2 show messages template'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django-3.2, messages, python, show]
+---
+
+**The solution for this is noted below**
+
+## django 3.2 show messages template
+
+### Solution
+
+```python
+<div class="container">
+    {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-{{ message.tags }}">
+                {{ message|safe }}
+              </div>
+            {% endfor %}
+          {% endif %}
+    {% block content %}{% endblock content %}
+  </div>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

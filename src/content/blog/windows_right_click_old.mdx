@@ -1,0 +1,27 @@
+---
+title: 'windows right click old'
+description: 'windows right click old'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [right-click, shell, windows, windows-11]
+---
+
+**The solution for this is noted below**
+
+## windows right click old
+
+### Solution
+
+```shell
+# Open Windows Terminal with Windows PowerShell or Command Prompt.
+# You don't need to start it as administrator, since the override will be set per-user basis.
+
+# How to disable "Show more options" and get the full right-click context menu in Windows 11
+reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+
+# Re-enable Windows 11's default right-click context menu
+reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

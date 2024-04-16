@@ -1,0 +1,47 @@
+---
+title: 'Undefined constant Illuminate\Http\Request::HEADER_X_FORWARDED_ALL'
+description: 'Undefined constant Illuminate\Http\Request::HEADER_X_FORWARDED_ALL'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [undefined, whatever, unde]
+---
+
+**The solution for this is noted below**
+
+## Undefined constant Illuminate\Http\Request::HEADER_X_FORWARDED_ALL
+
+### Solution
+
+```whatever
+If you are upgrading your Laravel 8 project to Laravel 9 by importing your existing application code into a totally new Laravel 9 application skeleton, you may need to update your application's "trusted proxy" middleware.
+
+Within your app/Http/Middleware/TrustProxies.php file, update:
+
+use Fideloper\Proxy\TrustProxies as Middleware
+
+to
+
+use Illuminate\Http\Middleware\TrustProxies as Middleware
+
+Next, within app/Http/Middleware/TrustProxies.php, you should update the $headers property definition:
+
+// Before...
+
+protected $headers = Request::HEADER_X_FORWARDED_ALL;
+
+// After...
+
+protected $headers =
+    Request::HEADER_X_FORWARDED_FOR |
+    Request::HEADER_X_FORWARDED_HOST |
+    Request::HEADER_X_FORWARDED_PORT |
+    Request::HEADER_X_FORWARDED_PROTO |
+    Request::HEADER_X_FORWARDED_AWS_ELB;
+
+Then run composer update
+
+Make sure you are using PHP 8.0
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

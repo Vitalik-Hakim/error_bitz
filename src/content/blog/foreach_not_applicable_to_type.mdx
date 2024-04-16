@@ -1,0 +1,31 @@
+---
+title: 'foreach not applicable to type - binary tree sort'
+description: 'foreach not applicable to type - binary tree sort'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [binary-tree, foreach, java]
+---
+
+**The solution for this is noted below**
+
+## foreach not applicable to type - binary tree sort
+
+### Solution
+
+```java
+private static void iterateall(BinaryTree foo) {
+    Stack<BinaryTree> nodes = new Stack<BinaryTree>();
+    nodes.push(foo);
+    while (!nodes.isEmpty()) {
+        BinaryTree node = nodes.pop();
+        if (node == null)
+            continue;
+        System.out.println(node.node);
+        nodes.push(node.right);
+        nodes.push(node.left);
+    }
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

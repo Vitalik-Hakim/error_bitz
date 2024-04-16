@@ -1,0 +1,27 @@
+---
+title: 'postgresql tables with more rows'
+description: 'postgresql tables with more rows'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [postgresql, rows, sql]
+---
+
+**The solution for this is noted below**
+
+## postgresql tables with more rows
+
+### Solution
+
+```sql
+select n.nspname as table_schema,
+       c.relname as table_name,
+       c.reltuples as rows
+from pg_class c
+join pg_namespace n on n.oid = c.relnamespace
+where c.relkind = 'r'
+      and n.nspname not in ('information_schema','pg_catalog')
+order by c.reltuples desc;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,25 @@
+---
+title: 'unity spawn object at position'
+description: 'unity spawn object at position'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, object, position, spawn]
+---
+
+**The solution for this is noted below**
+
+## unity spawn object at position
+
+### Solution
+
+```csharp
+public Transform SpawnPosition;
+ public GameObject ObjectToCreate;
+
+ void SpawnObject() {
+     Instantiate(ObjectToCreate, SpawnPosition.position);
+ }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

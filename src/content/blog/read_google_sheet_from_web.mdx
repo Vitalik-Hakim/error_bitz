@@ -1,0 +1,23 @@
+---
+title: 'read google sheet from web to pandas python'
+description: 'read google sheet from web to pandas python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pandas, python, web]
+---
+
+**The solution for this is noted below**
+
+## read google sheet from web to pandas python
+
+### Solution
+
+```python
+import pandas as pd
+sheet_url = 'https://docs.google.com/spreadsheets/d/1XqOtPkiE_Q0dfGSoyxrH730RkwrTczcRbDeJJpqRByQ/edit#gid=0'
+url_1 = sheet_url.replace('/edit#gid=', '/export?format=csv&gid=')
+df=pd.read_csv(url_1)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

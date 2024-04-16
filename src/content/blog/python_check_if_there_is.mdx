@@ -1,0 +1,34 @@
+---
+title: 'python check if there is internet'
+description: 'python check if there is internet'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, internet-connection, pytho]
+---
+
+**The solution for this is noted below**
+
+## python check if there is internet
+
+### Solution
+
+```python
+try:
+    import httplib  # python < 3.0
+except:
+    import http.client as httplib
+
+
+def have_internet():
+    conn = httplib.HTTPSConnection("8.8.8.8", timeout=5)
+    try:
+        conn.request("HEAD", "/")
+        return True
+    except Exception:
+        return False
+    finally:
+        conn.close()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'go ensure implementation'
+description: 'go ensure implementation'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [go, implementation]
+---
+
+**The solution for this is noted below**
+
+## go ensure implementation
+
+### Solution
+
+```go
+// Will give you a compile-time error if
+// Implementation doesn't imlpement Interface
+var _ Interface = (*Implementation)(nil)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

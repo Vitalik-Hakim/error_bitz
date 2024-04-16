@@ -1,0 +1,29 @@
+---
+title: 'remove column in export csv angular'
+description: 'remove column in export csv angular'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [angular, export-csv, javascript]
+---
+
+**The solution for this is noted below**
+
+## remove column in export csv angular
+
+### Solution
+
+```javascript
+const headers = Object.keys(res.memberEnrollmentList[0])
+const filteredHeaders = headers.filter((header) => header !== 'deniedDate')
+const rows = res.memberEnrollmentList.map((obj) => Object.values(obj))
+const filteredRows = rows.map((row) => row.filter((_, index) => headers[index] !== 'deniedDate'))
+const csvContent =
+	filteredHeaders.join(',') + '\n' + filteredRows.map((row) => row.join(',')).join('\n')
+const fileName = `report.csv`
+const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' })
+
+this.saveCSVFile(blob, fileName)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

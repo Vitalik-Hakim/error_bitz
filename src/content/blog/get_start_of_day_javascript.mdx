@@ -1,0 +1,26 @@
+---
+title: 'get start of day javascript'
+description: 'get start of day javascript'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, javascript]
+---
+
+**The solution for this is noted below**
+
+## get start of day javascript
+
+### Solution
+
+```javascript
+var start = new Date()
+start.setHours(0, 0, 0, 0)
+
+var end = new Date()
+end.setHours(23, 59, 59, 999)
+
+alert(start.toUTCString() + ':' + end.toUTCString())
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

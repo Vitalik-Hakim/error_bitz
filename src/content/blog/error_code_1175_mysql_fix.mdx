@@ -1,0 +1,25 @@
+---
+title: 'error code 1175 mysql fix'
+description: 'error code 1175 mysql fix'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [error-code, mysql, sql]
+---
+
+**The solution for this is noted below**
+
+## error code 1175 mysql fix
+
+### Solution
+
+```sql
+-- disable safe update mode
+SET SQL_SAFE_UPDATES=0;
+-- execute update statement
+UPDATE table SET column='value';
+-- enable safe update mode
+SET SQL_SAFE_UPDATES=1;
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,25 @@
+---
+title: '`mat-checkbox` is not a known element'
+description: '`mat-checkbox` is not a known element'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [element, typescript]
+---
+
+**The solution for this is noted below**
+
+## `mat-checkbox` is not a known element
+
+### Solution
+
+```typescript
+import { MatCheckboxModule } from '@angular/material/checkbox'
+
+TestBed.configureTestingModule({
+	imports: [MatCheckboxModule],
+	declarations: [AddAlarmsFormComponent]
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

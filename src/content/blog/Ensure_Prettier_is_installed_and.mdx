@@ -1,0 +1,37 @@
+---
+title: 'Ensure Prettier is installed and defined in your environment PATH variable. You can optionally specify a custom path in `JsPrettier.sublime-settings` using the `prettier_cli_path` setting.'
+description: 'Ensure Prettier is installed and defined in your environment PATH variable. You can optionally specify a custom path in `JsPrettier.sublime-settings` using the `prettier_cli_path` setting.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [defined, path, prettier, shell, using]
+---
+
+**The solution for this is noted below**
+
+## Ensure Prettier is installed and defined in your environment PATH variable. You can optionally specify a custom path in `JsPrettier.sublime-settings` using the `prettier_cli_path` setting.
+
+### Solution
+
+```shell
+#In your terminal run the following:
+	which node
+	which prettier
+
+# if which prettier result empty then
+# npm (global):
+    npm install --global prettier
+
+#Copy the result of the output for each step and in
+#SublimeText3 proceed to:
+#Preferences --> PackageSettings --> JsPrettier --> Settings-User
+#In the user settings build your file as such:
+
+{
+    "prettier_cli_path": "output from terminal here",
+    "node_path": "output from terminal here",
+    "auto_format_on_save": true,
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

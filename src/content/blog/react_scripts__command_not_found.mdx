@@ -1,0 +1,31 @@
+---
+title: 'react-scripts: command not found'
+description: 'react-scripts: command not found'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [command, javascript, typescript, j, javascrip, whatever, npm-start, react-scripts]
+---
+
+**The solution for this is noted below**
+
+## react-scripts: command not found
+
+### Solution
+
+```javascript
+# delete the node_modules
+rm -rf node_modules
+
+# delete the package-lock.json or yarn.lock
+rm -f package-lock.json
+rm -f yarn.lock
+
+# clean the npm cache
+npm cache clean --force
+
+# Install the dependencies
+npm install
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

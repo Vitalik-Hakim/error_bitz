@@ -1,0 +1,24 @@
+---
+title: 'Unable to update "Snap Store": cannot refresh "snap-store"'
+description: 'Unable to update "Snap Store": cannot refresh "snap-store"'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [refresh, shell]
+---
+
+**The solution for this is noted below**
+
+## Unable to update "Snap Store": cannot refresh "snap-store"
+
+### Solution
+
+```shell
+#Sudo is currently running in the background. So we will termiate the appilication
+sudo snap refresh
+sudo killall snap-store
+sudo snap refresh
+sudo reboot
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

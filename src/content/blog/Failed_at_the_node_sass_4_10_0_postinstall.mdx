@@ -1,0 +1,22 @@
+---
+title: 'Failed at the node-sass@4.10.0 postinstall script.'
+description: 'Failed at the node-sass@4.10.0 postinstall script.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [post-install, shell, post-insta, node-sass, node]
+---
+
+**The solution for this is noted below**
+
+## Failed at the node-sass@4.10.0 postinstall script.
+
+### Solution
+
+```shell
+rm -rf package-lock.json node_modules
+npm cache clean --force
+npm i --unsafe-perm node-sass
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,25 @@
+---
+title: 'django model verbose name'
+description: 'django model verbose name'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django, model, python, verbose]
+---
+
+**The solution for this is noted below**
+
+## django model verbose name
+
+### Solution
+
+```python
+class WaitlistEntry(Timestamps, models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+
+    class Meta:
+        verbose_name_plural = "Waitlist entries"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

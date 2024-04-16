@@ -1,0 +1,27 @@
+---
+title: 'java convert array to another type'
+description: 'java convert array to another type'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [java]
+---
+
+**The solution for this is noted below**
+
+## java convert array to another type
+
+### Solution
+
+```java
+import java.util.Arrays;
+
+int[] arr = {1, 2, 3, 4};
+
+// convertions
+Object[] a = Arrays.stream(arr).mapToObj(i -> i).toArray();
+Double[] b = Arrays.stream(arr).mapToDouble(i -> i).toArray();
+Long[] c = Arrays.stream(arr).mapToLong(i -> i).toArray();
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,31 @@
+---
+title: 'logout in laravel'
+description: 'logout in laravel'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [laravel, logout, php, laravel-8, lara, p]
+---
+
+**The solution for this is noted below**
+
+## logout in laravel
+
+### Solution
+
+```php
+//route
+Route::get('logout',[AuthController::class, 'logout'])->name('logout');
+
+//logout function
+use Auth,Session;
+public function logout(){
+  Auth::logout();
+  Session::flush();
+  return redirect()->route('login');
+}
+
+<a href="{{ route('admin_logout') }}">Log Out </a>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

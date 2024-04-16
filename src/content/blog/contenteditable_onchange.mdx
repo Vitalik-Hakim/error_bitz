@@ -1,0 +1,30 @@
+---
+title: 'contenteditable onchange'
+description: 'contenteditable onchange'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/HTML.png'
+category: 'html'
+tags: [contenteditable, html, onchange]
+---
+
+**The solution for this is noted below**
+
+## contenteditable onchange
+
+### Solution
+
+```html
+<!-- Use an "input" event listener -->
+<div contenteditable="true" id="editor">Please type something in here</div>
+<script>
+	document.getElementById('editor').addEventListener(
+		'input',
+		(inputEvt) => {
+			console.log('input event fired')
+		},
+		false
+	)
+</script>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

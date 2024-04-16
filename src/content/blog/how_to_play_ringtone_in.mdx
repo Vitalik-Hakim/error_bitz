@@ -1,0 +1,22 @@
+---
+title: 'how to play ringtone in android'
+description: 'how to play ringtone in android'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/kotlin.jpg'
+category: 'kotlin'
+tags: [android, kotlin, ringtone]
+---
+
+**The solution for this is noted below**
+
+## how to play ringtone in android
+
+### Solution
+
+```kotlin
+val ringtoneUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE)
+val ringtoneSound: Ringtone = RingtoneManager.getRingtone(requireContext(), ringtoneUri)
+ringtoneSound.play()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

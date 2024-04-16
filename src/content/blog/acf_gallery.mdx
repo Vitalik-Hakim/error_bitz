@@ -1,0 +1,34 @@
+---
+title: 'acf gallery'
+description: 'acf gallery'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [gallery, php]
+---
+
+**The solution for this is noted below**
+
+## acf gallery
+
+### Solution
+
+```php
+<?php
+$images = get_field('gallery');
+
+if( $images ): ?>
+    <ul>
+        <?php foreach( $images as $image ): ?>
+            <li>
+                <a href="<?php echo $image['url']; ?>">
+                     <img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </a>
+                <p><?php echo $image['caption']; ?></p>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

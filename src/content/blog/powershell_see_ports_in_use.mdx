@@ -1,0 +1,31 @@
+---
+title: 'powershell see ports in use'
+description: 'powershell see ports in use'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [ports, powershell, typescript]
+---
+
+**The solution for this is noted below**
+
+## powershell see ports in use
+
+### Solution
+
+```typescript
+See Ports in Use:
+Get-NetTCPConnection | where Localport -eq PORT_NUMBER | select Localport,OwningProcess
+
+Kill Port In Use
+
+*Set this command*
+netstat -ano | findstr :PORT_NUMBER
+*To find a ID Process look a exemple below*
+TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       THIS IS ID PROCESS --->[12948]
+
+*Kill IDProcess*
+taskkill /PID IDPROCESS /F
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

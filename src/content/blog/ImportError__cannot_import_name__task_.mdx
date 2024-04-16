@@ -1,0 +1,23 @@
+---
+title: 'ImportError: cannot import name `task` from `celery`'
+description: 'ImportError: cannot import name `task` from `celery`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [import, shell]
+---
+
+**The solution for this is noted below**
+
+## ImportError: cannot import name `task` from `celery`
+
+### Solution
+
+```shell
+# ImportError: cannot import name 'task' from 'celery'
+# Check your version of celery. If its 5.2.3 try reverting to 4.4.7
+pip uninstall celery
+pip install celery==4.4.7
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

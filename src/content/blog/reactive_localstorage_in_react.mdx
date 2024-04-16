@@ -1,0 +1,34 @@
+---
+title: 'reactive localstorage in react'
+description: 'reactive localstorage in react'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, local-storage, reactive]
+---
+
+**The solution for this is noted below**
+
+## reactive localstorage in react
+
+### Solution
+
+```javascript
+function useStorageWatcher(key) {
+	const [val, setVal] = useState(localStorage.get(key))
+
+	useEffect(() => {
+		const handler = () => val !== localStorage.get(key) && setVal(localStorage.get(key))
+		window.addEventListener('storage', handle)
+		;() => window.removeEventListener('storage', handler)
+	}, [])
+
+	useEffect(() => {
+		setVal(localStorage.get(key))
+	}, [key])
+
+	return val
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

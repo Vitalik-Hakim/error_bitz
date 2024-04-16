@@ -1,0 +1,23 @@
+---
+title: 'zsh: courpt historyfile'
+description: 'zsh: courpt historyfile'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell]
+---
+
+**The solution for this is noted below**
+
+## zsh: courpt historyfile
+
+### Solution
+
+```shell
+cd ~
+mv .zsh_history .zsh_history_bad
+strings -eS .zsh_history_bad > .zsh_history
+fc -R .zsh_history
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,32 @@
+---
+title: 'How do you add a label (title text) to a Checkbox in Flutter?'
+description: 'How do you add a label (title text) to a Checkbox in Flutter?'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/dart.png'
+category: 'dart'
+tags: [add, checkbox, dart, label]
+---
+
+**The solution for this is noted below**
+
+## How do you add a label (title text) to a Checkbox in Flutter?
+
+### Solution
+
+```dart
+bool isChecked = false;
+CheckboxListTile(
+            title: Text('CheckboxTitle'),
+            subtitle: Text('subtitle'),
+            secondary: Icon(Icons.delete),
+            controlAffinity: ListTileControlAffinity.leading, // ListTileControlAffinity.trailing
+            value: isChecked,
+            onChanged: (v) {
+              setState(() {
+                isChecked = v!;
+              });
+            },
+          ),
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

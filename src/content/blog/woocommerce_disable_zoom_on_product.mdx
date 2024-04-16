@@ -1,0 +1,26 @@
+---
+title: 'woocommerce disable zoom on product image'
+description: 'woocommerce disable zoom on product image'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [disable, image, php, product, woocommerce, whatever, woocommerc, w, woocomme, hover]
+---
+
+**The solution for this is noted below**
+
+## woocommerce disable zoom on product image
+
+### Solution
+
+```php
+/* Disable zoom on Woocommerce Product Images */
+
+// Append to your child theme's functions.php
+function remove_image_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+}
+add_action( 'wp', 'remove_image_zoom_support', 100 );
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

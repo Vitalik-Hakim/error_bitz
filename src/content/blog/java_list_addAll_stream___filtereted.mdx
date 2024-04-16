@@ -1,0 +1,21 @@
+---
+title: 'java list addAll stream() filtereted'
+description: 'java list addAll stream() filtereted'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [java, list]
+---
+
+**The solution for this is noted below**
+
+## java list addAll stream() filtereted
+
+### Solution
+
+```java
+List<Person> beerDrinkers = persons.stream()
+    .filter(p -> p.getAge() > 16).collect(Collectors.toList());
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

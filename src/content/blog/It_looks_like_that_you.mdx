@@ -1,0 +1,22 @@
+---
+title: 'It looks like that you are using a custom metro.config.js that does not extend @expo/metro-config.'
+description: 'It looks like that you are using a custom metro.config.js that does not extend @expo/metro-config.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [extend, javascript, using]
+---
+
+**The solution for this is noted below**
+
+## It looks like that you are using a custom metro.config.js that does not extend @expo/metro-config.
+
+### Solution
+
+```javascript
+transformer: {
+	assetPlugins: ['expo-asset/tools/hashAssetFiles'],
+},
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

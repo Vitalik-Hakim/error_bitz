@@ -1,0 +1,24 @@
+---
+title: 'adonis where ilike'
+description: 'adonis where ilike'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [typescript, where]
+---
+
+**The solution for this is noted below**
+
+## adonis where ilike
+
+### Solution
+
+```typescript
+const term = request.input('term')
+const posts = await Post.query()
+	.where('title', 'LIKE', '%' + term + '%')
+	.fetch()
+console.log(posts)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

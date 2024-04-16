@@ -1,0 +1,50 @@
+---
+title: 'unity c# hooke`s law suspension'
+description: 'unity c# hooke`s law suspension'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#]
+---
+
+**The solution for this is noted below**
+
+## unity c# hooke`s law suspension
+
+### Solution
+
+```csharp
+void FixedUpdate()
+    {
+        RaycastHit hit;
+ 
+        for (int i = 0; i < wheelPoints.Length; i++)
+        {
+            var wheelPoint = wheelPoints[i];
+ 
+            if (Physics.Raycast(wheelPoint.transform.position,
+                                -transform.up,
+                                out hit,
+                                suspensionLength,
+                                layerMask))
+            {
+                // Spring force
+                float contactDepth = hit.distance - suspensionLength;  
+ 
+                float springForce = - stiffness * contactDepth;
+               
+                // Final force or suspension force
+                float suspensionForce = springForce;
+               
+                rigidBody.AddForceAtPosition(transform.up * suspensionForce, wheelPoints[i].transform.position, ForceMode.Force);
+                vehicleInAir = false;
+            }
+            else
+            {
+                vehicleInAir = true;
+            }
+        }
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

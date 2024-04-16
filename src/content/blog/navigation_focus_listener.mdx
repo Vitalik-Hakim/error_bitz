@@ -1,0 +1,27 @@
+---
+title: 'navigation focus listener'
+description: 'navigation focus listener'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [focus, javascript, listener, navigation, react-native]
+---
+
+**The solution for this is noted below**
+
+## navigation focus listener
+
+### Solution
+
+```javascript
+useEffect(() => {
+	const unsubscribe = navigation.addListener('focus', () => {
+		//////////////////////////////
+		////// Call any action////////
+		//////////////////////////////
+	})
+	return unsubscribe
+}, [navigation])
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,25 @@
+---
+title: 'order by date wp php'
+description: 'order by date wp php'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [date, php]
+---
+
+**The solution for this is noted below**
+
+## order by date wp php
+
+### Solution
+
+```php
+$query = new WP_Query(array(
+    'post_status' => 'publish',
+    'orderby' => 'publish_date',
+    'order' => 'DESC'
+  ));
+//DESC sorts by newest, ASC by oldest. GL fellow grepper user
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

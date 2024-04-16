@@ -1,0 +1,27 @@
+---
+title: 'jquery replace h1 with h2'
+description: 'jquery replace h1 with h2'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [h2, javascript, jquery, replace]
+---
+
+**The solution for this is noted below**
+
+## jquery replace h1 with h2
+
+### Solution
+
+```javascript
+$(selector).load(url, function () {
+	// your existing load function
+	$(selector)
+		.find('h1')
+		.replaceWith(function () {
+			return '<h2>' + $(this).text() + '</h2>'
+		})
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

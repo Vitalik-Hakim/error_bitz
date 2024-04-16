@@ -1,0 +1,36 @@
+---
+title: 'UE4 Log'
+description: 'UE4 Log'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c++.png'
+category: 'cpp'
+tags: [c++, cpp, whatever]
+---
+
+**The solution for this is noted below**
+
+## UE4 Log
+
+### Solution
+
+```cpp
+UE_LOG(LogTemp, Warning, TEXT("Some message") );
+UE_LOG(LogTemp, Warning, TEXT("The integer value is: %d"), YourInteger);
+UE_LOG(LogTemp, Warning, TEXT("The float value is: %f"), YourFloat);
+UE_LOG(LogTemp, Warning, TEXT("The vector value is: %s"), *YourVector.ToString());
+//Multiple
+UE_LOG(LogTemp, Warning, TEXT("Current values are: vector %s, float %f, and integer %d"), *YourVector.ToString(), YourFloat, YourInteger);
+
+replace Warning by on of these:
+| Verbosity Level | Printed in Console? | Printed in Editor's Log? |                      Notes                       |
+|-----------------|---------------------|--------------------------|--------------------------------------------------|
+| Fatal           | Yes                 | N/A                      | Crashes the session, even if logging is disabled |
+| Error           | Yes                 | Yes                      | Log text is coloured red                         |
+| Warning         | Yes                 | Yes                      | Log text is coloured yellow                      |
+| Display         | Yes                 | Yes                      | Log text is coloured grey                        |
+| Log             | No                  | Yes                      | Log text is coloured grey                        |
+| Verbose         | No                  | No                       |                                                  |
+| VeryVerbose     | No                  | No                       |                                                  |
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,26 @@
+---
+title: 'codeigniter 3 delete all files in directory'
+description: 'codeigniter 3 delete all files in directory'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [codeigniter-3, directory, whatever]
+---
+
+**The solution for this is noted below**
+
+## codeigniter 3 delete all files in directory
+
+### Solution
+
+```whatever
+$this->load->helper('file');
+
+delete_files('./path/to/directory/');
+
+Or if you want to include subfolders recursvively
+
+delete_files('./path/to/directory/', TRUE);
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

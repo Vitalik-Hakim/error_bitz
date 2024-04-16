@@ -1,0 +1,34 @@
+---
+title: 'check if swap is working'
+description: 'check if swap is working'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [css, swap]
+---
+
+**The solution for this is noted below**
+
+## check if swap is working
+
+### Solution
+
+```css
+in linux, you can use
+
+cat /proc/meminfo to see total swap, and free swap (all linux)
+cat /proc/swaps to see which swap devices are being used (all linux)
+swapon -s to see swap devices and sizes (where swapon is installed)
+vmstat for current virtual memory statistics
+in Mac OS X, you can use
+
+vm_stat to see information about virtual memory (swap)
+ls -lh /private/var/vm/swapfile* to see how many swap files are being used.
+in Solaris, you can use
+
+swap -l to see swap devices/files, and their sizes
+swap -s to see total swap size, used & free
+vmstat to see virtual memory statistics
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

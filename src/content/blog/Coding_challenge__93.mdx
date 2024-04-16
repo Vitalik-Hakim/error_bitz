@@ -1,0 +1,121 @@
+---
+title: 'Coding challenge #93'
+description: 'Coding challenge #93'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [whatever]
+---
+
+**The solution for this is noted below**
+
+## Coding challenge #93
+
+### Solution
+
+```whatever
+import pygame
+import math
+import time
+import os
+from ctypes import POINTER, WINFUNCTYPE, windll
+from ctypes.wintypes import BOOL, HWND, RECT
+pygame.init()
+
+window = pygame.display.set_mode((1200,600))
+
+hwnd = pygame.display.get_wm_info()["window"]
+prototype = WINFUNCTYPE(BOOL, HWND, POINTER(RECT))
+paramflags = (1, "hwnd"), (2, "lprect")
+
+GetWindowRect = prototype(("GetWindowRect", windll.user32), paramflags)
+rect = GetWindowRect(hwnd)
+print("top, left, bottom, right: ", rect.top, rect.left, rect.bottom, rect.right)
+
+x = rect.left
+y = rect.top
+os.environ['SDL_VIDEO_WINDOW_POS'] = "%d,%d" % (x,y)
+
+
+stampsx = []
+stampsy = []
+stampspx = []
+stampspy = []
+r1 = 200
+r2 = 200
+m1 = 40
+m2 = 40
+a1 = math.pi / 2
+a2 = math.pi / 3
+a1_v = 0
+a2_v = 0
+a1_a = 0
+a2_a = 0
+g = 1
+px = r2 * math.sin(a2) + (r1 * math.sin(a1) + 600)
+py = r2 * math.cos(a2) + (r1 * math.cos(a1) + 50)
+mode = input("Line, dotted, or off? ")
+
+pygame.display.set_caption("Project")
+programIcon = pygame.image.load("icon.png")
+pygame.display.set_icon(programIcon)
+
+while True:
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    window.fill(pygame.Color("WHITE"))
+
+    num1a = -g * (2 * m1 + m2) * math.sin(a1)
+    num2a = -m2 * g * math.sin(a1-2*a2)
+    num3a = -2*math.sin(a1-a2)*m2
+    num4a = a2_v*a2_v*r2+a1_v*a1_v*r1*math.cos(a1-a2)
+    dena = r1 * (2*m1+m2-m2*math.cos(2*a1-2*a2))
+
+    num1b = 2 * math.sin(a1-a2)
+    num2b = (a1_v*a1_v*r1*(m1+m2))
+    num3b = g * (m1 + m2) * math.cos(a1)
+    num4b = a2_v*a2_v*r2*m2*math.cos(a1-a2)
+    denb = r2 * (2*m1+m2-m2*math.cos(2*a1-2*a2))
+
+    a1_a = (num1a + num2a + num3a*num4a) / dena
+    a2_a = num1b*(num2b+num3b+num4b) / denb
+
+    x1 = r1 * math.sin(a1) + 600
+    y1 = r1 * math.cos(a1) + 50
+
+    x2 = r2 * math.sin(a2) + x1
+    y2 = r2 * math.cos(a2) + y1
+
+    pygame.draw.line(window, pygame.Color("BLACK"), (600,50), (x1, y1), 2)
+    pygame.draw.circle(window, pygame.Color("BLACK"), (x1, y1), m1/2)
+
+    if not mode == 'off':
+        stampsx.append(x2)
+        stampsy.append(y2)
+        if mode == 'line':
+            stampspx.append(px)
+            stampspy.append(py)
+            for i in range(0, len(stampsx)):
+                pygame.draw.line(window, pygame.Color("BLACK"), (stampspx[i],stampspy[i]), (stampsx[i],stampsy[i]), 2)
+        else:
+            for i in range(0, len(stampsx)):
+                pygame.draw.circle(window, pygame.Color("BLACK"), (stampsx[i],stampsy[i]), 2)
+    pygame.draw.line(window, pygame.Color("BLACK"), (x1,y1), (x2, y2), 2)
+    pygame.draw.circle(window, pygame.Color("BLACK"), (x2, y2), m1/2)
+
+    a1_v += a1_a
+    a2_v += a2_a
+    a1 += a1_v
+    a2 += a2_v
+
+    px = x2
+    py = y2
+
+    pygame.display.update()
+    time.sleep(0.02)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

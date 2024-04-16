@@ -1,0 +1,27 @@
+---
+title: 'remove from systemctl'
+description: 'remove from systemctl'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [systemctl, whatever]
+---
+
+**The solution for this is noted below**
+
+## remove from systemctl
+
+### Solution
+
+```whatever
+systemctl stop [servicename]
+systemctl disable [servicename]
+rm /etc/systemd/system/[servicename]
+rm /etc/systemd/system/[servicename] # and symlinks that might be related
+rm /usr/lib/systemd/system/[servicename]
+rm /usr/lib/systemd/system/[servicename] # and symlinks that might be related
+systemctl daemon-reload
+systemctl reset-failed
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

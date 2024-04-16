@@ -1,0 +1,28 @@
+---
+title: 'how to install ftp server in ubuntu 20.04'
+description: 'how to install ftp server in ubuntu 20.04'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [ftp-server, shell, ubuntu-20.04]
+---
+
+**The solution for this is noted below**
+
+## how to install ftp server in ubuntu 20.04
+
+### Solution
+
+```shell
+sudo apt install vsftpd
+sudo echo write_enable=YES >> /etc/vsftpd.conf
+sudo systemctl restart vsftpd
+
+# if running a UFW firewall do:
+sudo ufw allow 20:21/tcp
+sudo ufw allow 30000:31000/tcp
+sudo ufw allow OpenSSH
+sudo ufw disable && sudo ufw enable
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

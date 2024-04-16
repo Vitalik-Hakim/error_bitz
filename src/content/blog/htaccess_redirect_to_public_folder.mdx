@@ -1,0 +1,24 @@
+---
+title: 'htaccess redirect to public folder'
+description: 'htaccess redirect to public folder'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [public, redirect, whatever]
+---
+
+**The solution for this is noted below**
+
+## htaccess redirect to public folder
+
+### Solution
+
+```whatever
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ public/index.php?$1 [L,QSA]
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

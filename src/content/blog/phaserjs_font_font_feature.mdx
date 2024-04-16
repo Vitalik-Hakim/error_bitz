@@ -1,0 +1,29 @@
+---
+title: 'phaserjs font font-feature'
+description: 'phaserjs font font-feature'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [css]
+---
+
+**The solution for this is noted below**
+
+## phaserjs font font-feature
+
+### Solution
+
+```css
+/* If you set the font-feature-settings in the @font-face,
+  	 You can just use the font-family name in Phaser and it will work
+  	 as expected */
+
+@font-face{
+  font-family: 'MyFont';
+  src: url('myfont.woff) format('woff');
+  font-weight: bold;
+  font-feature-settings: 'mf12';
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

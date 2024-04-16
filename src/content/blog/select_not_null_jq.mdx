@@ -1,0 +1,41 @@
+---
+title: 'select not null jq'
+description: 'select not null jq'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [jq, select, shell]
+---
+
+**The solution for this is noted below**
+
+## select not null jq
+
+### Solution
+
+```shell
+JSON='[
+  {
+    "id": 1,
+    "name": "John"
+  },
+  {
+    "id": 2,
+    "name": null
+  }
+]'
+echo $JSON | jq '.[] | select(.name != null)'
+
+# Output
+{
+  "id": 1,
+  "name": "John"
+}
+
+echo $JSON | jq '.[] | select(.name != null) | .name'
+
+# Output
+"John"
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

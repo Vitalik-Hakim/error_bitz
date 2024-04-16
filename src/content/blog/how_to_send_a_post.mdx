@@ -1,0 +1,32 @@
+---
+title: 'how to send a post by console chrome'
+description: 'how to send a post by console chrome'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript]
+---
+
+**The solution for this is noted below**
+
+## how to send a post by console chrome
+
+### Solution
+
+```javascript
+fetch('https://www.hackthebox.eu/api/invite/generate', {
+	method: 'POST',
+	body: JSON.stringify({
+		title: 'foo',
+		body: 'bar',
+		userId: 1
+	}),
+	headers: {
+		'Content-type': 'application/json; charset=UTF-8'
+	}
+})
+	.then((res) => res.json())
+	.then(console.log)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

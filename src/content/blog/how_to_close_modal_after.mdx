@@ -1,0 +1,30 @@
+---
+title: 'how to close modal after print'
+description: 'how to close modal after print'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [whatever]
+---
+
+**The solution for this is noted below**
+
+## how to close modal after print
+
+### Solution
+
+```whatever
+var printContents = document.getElementById('print_data').innerHTML;
+var originalContents = document.body.innerHTML;
+
+document.body.innerHTML = printContents;
+
+window.print();
+document.body.innerHTML = originalContents;
+setTimeout(function() {
+                location.reload();
+           }, 1000);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

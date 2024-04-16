@@ -1,0 +1,26 @@
+---
+title: 'Fetch Await'
+description: 'Fetch Await'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [fetch, javascript, fetc]
+---
+
+**The solution for this is noted below**
+
+## Fetch Await
+
+### Solution
+
+```javascript
+async function handleFetchAwait(id) {
+	let response = await fetch(`https://samplesite.com/users_id/${id}`)
+	let data = await response.json()
+	return data
+}
+
+handleFetchAwait(21).then((data) => console.log(data))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

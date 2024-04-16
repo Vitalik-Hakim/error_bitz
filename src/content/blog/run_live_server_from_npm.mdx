@@ -1,0 +1,29 @@
+---
+title: 'run live server from npm start'
+description: 'run live server from npm start'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [live, npm-start, server, whatever]
+---
+
+**The solution for this is noted below**
+
+## run live server from npm start
+
+### Solution
+
+```shell
+# How do I run live-server from the command line?
+# 1) Install live-server as a dev dependency:
+npm i -D live-server
+
+# 2) Add a start script to package.json:
+"scripts":{
+  "start": "live-server --open=./index.html"
+}
+# Alternatively, just run:
+npx live-server --open=./index.html
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

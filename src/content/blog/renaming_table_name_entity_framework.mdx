@@ -1,0 +1,24 @@
+---
+title: 'renaming table name entity framework code first fluent api'
+description: 'renaming table name entity framework code first fluent api'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [api, c#, code-first, entity-framework, fluent, renaming]
+---
+
+**The solution for this is noted below**
+
+## renaming table name entity framework code first fluent api
+
+### Solution
+
+```csharp
+protected override void OnModelCreating(DbModelBuilder modelBuilder)
+{
+  //Changing Database table name to Metadata
+  modelBuilder.Entity<Metadata>().ToTable("Metadata");
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

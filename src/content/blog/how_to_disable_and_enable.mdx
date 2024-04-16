@@ -1,0 +1,32 @@
+---
+title: 'how to disable and enable rigidbody unity'
+description: 'how to disable and enable rigidbody unity'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, disable, csharp, di]
+---
+
+**The solution for this is noted below**
+
+## how to disable and enable rigidbody unity
+
+### Solution
+
+```csharp
+// if you want to disable the rigidbody on which the script is sitting on
+// you can't do that but you can go around it by
+
+// Just destroying the rigidbody by calling
+Destroy(gameObject.GetComponent<Rigidbody>());
+
+// and if you want it again call
+gameObject.AddComponent<Rigidbody>();
+
+// Remember "gameObject" with small 'g' reffers to the gameObj on which the script
+// is sitting on
+
+// -*-*-*-*-*-***-HAPPY CODING-***-*-*-*-*-*-
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

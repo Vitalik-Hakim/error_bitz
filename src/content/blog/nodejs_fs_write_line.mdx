@@ -1,0 +1,28 @@
+---
+title: 'nodejs fs write line'
+description: 'nodejs fs write line'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [fs, javascript, line]
+---
+
+**The solution for this is noted below**
+
+## nodejs fs write line
+
+### Solution
+
+```javascript
+import fs from 'fs'
+
+const fileWritter = fs.createWriteStream('./users-data.txt' {
+  flags: 'a' // 'a' means appending (old data will be preserved)
+})
+
+// Will append one line to the file
+fileWritter.write(JSON.stringify({
+}))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

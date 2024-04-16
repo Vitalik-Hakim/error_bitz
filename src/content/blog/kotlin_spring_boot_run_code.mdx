@@ -1,0 +1,23 @@
+---
+title: 'kotlin spring boot run code after component init'
+description: 'kotlin spring boot run code after component init'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/kotlin.jpg'
+category: 'kotlin'
+tags: [init, kotlin, spring-boot]
+---
+
+**The solution for this is noted below**
+
+## kotlin spring boot run code after component init
+
+### Solution
+
+```kotlin
+@EventListener(ApplicationReadyEvent::class)
+fun doSomethingAfterStartup() {
+    testApp.subscribers + devices
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,32 @@
+---
+title: 'Git change remote branch name'
+description: 'Git change remote branch name'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [git, remote-branch, shell, branch, br, git-branch, g]
+---
+
+**The solution for this is noted below**
+
+## Git change remote branch name
+
+### Solution
+
+```shell
+1. Verify the local branch has the correct name:
+git branch -a
+
+2. Next, delete the branch with the old name on the remote repository:
+git push origin ––delete old-name
+
+3. Finally, push the branch with the correct name, and reset the upstream branch:
+git push origin –u new-name
+
+Alternatively, you can overwrite the remote branch with a single command:
+git push origin :old-name new-name
+Resetting the upstream branch is still required:
+git push origin –u new-name
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,38 @@
+---
+title: 'unity teleport object to position on collision'
+description: 'unity teleport object to position on collision'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, collision, object, position, teleport]
+---
+
+**The solution for this is noted below**
+
+## unity teleport object to position on collision
+
+### Solution
+
+```csharp
+public Transform newPos;  // create empty object and place it to
+						  // where u wanna teleport
+
+private GameObject gO;
+
+private void Start()
+	{
+    //any other objects with tag player will teleport
+	gO = GameObject.FindWithTag("player");
+    }
+
+private void OnTriggerEnter2D(Collider2D other)
+    {	if (other.gameObject.tag == "player")
+            {
+            player.transform.position = newPos.transform.position;
+            }
+     }
+
+     //script should be inside the teleport inspector
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

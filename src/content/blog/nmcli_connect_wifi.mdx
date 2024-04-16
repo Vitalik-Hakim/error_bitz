@@ -1,0 +1,32 @@
+---
+title: 'nmcli connect wifi'
+description: 'nmcli connect wifi'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [connect, nmcli, shell, wifi]
+---
+
+**The solution for this is noted below**
+
+## nmcli connect wifi
+
+### Solution
+
+```shell
+# see available connections
+nmcli d wifi
+
+# disconnect from the access point you are currently connected to
+# replace <current AP> with the AP you are currently connected to
+nmcli c down <current AP> # see previous command output
+
+# connect to new AP
+# replace <AP name> with name of AP you want to connect to
+# replace <password> with the password of the AP
+nmcli d wifi c <AP name> password <password>
+
+# hope this helped you :)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

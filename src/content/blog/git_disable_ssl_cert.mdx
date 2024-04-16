@@ -1,0 +1,26 @@
+---
+title: 'git disable ssl cert'
+description: 'git disable ssl cert'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [cert, disable, git, shell, ssl, shel]
+---
+
+**The solution for this is noted below**
+
+## git disable ssl cert
+
+### Solution
+
+```shell
+# Disables ssl verfication in the local repo
+git config http.sslVerify false
+# or, in ".git/config" add the following (the name of the server is optional)
+[http "https://gitlab.dev"]
+        sslVerify = false
+# or, also prepend to each command
+SET GIT_SSL_NO_VERIFY=true && git some operation
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

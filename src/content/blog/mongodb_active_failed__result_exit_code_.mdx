@@ -1,0 +1,21 @@
+---
+title: 'mongodb active failed (result exit-code)'
+description: 'mongodb active failed (result exit-code)'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [mongodb, shell, whatever, whateve, exit-code]
+---
+
+**The solution for this is noted below**
+
+## mongodb active failed (result exit-code)
+
+### Solution
+
+```shell
+chown -R mongodb:mongodb /var/lib/mongodb
+chown mongodb:mongodb /tmp/mongodb-27017.sock
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

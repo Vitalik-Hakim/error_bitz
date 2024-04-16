@@ -1,0 +1,31 @@
+---
+title: 'how to remove the very last character of a text file in python'
+description: 'how to remove the very last character of a text file in python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [character, file, python, text]
+---
+
+**The solution for this is noted below**
+
+## how to remove the very last character of a text file in python
+
+### Solution
+
+```python
+file.truncate(file.tell - 1)
+#explanation - the function truncate will resize the file to the
+#full size - 1 and that means it will remove the last character
+#if you need to do that while you are reading/writing somewhere using
+#seek() you can use this function ->
+def get_size(fileobject):
+    fileobject.seek(0,2) # move the cursor to the end of the file
+    size = fileobject.tell()
+    return size
+#and then
+fsize = get_size(file)
+file.truncate(fsize - 1)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

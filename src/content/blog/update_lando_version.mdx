@@ -1,0 +1,28 @@
+---
+title: 'update lando version'
+description: 'update lando version'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [lando, shell, version]
+---
+
+**The solution for this is noted below**
+
+## update lando version
+
+### Solution
+
+```shell
+# Poweroff all lando instances
+lando poweroff
+
+# Then follow basic lando installation process
+wget https://files.lando.dev/installer/lando-x64-stable.deb
+sudo dpkg -i lando-x64-stable.deb
+
+# Check lando version
+lando version
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

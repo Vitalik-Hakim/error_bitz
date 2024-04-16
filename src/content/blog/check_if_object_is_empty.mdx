@@ -1,0 +1,30 @@
+---
+title: 'check if object is empty javascript'
+description: 'check if object is empty javascript'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [is-empty, javascript, object, is-empt, j]
+---
+
+**The solution for this is noted below**
+
+## check if object is empty javascript
+
+### Solution
+
+```javascript
+const empty = {}
+/* -------------------------
+  Plain JS for Newer Browser
+----------------------------*/
+Object.keys(empty).length === 0 && empty.constructor === Object
+// true
+/* -------------------------
+  Lodash for Older Browser
+----------------------------*/
+_.isEmpty(empty)
+// true
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

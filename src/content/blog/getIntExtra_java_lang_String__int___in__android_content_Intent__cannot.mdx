@@ -1,0 +1,21 @@
+---
+title: 'getIntExtra(java.lang.String, int)` in `android.content.Intent` cannot be applied to `(java.lang.String)`'
+description: 'getIntExtra(java.lang.String, int)` in `android.content.Intent` cannot be applied to `(java.lang.String)`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [java]
+---
+
+**The solution for this is noted below**
+
+## getIntExtra(java.lang.String, int)`in`android.content.Intent`cannot be applied to`(java.lang.String)`
+
+### Solution
+
+```java
+// it requires DEFAULT_VALUE
+getIntExtra("name", DEFAULT_VALUE)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

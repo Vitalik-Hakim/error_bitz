@@ -1,0 +1,24 @@
+---
+title: 'Your serialized closure might have been modified or it`s unsafe to be unserialized.'
+description: 'Your serialized closure might have been modified or it`s unsafe to be unserialized.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [php, unsafe]
+---
+
+**The solution for this is noted below**
+
+## Your serialized closure might have been modified or it`s unsafe to be unserialized.
+
+### Solution
+
+```php
+php artisan cache:clear
+php artisan config:clear
+php artisan key:generate
+
+If the above doesnt work then look for a backup .env file and use the same APP_KEY to resolve it.
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'how to make a discord bot dm someone python'
+description: 'how to make a discord bot dm someone python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [discord, dm, python]
+---
+
+**The solution for this is noted below**
+
+## how to make a discord bot dm someone python
+
+### Solution
+
+```python
+@bot.command(pass_context = True)
+async def dm(ctx, member : discord.Member, *, content: str):
+    await bot.send_message(member, content)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

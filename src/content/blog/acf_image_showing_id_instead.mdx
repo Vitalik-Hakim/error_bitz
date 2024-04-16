@@ -1,0 +1,25 @@
+---
+title: 'acf image showing id instead of url'
+description: 'acf image showing id instead of url'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [image, url, whatever]
+---
+
+**The solution for this is noted below**
+
+## acf image showing id instead of url
+
+### Solution
+
+```whatever
+<?php
+$image = get_field('image');
+$size = 'full'; // (thumbnail, medium, large, full or custom size)
+if( $image ) {
+    echo wp_get_attachment_image( $image, $size );
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

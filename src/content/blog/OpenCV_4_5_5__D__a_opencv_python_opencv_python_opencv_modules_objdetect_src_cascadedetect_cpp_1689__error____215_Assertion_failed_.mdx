@@ -1,0 +1,24 @@
+---
+title: 'OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\objdetect\src\cascadedetect.cpp:1689: error: (-215:Assertion failed) !empty() in function `cv::CascadeClassifier::detectMultiScale`'
+description: 'OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\objdetect\src\cascadedetect.cpp:1689: error: (-215:Assertion failed) !empty() in function `cv::CascadeClassifier::detectMultiScale`'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [in-function, python]
+---
+
+**The solution for this is noted below**
+
+## OpenCV(4.5.5) D:\a\opencv-python\opencv-python\opencv\modules\objdetect\src\cascadedetect.cpp:1689: error: (-215:Assertion failed) !empty() in function `cv::CascadeClassifier::detectMultiScale`
+
+### Solution
+
+```python
+#[...]
+
+face_cascade=cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml") #Note the change
+
+#[...]
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

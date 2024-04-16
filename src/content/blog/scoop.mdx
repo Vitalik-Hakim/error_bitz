@@ -1,0 +1,56 @@
+---
+title: 'scoop'
+description: 'scoop'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, whatever]
+---
+
+**The solution for this is noted below**
+
+## scoop
+
+### Solution
+
+```shell
+# ------------------------------------------for this commands i use powershell :)
+# -----------------------START install scoop
+ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+#and that
+ irm get.scoop.sh | iex
+# END
+#--------------------------------------------------------------------------------
+# -------------------START install software with scoope
+scoop install nameSoftwareHere
+# END
+#--------------------------------------------------------------------------------
+#-----install software not in scoop, like vscode you need to install extra
+scoop bucket add extras
+#END
+#--------------------------------------------------------------------------------
+#----------------------------update scoop
+scoop update
+#END
+#--------------------------------------------------------------------------------
+#-------------------update software installed with scoop
+scoop update * # for all software
+scoop update nameOfYourSoftware # update just your software
+#END
+#--------------------------------------------------------------------------------
+#-----------------uninstall software installed with scoop
+scoop uninstall nameSoftwareHere
+#END
+#--------------------------------------------------------------------------------
+#--------------------------uninstall scoop !!!
+scoop uninstall scoop
+#END
+#--------------------------------------------------------------------------------
+#------------where to find the command line to run to install software
+in official website:
+https://scoop.sh/
+search what you need in search bar
+#END
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

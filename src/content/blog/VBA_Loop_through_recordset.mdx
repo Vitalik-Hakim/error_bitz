@@ -1,0 +1,29 @@
+---
+title: 'VBA Loop through recordset'
+description: 'VBA Loop through recordset'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/vba.jpg'
+category: 'vb'
+tags: [recordset, vba]
+---
+
+**The solution for this is noted below**
+
+## VBA Loop through recordset
+
+### Solution
+
+```vb
+'The short version
+Dim rs As DAO.Recordset
+Set rs = CurrentDb.OpenRecordset("SELECT * FROM Contacts")
+If Not (rs.EOF And rs.BOF) Then
+	Do Until rs.EOF = True
+		rs.MoveNext
+	Loop
+End If
+rs.Close
+Set rs = Nothing
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,22 @@
+---
+title: 'kill process on port windows'
+description: 'kill process on port windows'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [kill-process, port, shell, windows, kill, kill-proce]
+---
+
+**The solution for this is noted below**
+
+## kill process on port windows
+
+### Solution
+
+```shell
+netstat -ano | findstr "PORT_NUMBER"
+
+taskkill /PID PORT_NUMBER /f
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

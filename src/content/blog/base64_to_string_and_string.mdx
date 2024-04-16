@@ -1,0 +1,32 @@
+---
+title: 'base64 to string and string to base64 javascript decode'
+description: 'base64 to string and string to base64 javascript decode'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [base64, decode, javascript, string, j, ba]
+---
+
+**The solution for this is noted below**
+
+## base64 to string and string to base64 javascript decode
+
+### Solution
+
+```javascript
+// base64 to string
+let base64ToString = Buffer.from(obj, 'base64').toString()
+base64ToString = JSON.parse(base64ToString)
+
+//or
+let str = 'bmltZXNoZGV1amEuY29t'
+let buff = new Buffer(str, 'base64')
+let base64ToStringNew = buff.toString('ascii')
+
+// string to base64
+let data = 'nimeshdeuja.com'
+let buff = new Buffer(data)
+let stringToBase64 = buff.toString('base64')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

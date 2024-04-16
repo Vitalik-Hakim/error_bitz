@@ -1,0 +1,36 @@
+---
+title: 'js get array item by property'
+description: 'js get array item by property'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, javascript, find, javascrip, j]
+---
+
+**The solution for this is noted below**
+
+## js get array item by property
+
+### Solution
+
+```javascript
+const jsObjects = [
+	{ id: 1, displayName: 'First' },
+	{ id: 2, displayName: 'Second' },
+	{ id: 3, displayName: 'Third' },
+	{ id: 4, displayName: 'Fourth' }
+]
+
+// You can use the arrow function expression:
+var result = jsObjects.find((obj) => {
+	// Returns the object where
+	// the given property has some value
+	return obj.id === 1
+})
+
+console.log(result)
+
+// Output: {id: 1, displayName: "First"}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

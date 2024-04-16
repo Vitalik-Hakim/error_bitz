@@ -1,0 +1,42 @@
+---
+title: 'gtx1650 nvidia-driver-520-open problem'
+description: 'gtx1650 nvidia-driver-520-open problem'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [screen, ubuntu-22.04, whatever]
+---
+
+**The solution for this is noted below**
+
+## gtx1650 nvidia-driver-520-open problem
+
+### Solution
+
+```whatever
+// I have gtx1650
+// After install latest drivers nvidia-driver-520-open
+// I have black screen
+// For me help this:
+
+rm -rf /etc/X11/xorg.conf
+
+// make sure nvidia-prime is installed
+sudo apt install --reinstall nvidia-prime
+
+// switch to nvidia
+sudo prime-select nvidia
+
+// (optional)
+
+// remove stray blacklist files
+sudo rm /lib/modprobe.d/blacklist-nvidia.conf /etc/modprobe.d/blacklist-nvidia.conf
+
+
+//update the initrd
+sudo update-initramfs -u
+
+reboot
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

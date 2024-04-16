@@ -1,0 +1,48 @@
+---
+title: 'jquery block page while loading'
+description: 'jquery block page while loading'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/HTML.png'
+category: 'html'
+tags: [block, html, jquery, loading]
+---
+
+**The solution for this is noted below**
+
+## jquery block page while loading
+
+### Solution
+
+```html
+<style>
+	#first {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		opacity: 0.5;
+		background-color: #000;
+		color: #fff;
+		z-index: 9999;
+	}
+	.load {
+		height: 600px;
+		width: 600px;
+		background-image: url('https://upload.wikimedia.org/wikipedia/commons/9/9d/Wikidata_Map_July_2017_Huge.png');
+	}
+</style>
+<script>
+	$(document).ready(function(){
+	  await sleep(2000);
+	    $("#first").fadeOut()
+	  });
+</script>
+
+<div id="first">
+	<h1>Please Wait..</h1>
+</div>
+<div class="load"></div>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

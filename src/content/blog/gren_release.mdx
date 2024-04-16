@@ -1,0 +1,37 @@
+---
+title: 'gren release'
+description: 'gren release'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [release, shell, versions]
+---
+
+**The solution for this is noted below**
+
+## gren release
+
+### Solution
+
+```shell
+# setup
+npm install github-release-notes -g
+export GREN_GITHUB_TOKEN=your_token_here
+
+# release tag version 'v0.0.4'
+gren release -t v0.0.4
+
+# doc
+gren help release # or gren release --help
+
+# examples
+gren examples release
+
+# commits between v1.0.1 and v1.1.0 registered for the release v1.1.0
+gren release -t v1.1.0..v1.0.1
+
+# recreate release 1.0.1 with pull releases having milestone matching "v1.0.1"
+gren release --data-source=prs -t 1.0.1 --milestone-match="v1.0.1" --override
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,46 @@
+---
+title: 'how to check if iframe is loaded'
+description: 'how to check if iframe is loaded'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [iframe, javascript, loaded]
+---
+
+**The solution for this is noted below**
+
+## how to check if iframe is loaded
+
+### Solution
+
+```javascript
+<script>
+function checkIframeLoaded() {
+    // Get a handle to the iframe element
+    var iframe = document.getElementById('i_frame');
+    var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Check if loading is complete
+    if (  iframeDoc.readyState  == 'complete' ) {
+        //iframe.contentWindow.alert("Hello");
+        iframe.contentWindow.onload = function(){
+            alert("I am loaded");
+        };
+        // The loading is complete, call the function we want executed once the iframe is loaded
+        afterLoading();
+        return;
+    }
+
+    // If we are here, it is not loaded. Set things up so we check   the status again in 100 milliseconds
+    window.setTimeout(checkIframeLoaded, 100);
+}
+
+function afterLoading(){
+    alert("I am here");
+}
+</script>
+
+<body onload="checkIframeLoaded();">
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

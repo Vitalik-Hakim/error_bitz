@@ -1,0 +1,21 @@
+---
+title: 'Python sort dataframe by list'
+description: 'Python sort dataframe by list'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [dataframe, list, python]
+---
+
+**The solution for this is noted below**
+
+## Python sort dataframe by list
+
+### Solution
+
+```python
+# sorts the dataframe so resulting order of ColumnName matches order in list
+df = df.set_index(ColumnName).reindex(list_to_sort_by).reset_index()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

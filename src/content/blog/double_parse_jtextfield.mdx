@@ -1,0 +1,29 @@
+---
+title: 'double parse jtextfield'
+description: 'double parse jtextfield'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [double, java, jtextfield, whatever]
+---
+
+**The solution for this is noted below**
+
+## double parse jtextfield
+
+### Solution
+
+```java
+public static void main(String[] args) {
+    double amount=0.0;
+    try {
+         amount = Double.parseDouble(txtMonth.getText());
+    } catch (Exception e) {
+        System.err.println("ups, this was not castable to double");
+          amount=-10.0;
+    }
+    System.out.println("Here is the double: "+ amount);
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

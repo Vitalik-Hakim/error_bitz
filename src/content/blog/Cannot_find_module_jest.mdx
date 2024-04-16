@@ -1,0 +1,36 @@
+---
+title: 'Cannot find module jest'
+description: 'Cannot find module jest'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [find, module, whatever, javascript]
+---
+
+**The solution for this is noted below**
+
+## Cannot find module jest
+
+### Solution
+
+```whatever
+For those who are facing this issue in 2022. Please add this code in your
+`jest-unit.json (or your jest config json file)`.
+
+    "moduleDirectories": ["<rootDir>/../", "node_modules"]
+
+Result:
+
+    {
+      "moduleFileExtensions": ["js", "json", "ts"],
+      "rootDir": ".",
+      "testEnvironment": "node",
+      "testRegex": ".\\.spec.ts$",
+      "transform": {
+        "^.+\\.(t|j)s$": "ts-jest"
+      },
+      "moduleDirectories": ["<rootDir>/../", "node_modules"]
+    }
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

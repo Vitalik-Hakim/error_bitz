@@ -1,0 +1,32 @@
+---
+title: 'changing mac address linux'
+description: 'changing mac address linux'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [linux, mac-address, shell, linu]
+---
+
+**The solution for this is noted below**
+
+## changing mac address linux
+
+### Solution
+
+```shell
+# I tested this in kali linux which is debian-based linux
+# type <ifconfig> to know your ip address and MAC address
+# you will see your MAC address like this -> ether 'MAC address'
+
+#to change the MAC address you have to do these steps
+sudo ifconfig <network interface> down
+#example -> ifconfig wlan0 down
+sudo ifconfig <network interface> hw ether <MAC addr that you wanna change>
+#example -> ifconfig wlan0 hw ether 00:11:22:33:44:55
+sudo ifconfig <network interface> up
+#ifconfig wlan0 up
+
+#NOTE: MAC address will change after the system has rebooted
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

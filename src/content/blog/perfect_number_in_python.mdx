@@ -1,0 +1,26 @@
+---
+title: 'perfect number in python'
+description: 'perfect number in python'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [perfect, python, perfect-numbers]
+---
+
+**The solution for this is noted below**
+
+## perfect number in python
+
+### Solution
+
+```python
+def perfect_number(n):
+    sum = 0
+    for x in range(1, n):
+        if n % x == 0:
+            sum += x
+    return sum == n
+print(perfect_number(6))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

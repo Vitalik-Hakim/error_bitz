@@ -1,0 +1,30 @@
+---
+title: 'npm ERR! code ERR_SOCKET_TIMEOUT'
+description: 'npm ERR! code ERR_SOCKET_TIMEOUT'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [npm, shell, whatever, javascript, j, errno]
+---
+
+**The solution for this is noted below**
+
+## npm ERR! code ERR_SOCKET_TIMEOUT
+
+### Solution
+
+```shell
+# In most cases your internet connection or internet speed is not good enough. Try changing your internet connection.
+# If this doesn't solve your problem then try other solutions!
+# Here are some other solutions:
+
+# 1) Delete proxies
+npm config rm proxy
+npm config rm https-proxy
+
+# 2) Change Timeouts
+npm config set fetch-retry-mintimeout 20000
+npm config set fetch-retry-maxtimeout 120000
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

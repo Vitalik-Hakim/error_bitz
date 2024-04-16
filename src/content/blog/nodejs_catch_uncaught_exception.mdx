@@ -1,0 +1,24 @@
+---
+title: 'nodejs catch uncaught exception'
+description: 'nodejs catch uncaught exception'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, uncaught-exception]
+---
+
+**The solution for this is noted below**
+
+## nodejs catch uncaught exception
+
+### Solution
+
+```javascript
+process
+	.on('uncaughtException', (err) => console.error(err, 'Uncaught Exception'))
+	.on('unhandledRejection', (reason, promise) =>
+		console.error(reason, 'Unhandled Rejection at', promise)
+	)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

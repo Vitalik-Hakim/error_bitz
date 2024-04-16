@@ -1,0 +1,28 @@
+---
+title: 'js get next weekend'
+description: 'js get next weekend'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [get, javascript, next, weekend]
+---
+
+**The solution for this is noted below**
+
+## js get next weekend
+
+### Solution
+
+```javascript
+function getNextDayOfWeek(date, dayOfWeek) {
+	// Code to check that date and dayOfWeek are valid left as an exercise ;)
+
+	var resultDate = new Date(date.getTime())
+
+	resultDate.setDate(date.getDate() + ((7 + dayOfWeek - date.getDay()) % 7))
+
+	return resultDate
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

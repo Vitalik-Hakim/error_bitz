@@ -1,0 +1,22 @@
+---
+title: 'find max length in string in pandas dataframe'
+description: 'find max length in string in pandas dataframe'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [dataframe, find, max, pandas, python, string]
+---
+
+**The solution for this is noted below**
+
+## find max length in string in pandas dataframe
+
+### Solution
+
+```python
+df.text.map(lambda x: len(x)).max()
+#or
+df['text_corrected'].max()
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

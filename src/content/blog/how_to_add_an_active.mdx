@@ -1,0 +1,22 @@
+---
+title: 'how to add an active class to current element in navbar in django'
+description: 'how to add an active class to current element in navbar in django'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [add, class, django, element, navbar, python]
+---
+
+**The solution for this is noted below**
+
+## how to add an active class to current element in navbar in django
+
+### Solution
+
+```python
+<li {% if request.resolver_match.url_name == 'home' %}class="active"{% endif %}>
+    <a href="/">HOME</a>
+</li>
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

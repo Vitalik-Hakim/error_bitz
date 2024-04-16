@@ -1,0 +1,35 @@
+---
+title: 'How to Send WhatsApp API using Ruby'
+description: 'How to Send WhatsApp API using Ruby'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [api, ruby, send, using, whatever, whatsapp]
+---
+
+**The solution for this is noted below**
+
+## How to Send WhatsApp API using Ruby
+
+### Solution
+
+```whatever
+require 'uri'
+require 'net/http'
+require 'openssl'
+
+url = URI("https://api.ultramsg.com/instance1316/messages/link")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Post.new(url)
+request["content-type"] = 'application/x-www-form-urlencoded'
+request.body = "token=5v941eyo9eqixrsi&to=14155552671&link=https://en.wikipedia.org/wiki/COVID-19&referenceId="
+
+response = http.request(request)
+puts response.read_body
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

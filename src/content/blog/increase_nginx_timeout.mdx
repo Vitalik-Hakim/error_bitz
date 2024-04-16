@@ -1,0 +1,29 @@
+---
+title: 'increase nginx timeout'
+description: 'increase nginx timeout'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [nginx, shell, timeout, whatever, ngin]
+---
+
+**The solution for this is noted below**
+
+## increase nginx timeout
+
+### Solution
+
+```shell
+step 1:  $sudo nano /etc/nginx/nginx.conf
+step 2:  add following config to http section and save it.
+http {
+   ...
+   proxy_read_timeout 300;
+   proxy_connect_timeout 300;
+   proxy_send_timeout 300;
+   ...
+}
+step 3:  $sudo service nginx reload
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

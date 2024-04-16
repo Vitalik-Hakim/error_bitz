@@ -1,0 +1,22 @@
+---
+title: 'wordpress https too many redirects'
+description: 'wordpress https too many redirects'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [https, php, wordpress, typescript, t]
+---
+
+**The solution for this is noted below**
+
+## wordpress https too many redirects
+
+### Solution
+
+```php
+define('WP_HOME','https://mywebsite.com');
+define('WP_SITEURL','https://mywebsite.com');
+$_SERVER['HTTPS'] = 'on';
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

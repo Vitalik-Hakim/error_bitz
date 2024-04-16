@@ -1,0 +1,29 @@
+---
+title: 'np array describe'
+description: 'np array describe'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [describe, np, python]
+---
+
+**The solution for this is noted below**
+
+## np array describe
+
+### Solution
+
+```python
+>>> from scipy import stats
+>>> a = np.arange(10)
+>>> stats.describe(a)
+DescribeResult(nobs=10, minmax=(0, 9), mean=4.5, variance=9.166666666666666,
+               skewness=0.0, kurtosis=-1.2242424242424244)
+>>> b = [[1, 2], [3, 4]]
+>>> stats.describe(b)
+DescribeResult(nobs=2, minmax=(array([1, 2]), array([3, 4])),
+               mean=array([2., 3.]), variance=array([2., 2.]),
+               skewness=array([0., 0.]), kurtosis=array([-2., -2.]))
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

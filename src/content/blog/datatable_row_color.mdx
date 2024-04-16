@@ -1,0 +1,29 @@
+---
+title: 'datatable row color'
+description: 'datatable row color'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [datatable, javascript, row]
+---
+
+**The solution for this is noted below**
+
+## datatable row color
+
+### Solution
+
+```javascript
+$('#tid_css').DataTable({
+	// ...
+	createdRow: function (row, data, dataIndex) {
+		if (data['column_index'] == 'column_value') {
+			$(row).css('background-color', 'Orange')
+			$(row).addClass('warning')
+		}
+	}
+	// ...
+})
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

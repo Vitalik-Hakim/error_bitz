@@ -1,0 +1,56 @@
+---
+title: 'golang check rune is number'
+description: 'golang check rune is number'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/go.png'
+category: 'go'
+tags: [go, rune]
+---
+
+**The solution for this is noted below**
+
+## golang check rune is number
+
+### Solution
+
+```go
+// Go program to illustrate how to
+// check the given rune is a
+// decimal digit or not
+package main
+  
+import (
+    "fmt"
+    "unicode"
+)
+  
+// Main function
+func main() {
+  
+    // Creating rune
+    rune_1 := 'g'
+    rune_2 := 'e'
+    rune_3 := '1'
+    rune_4 := '4'
+    rune_5 := 'S'
+  
+    // Checking the given rune is 
+    // a decimal digit or not
+    // Using IsDigit() function
+    res_1 := unicode.IsDigit(rune_1)
+    res_2 := unicode.IsDigit(rune_2)
+    res_3 := unicode.IsDigit(rune_3)
+    res_4 := unicode.IsDigit(rune_4)
+    res_5 := unicode.IsDigit(rune_5)
+  
+    // Displaying results
+    fmt.Println(res_1)
+    fmt.Println(res_2)
+    fmt.Println(res_3)
+    fmt.Println(res_4)
+    fmt.Println(res_5)
+  
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

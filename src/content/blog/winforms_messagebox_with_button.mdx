@@ -1,0 +1,28 @@
+---
+title: 'winforms messagebox with button'
+description: 'winforms messagebox with button'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [button, c#, messagebox, winforms, whatever, m]
+---
+
+**The solution for this is noted below**
+
+## winforms messagebox with button
+
+### Solution
+
+```csharp
+string message = "Do you want to close this window?";  
+string title = "Close Window";  
+MessageBoxButtons buttons = MessageBoxButtons.YesNo;  
+DialogResult result = MessageBox.Show(message, title, buttons);  
+if (result == DialogResult.Yes) {  
+    this.Close();  
+} else {  
+    // Do something  
+}
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

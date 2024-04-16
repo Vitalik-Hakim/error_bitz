@@ -1,0 +1,22 @@
+---
+title: 'Type `Timeout` is not assignable to type `number`.'
+description: 'Type `Timeout` is not assignable to type `number`.'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/typescript.png'
+category: 'typescript'
+tags: [typescript]
+---
+
+**The solution for this is noted below**
+
+## Type `Timeout` is not assignable to type `number`.
+
+### Solution
+
+```typescript
+let timeoutId: null | ReturnType<typeof setTimeout> = null
+...
+timeoutId = setTimeout(...)
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

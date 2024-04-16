@@ -1,0 +1,28 @@
+---
+title: 'Appending pandas dataframes generated in a for loop'
+description: 'Appending pandas dataframes generated in a for loop'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [for-loop, generated, pandas, python, append, ap]
+---
+
+**The solution for this is noted below**
+
+## Appending pandas dataframes generated in a for loop
+
+### Solution
+
+```python
+appended_data = []
+for infile in glob.glob("*.xlsx"):
+    data = pandas.read_excel(infile)
+    # store DataFrame in list
+    appended_data.append(data)
+# see pd.concat documentation for more info
+appended_data = pd.concat(appended_data)
+# write DataFrame to an excel sheet
+appended_data.to_excel('appended.xlsx')
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,23 @@
+---
+title: 'find particular column or table name from whole db'
+description: 'find particular column or table name from whole db'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [find, sql]
+---
+
+**The solution for this is noted below**
+
+## find particular column or table name from whole db
+
+### Solution
+
+```sql
+SELECT COLUMN_NAME
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME like '%ClaimProfessional%'
+AND COLUMN_NAME LIKE '%payer%';
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

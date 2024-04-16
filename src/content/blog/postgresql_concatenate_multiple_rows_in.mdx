@@ -1,0 +1,28 @@
+---
+title: 'postgresql concatenate multiple rows in group by'
+description: 'postgresql concatenate multiple rows in group by'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [concat, group-by, pg, postgresql, sql]
+---
+
+**The solution for this is noted below**
+
+## postgresql concatenate multiple rows in group by
+
+### Solution
+
+```sql
+SELECT col_a,
+array_to_string(array_agg(distinct col_b),',') AS Actor
+FROM Table1
+GROUP BY col_a;
+
+-- Result:
+-- MOVIE	ACTOR
+-- A		1,2,3
+-- B		4
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**

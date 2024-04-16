@@ -1,0 +1,25 @@
+---
+title: 'aws ec2 connect does not work with ubuntu 18.04'
+description: 'aws ec2 connect does not work with ubuntu 18.04'
+pubDate: 'Apr 16 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [connect, shell, ubuntu-18.04]
+---
+
+**The solution for this is noted below**
+
+## aws ec2 connect does not work with ubuntu 18.04
+
+### Solution
+
+```shell
+# On Ubuntu this is not enabled by default (but, it works out-of-the-box
+# on Amazon Linux 2). Usually to enable this, installing
+# ec2-instance-connect should be enough:
+
+sudo apt update
+sudo apt install ec2-instance-connect
+```
+
+**Try other methods by searching on the site. That is if this doesn't work**
