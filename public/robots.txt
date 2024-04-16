@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://errorbitz.com/sitemap-index.xml
+Sitemap: https://errorbitz.netlify.app/sitemap-index.xml
