@@ -36,7 +36,18 @@ import { AstroFont } from 'astro-font'
 
 <!-- ViewTransitions  -->
 <ViewTransitions />
+<!-- Analytics -->
+<!-- Google tag (gtag.js) -->
+<script async src='https://www.googletagmanager.com/gtag/js?id=G-0364MWK3CR'></script>
+<script>
+	window.dataLayer = window.dataLayer || []
+	function gtag() {
+		dataLayer.push(arguments)
+	}
+	gtag('js', new Date())
 
+	gtag('config', 'G-0364MWK3CR')
+</script>
 <!-- SEO -->
 <meta name='title' content={siteTitle} />
 <meta name='description' content={description} />
