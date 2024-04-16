@@ -6,7 +6,7 @@ import { remarkReadingTime } from './src/utils/readTime.ts'
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://errorbitz.com/', // Write here your website url
+	site: 'https://errorbitz.netlify.app/', // Write here your website url
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,
@@ -21,8 +21,8 @@ export default defineConfig({
 			shikiConfig: {
 				experimentalThemes: {
 					light: 'vitesse-light',
-					dark: 'material-theme-palenight',
-				  },
+					dark: 'material-theme-palenight'
+				},
 				wrap: true
 			},
 			drafts: true
