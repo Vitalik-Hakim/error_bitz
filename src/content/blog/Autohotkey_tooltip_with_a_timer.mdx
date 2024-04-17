@@ -1,0 +1,32 @@
+---
+title: 'Autohotkey tooltip with a timer to remove itself'
+description: 'Autohotkey tooltip with a timer to remove itself'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [auto, autohotkey, timer, tooltip, whatever]
+---
+
+**The solution for this is noted below**
+
+## Autohotkey tooltip with a timer to remove itself
+
+### Solution
+
+```whatever
+TimedToolTip("Example text",3000) ;In miliseconds
+
+;-----Functions-----;
+TimedToolTip(text,time)
+{
+	ToolTip, %text%
+	SetTimer, RemoveToolTip, %time%
+	return
+}
+
+;---Subroutines---;
+RemoveToolTip:
+	ToolTip
+	return
+```
+**Try other methods by searching on the site. That is if this doesn't work**

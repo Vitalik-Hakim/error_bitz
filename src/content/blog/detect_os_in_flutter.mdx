@@ -1,0 +1,30 @@
+---
+title: 'detect os in flutter'
+description: 'detect os in flutter'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/dart.png'
+category: 'dart'
+tags: [dart, detect, flutter]
+---
+
+**The solution for this is noted below**
+
+## detect os in flutter
+
+### Solution
+
+```dart
+import 'dart:io' show Platform, stdout;
+
+void main() {
+  // Get the operating system as a string.
+  String os = Platform.operatingSystem;
+  // Or, use a predicate getter.
+  if (Platform.isMacOS) {
+    print('is a Mac');
+  } else {
+    print('is not a Mac');
+  }
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

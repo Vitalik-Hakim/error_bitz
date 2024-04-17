@@ -1,0 +1,24 @@
+---
+title: '`Client does not support authentication protocol requested by server; consider upgrading MySQL client`, sqlState: `08004`,'
+description: '`Client does not support authentication protocol requested by server; consider upgrading MySQL client`, sqlState: `08004`,'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [authentication, sql, shell, auth, haskell]
+---
+
+**The solution for this is noted below**
+
+## `Client does not support authentication protocol requested by server; consider upgrading MySQL client`, sqlState: `08004`,
+
+### Solution
+
+```sql
+$ mysql -u root -p
+Enter password: (enter your root password)
+
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'your_new_password';
+mysql> FLUSH PRIVILEGES;
+mysql> quit
+```
+**Try other methods by searching on the site. That is if this doesn't work**

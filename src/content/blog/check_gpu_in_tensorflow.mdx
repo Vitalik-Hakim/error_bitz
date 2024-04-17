@@ -1,0 +1,23 @@
+---
+title: 'check gpu in tensorflow'
+description: 'check gpu in tensorflow'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [gpu, python, tensorflow, whatever, shell, sh, pyt, using, usin]
+---
+
+**The solution for this is noted below**
+
+## check gpu in tensorflow
+
+### Solution
+
+```python
+# For tensorflow 2:
+print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))
+
+# For tensorflow 1:
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+```
+**Try other methods by searching on the site. That is if this doesn't work**

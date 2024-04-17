@@ -1,0 +1,23 @@
+---
+title: 'discord.py aliases'
+description: 'discord.py aliases'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [aliases, discord.py, python, alias, command, co]
+---
+
+**The solution for this is noted below**
+
+## discord.py aliases
+
+### Solution
+
+```python
+@commands.command(name='test', aliases=['testcommand', 'testing'])
+async def test(self, ctx):
+    await ctx.send("This a test command")
+
+#will run with either 'test, testcommand or testing
+```
+**Try other methods by searching on the site. That is if this doesn't work**

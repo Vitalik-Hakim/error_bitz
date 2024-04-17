@@ -1,0 +1,29 @@
+---
+title: 'Datatable Change page size for pdf'
+description: 'Datatable Change page size for pdf'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [datatable, javascript, page-size, pdf]
+---
+
+**The solution for this is noted below**
+
+## Datatable Change page size for pdf
+
+### Solution
+
+```javascript
+buttons: [
+            'csv', 'excel',
+            {
+                extend: 'pdfHtml5',
+                pageSize: 'A3',
+                exportOptions: {
+                    columns:':visible',
+                    rows: ':visible'
+                }
+            },
+        ],
+```
+**Try other methods by searching on the site. That is if this doesn't work**

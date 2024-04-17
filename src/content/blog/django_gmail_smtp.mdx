@@ -1,0 +1,24 @@
+---
+title: 'django gmail smtp'
+description: 'django gmail smtp'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [django, gmail, python, smtp]
+---
+
+**The solution for this is noted below**
+
+## django gmail smtp
+
+### Solution
+
+```python
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'your_account@gmail.com'
+EMAIL_HOST_PASSWORD = 'your accounts password'
+```
+**Try other methods by searching on the site. That is if this doesn't work**

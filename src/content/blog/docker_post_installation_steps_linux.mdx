@@ -1,0 +1,27 @@
+---
+title: 'docker post installation steps linux'
+description: 'docker post installation steps linux'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [docker, linux, shell, sudo, installation]
+---
+
+**The solution for this is noted below**
+
+## docker post installation steps linux
+
+### Solution
+
+```shell
+# Creates docker group
+sudo groupadd docker
+
+# Add your user to the docker group
+sudo usermod -aG docker $USER
+
+# Log out and log back in so that your group membership is re-evaluated
+# GNOME example
+gnome-session-quit
+```
+**Try other methods by searching on the site. That is if this doesn't work**

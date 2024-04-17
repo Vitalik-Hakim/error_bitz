@@ -1,0 +1,27 @@
+---
+title: 'allow only positive integer in input type number'
+description: 'allow only positive integer in input type number'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/HTML.png'
+category: 'html'
+tags: [html, input, integer]
+---
+
+**The solution for this is noted below**
+
+## allow only positive integer in input type number
+
+### Solution
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+  </head>
+  <body>
+    <input type="number" name="test_name" min="0" oninput="validity.valid||(value='');">
+  </body>
+</html>
+```
+**Try other methods by searching on the site. That is if this doesn't work**

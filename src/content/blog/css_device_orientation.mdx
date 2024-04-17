@@ -1,0 +1,43 @@
+---
+title: 'css device orientation'
+description: 'css device orientation'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [css, device-orientation]
+---
+
+**The solution for this is noted below**
+
+## css device orientation
+
+### Solution
+
+```css
+/* For portrait, we want the tool bar on top */
+
+@media screen and (orientation: portrait) {
+  #toolbar {
+    width: 100%;
+  }
+}
+
+/* For landscape, we want the tool bar stick on the left */
+
+@media screen and (orientation: landscape) {
+  #toolbar {
+    position: fixed;
+    width: 2.65em;
+    height: 100%;
+  }
+
+  p {
+    margin-left: 2em;
+  }
+
+  li + li {
+    margin-top: .5em;
+  }
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

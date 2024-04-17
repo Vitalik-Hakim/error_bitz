@@ -1,19 +1,25 @@
 ---
-title: 'c# get username'
-description: 'c# get username'
+title: 'c# Sleep'
+description: 'c# Sleep'
 pubDate: 'Apr 17 2024'
 heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
 category: 'csharp'
-tags: [c#, get, csharp, c]
+tags: [c#, sleep, csharp, c]
 ---
 
 **The solution for this is noted below**
 
-## c# get username
+## c# Sleep
 
 ### Solution
 
 ```csharp
-string userName = System.Security.Principal.WindowsIdentity.GetCurrent().Name;
+using System.Threading;
+
+static void Main()
+{
+  //do stuff
+  Thread.Sleep(5000) //will sleep for 5 sec
+}
 ```
 **Try other methods by searching on the site. That is if this doesn't work**

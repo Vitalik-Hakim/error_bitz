@@ -1,0 +1,24 @@
+---
+title: 'detecting a right click unity'
+description: 'detecting a right click unity'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, right-click]
+---
+
+**The solution for this is noted below**
+
+## detecting a right click unity
+
+### Solution
+
+```csharp
+function Update()
+{
+   if(Input.GetMouseButtonDown(0)) Debug.Log("Pressed left click.");
+   if(Input.GetMouseButtonDown(1)) Debug.Log("Pressed right click.");
+   if(Input.GetMouseButtonDown(2)) Debug.Log("Pressed middle click.");
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

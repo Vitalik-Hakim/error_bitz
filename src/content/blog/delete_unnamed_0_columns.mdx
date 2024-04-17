@@ -1,0 +1,19 @@
+---
+title: 'delete unnamed 0 columns'
+description: 'delete unnamed 0 columns'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [python, pandas, pa]
+---
+
+**The solution for this is noted below**
+
+## delete unnamed 0 columns
+
+### Solution
+
+```python
+df.drop(df.filter(regex="Unnamed"),axis=1, inplace=True)
+```
+**Try other methods by searching on the site. That is if this doesn't work**

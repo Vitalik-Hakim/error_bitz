@@ -1,0 +1,27 @@
+---
+title: 'add shadow to UIButton swift'
+description: 'add shadow to UIButton swift'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/swift.png'
+category: 'swift'
+tags: [add, shadow, swift, uibutton]
+---
+
+**The solution for this is noted below**
+
+## add shadow to UIButton swift
+
+### Solution
+
+```swift
+globeButton.setImage(UIImage(named: "Globe"), forState: .Normal)
+globeButton.backgroundColor = UIColor(red: 171/255, green: 178/255, blue: 186/255, alpha: 1.0)
+// Shadow and Radius
+globeButton.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).CGColor
+globeButton.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+globeButton.layer.shadowOpacity = 1.0
+globeButton.layer.shadowRadius = 0.0
+globeButton.layer.masksToBounds = false
+globeButton.layer.cornerRadius = 4.0
+```
+**Try other methods by searching on the site. That is if this doesn't work**

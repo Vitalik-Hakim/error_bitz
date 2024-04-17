@@ -1,0 +1,25 @@
+---
+title: 'css selector not checked input  label'
+description: 'css selector not checked input  label'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/CSS.png'
+category: 'css'
+tags: [checked, css, input, label, selector]
+---
+
+**The solution for this is noted below**
+
+## css selector not checked input  label
+
+### Solution
+
+```css
+/* For a checked radio or checkbox */
+input[type="radio"]:checked + label
+input[type="checkbox"]:checked + label
+
+/* For an unchecked radio or checkbox */
+input[type="radio"]:not(:checked) + label
+input[type="checkbox"]:not(:checked) + label
+```
+**Try other methods by searching on the site. That is if this doesn't work**

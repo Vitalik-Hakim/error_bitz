@@ -1,0 +1,28 @@
+---
+title: 'add admin notice on wordpress'
+description: 'add admin notice on wordpress'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [add, admin, notice, php, wordpress]
+---
+
+**The solution for this is noted below**
+
+## add admin notice on wordpress
+
+### Solution
+
+```php
+// Add admin notice
+function my_custom_admin_notice() {
+    $message = 'This is my custom admin notice.';
+    ?>
+    <div class="notice notice-success is-dismissible">
+        <p><?php echo $message; ?></p>
+    </div>
+    <?php
+}
+add_action( 'admin_notices', 'my_custom_admin_notice' );
+```
+**Try other methods by searching on the site. That is if this doesn't work**

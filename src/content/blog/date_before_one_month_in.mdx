@@ -1,0 +1,19 @@
+---
+title: 'date before one month in mysql'
+description: 'date before one month in mysql'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [date, mysql, sql]
+---
+
+**The solution for this is noted below**
+
+## date before one month in mysql
+
+### Solution
+
+```sql
+select Date(DATE_SUB(NOW(), INTERVAL 1 MONTH));
+```
+**Try other methods by searching on the site. That is if this doesn't work**
