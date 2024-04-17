@@ -62,8 +62,8 @@ import { AstroFont } from 'astro-font'
     "@id": "https://errorbitz.netlify.app/"
   },
   "headline": {siteTitle},
-  "description": {description},
-  "image": {socialImageURL},  
+  "description": ${description},
+  "image": ${socialImageURL},  
   "author": {
     "@type": "Organization",
     "name": "Vitalik-Hakim",
@@ -74,11 +74,11 @@ import { AstroFont } from 'astro-font'
     "name": "Error Bitz",
     "logo": {
       "@type": "ImageObject",
-      "url": {socialImageURL}
+      "url": ${socialImageURL}
     }
   },
-  "datePublished": {articleDate},
-  "dateModified": {articleDate}
+  "datePublished": ${articleDate},
+  "dateModified": ${articleDate}
 }
 </script>
 <!-- Open Graph / Facebook -->
