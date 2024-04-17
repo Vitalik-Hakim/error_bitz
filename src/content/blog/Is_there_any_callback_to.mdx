@@ -1,0 +1,20 @@
+---
+title: 'Is there any callback to tell me when “build” function is done in Flutter?'
+description: 'Is there any callback to tell me when “build” function is done in Flutter?'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/dart.png'
+category: 'dart'
+tags: [any, callback, dart, function, tell, when]
+---
+
+**The solution for this is noted below**
+
+## Is there any callback to tell me when “build” function is done in Flutter?
+
+### Solution
+
+```dart
+build() is sync, so if you execute something async in build()
+it will be executed after build() is done.
+```
+**Try other methods by searching on the site. That is if this doesn't work**

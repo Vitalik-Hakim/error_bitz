@@ -1,0 +1,26 @@
+---
+title: 'pl sql escape &'
+description: 'pl sql escape &'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [sql]
+---
+
+**The solution for this is noted below**
+
+## pl sql escape &
+
+### Solution
+
+```sql
+-- syntax (This is specifically for PLSQL)
+||CHR(38)||
+
+-- example (You want: 'This symbol, &, works!')
+'This symbol, '||CHR(38)||', works!'
+
+-- Note: You could also use the "SET DEFINE ~;" code. Please see the 
+-- reference/source (URL) for more details
+```
+**Try other methods by searching on the site. That is if this doesn't work**

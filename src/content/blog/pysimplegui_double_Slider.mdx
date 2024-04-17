@@ -1,0 +1,34 @@
+---
+title: 'pysimplegui double Slider'
+description: 'pysimplegui double Slider'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [double, pg, pysimplegui, python, slider]
+---
+
+**The solution for this is noted below**
+
+## pysimplegui double Slider
+
+### Solution
+
+```python
+import PySimpleGUI as sg
+
+layout = [
+    [sg.Frame('Work Hours', [[sg.Slider(range=(0, 12), orientation='h', key='-START-'), sg.Slider(range=(12, 24), orientation='h', key='-END-')]])],
+]
+
+window = sg.Window(title="Zatrudnienie", layout=layout)
+
+while True:
+    event, values = window.read(timeout=50)
+
+    if event == sg.WIN_CLOSED:
+        break
+    print(values)
+
+window.close()
+```
+**Try other methods by searching on the site. That is if this doesn't work**

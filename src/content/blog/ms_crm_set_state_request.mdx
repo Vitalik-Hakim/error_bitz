@@ -1,0 +1,27 @@
+---
+title: 'ms crm set state request  dynamics 365 set state request'
+description: 'ms crm set state request  dynamics 365 set state request'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, crm, dynamics-365, request, set, state]
+---
+
+**The solution for this is noted below**
+
+## ms crm set state request  dynamics 365 set state request
+
+### Solution
+
+```csharp
+SetStateRequest req = new SetStateRequest();
+
+req.EntityMoniker = new EntityReference("contact" ,entity.Id);
+
+req.State = new OptionSetValue(1);
+
+req.Status = new OptionSetValue(2);
+
+service.Execute(req);
+```
+**Try other methods by searching on the site. That is if this doesn't work**

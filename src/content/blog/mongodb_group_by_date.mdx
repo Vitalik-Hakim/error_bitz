@@ -1,0 +1,27 @@
+---
+title: 'mongodb group by date'
+description: 'mongodb group by date'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [date, group-by, mongodb, whatever]
+---
+
+**The solution for this is noted below**
+
+## mongodb group by date
+
+### Solution
+
+```whatever
+db.getCollection('supportIssuesChat').aggregate([
+{
+        $group : {
+           _id :{ $dateToString: { format: "%Y-%m-%d", date: "$createdAt"} },
+           list: { $push: "$$ROOT" },
+           count: { $sum: 1 }
+        }
+}
+])
+```
+**Try other methods by searching on the site. That is if this doesn't work**

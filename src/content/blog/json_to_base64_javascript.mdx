@@ -1,0 +1,31 @@
+---
+title: 'json to base64 javascript'
+description: 'json to base64 javascript'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [base64, javascript, json, ba]
+---
+
+**The solution for this is noted below**
+
+## json to base64 javascript
+
+### Solution
+
+```javascript
+JSON to Base64:
+
+function jsonToBase64(object) {
+  const json = JSON.stringify(object);
+  return Buffer.from(json).toString("base64");
+}
+
+Base64 to JSON:
+
+function base64ToJson(base64String) {
+  const json = Buffer.from(base64String, "base64").toString();
+  return JSON.parse(json);
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

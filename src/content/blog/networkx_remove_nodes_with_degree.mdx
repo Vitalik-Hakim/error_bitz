@@ -1,0 +1,28 @@
+---
+title: 'networkx remove nodes with degree'
+description: 'networkx remove nodes with degree'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [networkx, nodes, python]
+---
+
+**The solution for this is noted below**
+
+## networkx remove nodes with degree
+
+### Solution
+
+```python
+import networkx
+
+G1 = networkx.Graph()
+G1.add_edges_from([('a','b'),('b','c'),('c','e'),('c','d'),('c','f'),('c','g')])
+to_be_removed = [x for  x in G1.nodes() if G1.degree(x) <= 1]
+
+for x in to_be_removed:
+    G1.remove_node(x)
+
+print(G1.edges())
+```
+**Try other methods by searching on the site. That is if this doesn't work**

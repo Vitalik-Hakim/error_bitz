@@ -1,0 +1,26 @@
+---
+title: 'Problem binding to port 80: Could not bind to IPv4 or IPv6 letsencrypt'
+description: 'Problem binding to port 80: Could not bind to IPv4 or IPv6 letsencrypt'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [bind, binding, ipv4, ipv6, lets-encrypt, port, shell, shel]
+---
+
+**The solution for this is noted below**
+
+## Problem binding to port 80: Could not bind to IPv4 or IPv6 letsencrypt
+
+### Solution
+
+```shell
+You just need to stop all running servers like Apache, nginx or OpenShift 
+before doing this.
+
+### Stop Nginx
+sudo systemctl stop nginx
+
+### Stop Apache2
+sudo systemctl stop apache2
+```
+**Try other methods by searching on the site. That is if this doesn't work**

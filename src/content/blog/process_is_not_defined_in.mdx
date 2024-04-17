@@ -1,0 +1,33 @@
+---
+title: 'process is not defined in react vite'
+description: 'process is not defined in react vite'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [defined, javascript, process, vite]
+---
+
+**The solution for this is noted below**
+
+## process is not defined in react vite
+
+### Solution
+
+```javascript
+If you are using Vite, use import.meta.env instead, process.env is removed.
+And make sure variables start with VITE_ in .env file.
+//in .env 
+VITE_GITHUB_URL= 'https://api.github.com'
+//in App.jsx calling environment variable
+console.log(import.meta.env.VITE_GITHUB_URL)
+//never use sensentive data in .env as vite or create react app  include in build
+//instead create server.
+
+process is a global object in Node.js that provides information about,
+and control over, the current Node.js process. It is not available in the browser.
+
+If you are using Vite, a web development build tool, you will not have access 
+to the process object because Vite is designed to run in the browser and does
+not have access to the Node.js runtime.
+```
+**Try other methods by searching on the site. That is if this doesn't work**

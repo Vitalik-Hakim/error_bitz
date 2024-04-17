@@ -1,0 +1,20 @@
+---
+title: 'mysql purge binary logs'
+description: 'mysql purge binary logs'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [mysql, purge, sql, mysq]
+---
+
+**The solution for this is noted below**
+
+## mysql purge binary logs
+
+### Solution
+
+```sql
+# Enter mysql as root with mysql -u root
+PURGE BINARY LOGS BEFORE NOW();
+```
+**Try other methods by searching on the site. That is if this doesn't work**

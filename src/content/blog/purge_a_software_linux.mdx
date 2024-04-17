@@ -1,0 +1,25 @@
+---
+title: 'purge a software linux'
+description: 'purge a software linux'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [linux, purge, shell, linu]
+---
+
+**The solution for this is noted below**
+
+## purge a software linux
+
+### Solution
+
+```shell
+# List out all software installed on the machine
+dpkg --list
+
+# remove the software you want using the following command 
+sudo apt-get --purge remove NAME_SOFTWARE
+# e.g.
+sudo apt-get --purge remove gimp
+```
+**Try other methods by searching on the site. That is if this doesn't work**

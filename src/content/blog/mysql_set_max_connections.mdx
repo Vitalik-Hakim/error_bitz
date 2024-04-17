@@ -1,0 +1,20 @@
+---
+title: 'mysql set max connections'
+description: 'mysql set max connections'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [max, mysql, set, sql]
+---
+
+**The solution for this is noted below**
+
+## mysql set max connections
+
+### Solution
+
+```sql
+show variables like "max_connections";
+set global max_connections =5000;
+```
+**Try other methods by searching on the site. That is if this doesn't work**

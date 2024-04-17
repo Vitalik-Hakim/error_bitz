@@ -1,0 +1,33 @@
+---
+title: 'laralve validation url'
+description: 'laralve validation url'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [php, url, validation, laravel]
+---
+
+**The solution for this is noted below**
+
+## laralve validation url
+
+### Solution
+
+```php
+/**
+ * The attributes that are mass assignable.
+ *
+ * @var array
+ */
+public function store(Request $request)
+{
+    $input = $request->all();
+
+    $request->validate([
+        'url' => 'required|url'
+    ]);
+
+    // Url Validation
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

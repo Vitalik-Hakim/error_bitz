@@ -1,0 +1,21 @@
+---
+title: 'Java make sure only one condition is true'
+description: 'Java make sure only one condition is true'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/java.png'
+category: 'java'
+tags: [java]
+---
+
+**The solution for this is noted below**
+
+## Java make sure only one condition is true
+
+### Solution
+
+```java
+if (Stream.of(valueA, valueB, valueC, valueD).filter(Objects::nonNull).count() != 1) { 
+    /* throw error */ 
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

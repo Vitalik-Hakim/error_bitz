@@ -1,0 +1,24 @@
+---
+title: 'last insert id model codeigniter'
+description: 'last insert id model codeigniter'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [codeigniter, last-insert-id, model, php, code, css]
+---
+
+**The solution for this is noted below**
+
+## last insert id model codeigniter
+
+### Solution
+
+```php
+function add_post($post_data){
+   $this->db->insert('posts', $post_data);
+   $insert_id = $this->db->insert_id();
+
+   return  $insert_id;
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,34 @@
+---
+title: 'laravel paginate fix'
+description: 'laravel paginate fix'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [laravel-paginate, php, laravel-pagination, laravel-pagi]
+---
+
+**The solution for this is noted below**
+
+## laravel paginate fix
+
+### Solution
+
+```php
+//First go to the file app\Providers\AppServiceProvider.php and add:
+
+use Illuminate\Pagination\Paginator;
+
+public function boot()
+{
+    
+    Paginator::useBootstrap();
+}
+
+//Use this after @endforeach in your post.blade.php:
+{{ $blogs->links() }}
+
+// OR
+// Directly in your blade file
+$posts->links('pagination::bootstrap-4')
+```
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,29 @@
+---
+title: 'php get all txt files in directory'
+description: 'php get all txt files in directory'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [directory, get, php, txt]
+---
+
+**The solution for this is noted below**
+
+## php get all txt files in directory
+
+### Solution
+
+```php
+$path = '/path/to/directory';
+$files = glob($path."/*.txt");
+foreach ($files as $file) {
+  echo $file;
+  echo '<br>';
+}
+/* Outputs something like: 
+	/path/to/directory/someFile.txt
+	/path/to/directory/someOtherFile.txt
+	/path/to/directory/anotherFile.txt
+*/
+```
+**Try other methods by searching on the site. That is if this doesn't work**
