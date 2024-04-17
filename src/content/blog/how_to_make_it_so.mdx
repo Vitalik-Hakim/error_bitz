@@ -1,0 +1,25 @@
+---
+title: 'how to make it so the pygame window will close'
+description: 'how to make it so the pygame window will close'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pygame, python, window, exit]
+---
+
+**The solution for this is noted below**
+
+## how to make it so the pygame window will close
+
+### Solution
+
+```python
+running = True
+while running:
+  for event in pygame.event.get():
+    if event.type == pygame.QUIT:
+      running = False
+    if running == False:
+      pygame.quit()
+```
+**Try other methods by searching on the site. That is if this doesn't work**

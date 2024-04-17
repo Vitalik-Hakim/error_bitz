@@ -1,0 +1,23 @@
+---
+title: 'format amount in javascript'
+description: 'format amount in javascript'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [format, javascript]
+---
+
+**The solution for this is noted below**
+
+## format amount in javascript
+
+### Solution
+
+```javascript
+const formatToCurrency = amount => {
+  return "$" + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+};
+formatToCurrency(12.34546); //"$12.35"
+formatToCurrency(42345255.356); //"$42,345,255.36
+```
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,25 @@
+---
+title: 'grep powershell'
+description: 'grep powershell'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [grep, powershell, shell]
+---
+
+**The solution for this is noted below**
+
+## grep powershell
+
+### Solution
+
+```shell
+To grep in powershell use Select-String. Select-String uses regex wildcards
+so you have to use .* instead of only * (for instance). You can also specify
+path.
+
+ls | Select-String -Pattern ".*Anders.*"
+
+ls | Select-String -Path ".*Code.*" -Pattern ".*\.cs"
+```
+**Try other methods by searching on the site. That is if this doesn't work**

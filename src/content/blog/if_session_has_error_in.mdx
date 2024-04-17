@@ -1,0 +1,35 @@
+---
+title: 'if session has error in laravel'
+description: 'if session has error in laravel'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/php.png'
+category: 'php'
+tags: [laravel, php, session, exists, ex]
+---
+
+**The solution for this is noted below**
+
+## if session has error in laravel
+
+### Solution
+
+```php
+@if (Session::has('success'))
+<div class="alert alert-success">{{ Session::get('success') }}</div>
+@endif
+@if (Session::has('fail'))
+<div class="alert alert-danger">{{ Session::get('fail') }}</div>
+@endif
+
+@if (session()->has('errors'))
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+<br />
+@endif
+```
+**Try other methods by searching on the site. That is if this doesn't work**

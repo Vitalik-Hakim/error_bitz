@@ -1,0 +1,24 @@
+---
+title: 'How to make a GameObject Bigger in C# unity'
+description: 'How to make a GameObject Bigger in C# unity'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/c%23.png'
+category: 'csharp'
+tags: [c#, gameobject]
+---
+
+**The solution for this is noted below**
+
+## How to make a GameObject Bigger in C# unity
+
+### Solution
+
+```csharp
+public GameObject objectToResize;
+//                     ^^^^^ Name of GameObject
+void IncreaseSize() {
+    objectToResize.transform.localScale += new Vector3(1, 1, 1);
+                                                   Size ^^^^^
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

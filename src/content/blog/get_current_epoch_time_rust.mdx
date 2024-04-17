@@ -1,0 +1,27 @@
+---
+title: 'get current epoch time rust'
+description: 'get current epoch time rust'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [epoch, get, rust, time, whatever]
+---
+
+**The solution for this is noted below**
+
+## get current epoch time rust
+
+### Solution
+
+```whatever
+use std::time::{SystemTime, UNIX_EPOCH};
+
+fn main() {
+    let start = SystemTime::now();
+    let since_the_epoch = start
+        .duration_since(UNIX_EPOCH)
+        .unwrap();
+    println!("{:?}", since_the_epoch);
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

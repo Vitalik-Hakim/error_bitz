@@ -1,0 +1,20 @@
+---
+title: 'error: `src/` does not have a commit checked out fatal: adding files failed'
+description: 'error: `src/` does not have a commit checked out fatal: adding files failed'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [checked, commit, out, shell, whatever]
+---
+
+**The solution for this is noted below**
+
+## error: `src/` does not have a commit checked out fatal: adding files failed
+
+### Solution
+
+```shell
+#You have to remove all .git files in subdirectories to fix git error
+rm -rf */.git
+```
+**Try other methods by searching on the site. That is if this doesn't work**

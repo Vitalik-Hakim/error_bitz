@@ -1,0 +1,37 @@
+---
+title: 'how to take a screenshot of a particular area on the screen with python'
+description: 'how to take a screenshot of a particular area on the screen with python'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [area, python, screen, screenshot, take]
+---
+
+**The solution for this is noted below**
+
+## how to take a screenshot of a particular area on the screen with python
+
+### Solution
+
+```python
+# First install module called pillow
+
+pip install pillow
+
+# ------------------------------------------------------- #
+
+
+from PIL import ImageGrab
+
+
+image = ImageGrab.grab(bbox=(0,0,700,800))
+# If you don't iclude bbox, you will take a screenshot of the entire screen.
+# If you use bbox, the first two numbers is the start coordinates and the last 
+# two numbers is the end cordiates of your picture on the screen.
+# (one corrdinate == one pixel)
+
+
+
+image.save('sc.png') # saves the screeshot
+```
+**Try other methods by searching on the site. That is if this doesn't work**

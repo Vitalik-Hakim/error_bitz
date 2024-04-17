@@ -1,0 +1,23 @@
+---
+title: 'How to select rows with no matching entry in another table?'
+description: 'How to select rows with no matching entry in another table?'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [join, matching, rows, select, sql]
+---
+
+**The solution for this is noted below**
+
+## How to select rows with no matching entry in another table?
+
+### Solution
+
+```sql
+SELECT Name, Gender,country, Salary, DeptName   
+FROM tbl_Employee  
+LEFT OUTER JOIN tbl_Department  
+ON tbl_Employee.DepartmentId = tbl_Department.DeptId  
+where tbl_Employee.DepartmentId is null
+```
+**Try other methods by searching on the site. That is if this doesn't work**

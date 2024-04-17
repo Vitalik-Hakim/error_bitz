@@ -1,0 +1,23 @@
+---
+title: 'Error: Unable to resolve module `react-native-screens` from `node_modules/@react-navigation/bottom-tabs/src/views/BottomTabView.tsx`: react-native-screens could not be found within the project.'
+description: 'Error: Unable to resolve module `react-native-screens` from `node_modules/@react-navigation/bottom-tabs/src/views/BottomTabView.tsx`: react-native-screens could not be found within the project.'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [module, react-native-screens, resolve, shell]
+---
+
+**The solution for this is noted below**
+
+## Error: Unable to resolve module `react-native-screens` from `node_modules/@react-navigation/bottom-tabs/src/views/BottomTabView.tsx`: react-native-screens could not be found within the project.
+
+### Solution
+
+```shell
+# If you are using react-navigation in your bare react-native project do not forget to also install the following required dependencies:
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+
+# Yarn
+yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+```
+**Try other methods by searching on the site. That is if this doesn't work**

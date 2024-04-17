@@ -1,0 +1,24 @@
+---
+title: 'git ignore .env files not working'
+description: 'git ignore .env files not working'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [git, ignore, javascript, whatever, gitignore, giti, shell]
+---
+
+**The solution for this is noted below**
+
+## git ignore .env files not working
+
+### Solution
+
+```javascript
+If you have already added the files to be tracked,
+you need to remove them from tracking:
+
+git rm env.local --cached
+git rm env.staging --cached
+git commit -m "Stopped tracking env.local, and env.staging"
+```
+**Try other methods by searching on the site. That is if this doesn't work**

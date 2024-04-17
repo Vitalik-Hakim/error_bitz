@@ -1,0 +1,21 @@
+---
+title: 'error C4996: `fopen`: This function or variable may be unsafe'
+description: 'error C4996: `fopen`: This function or variable may be unsafe'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [unsafe, whatever]
+---
+
+**The solution for this is noted below**
+
+## error C4996: `fopen`: This function or variable may be unsafe
+
+### Solution
+
+```whatever
+Select your project and click "Properties".
+then chose "Configuration Properties" -> "C/C++" -> "Preprocessor"
+In the field "PreprocessorDefinitions" add ;_CRT_SECURE_NO_WARNINGS
+```
+**Try other methods by searching on the site. That is if this doesn't work**

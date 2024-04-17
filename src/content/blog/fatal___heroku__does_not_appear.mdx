@@ -1,0 +1,24 @@
+---
+title: 'fatal: `heroku` does not appear to be a git repository'
+description: 'fatal: `heroku` does not appear to be a git repository'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, shel]
+---
+
+**The solution for this is noted below**
+
+## fatal: `heroku` does not appear to be a git repository
+
+### Solution
+
+```shell
+git add .
+git commit -m "heroku commit"
+
+heroku git:remote -a YOUR_APP_NAME
+
+git push heroku master
+```
+**Try other methods by searching on the site. That is if this doesn't work**
