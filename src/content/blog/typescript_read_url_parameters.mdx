@@ -1,0 +1,27 @@
+---
+title: 'typescript read url parameters'
+description: 'typescript read url parameters'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [javascript, typescript, url-parameters, get, search, typescri]
+---
+
+**The solution for this is noted below**
+
+## typescript read url parameters
+
+### Solution
+
+```javascript
+// get all search params (including ?)
+const queryString = window.location.search;
+// it will look like this: ?product=shirt&color=blue&newuser&size=m
+
+// parse the query string's paramters
+const urlParams = new URLSearchParams(queryString);
+
+// To get a parameter simply write something like the follwing
+const paramValue = urlParams.get('yourParam');
+```
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,29 @@
+---
+title: 'running eslint'
+description: 'running eslint'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [eslint, whatever, shell]
+---
+
+**The solution for this is noted below**
+
+## running eslint
+
+### Solution
+
+```whatever
+#install eslint in project
+npm install eslint --save-dev
+
+#initialize in root folder
+node_modules/.bin/eslint --init
+
+#Add the snippet below into "script" in package.json file.
+"lint": "eslint ."
+
+#Run 
+npm run lint
+```
+**Try other methods by searching on the site. That is if this doesn't work**

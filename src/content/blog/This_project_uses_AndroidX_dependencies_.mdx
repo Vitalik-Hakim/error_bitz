@@ -1,0 +1,29 @@
+---
+title: 'This project uses AndroidX dependencies, but the `android.useAndroidX` property is not enabled.'
+description: 'This project uses AndroidX dependencies, but the `android.useAndroidX` property is not enabled.'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [androidx, javascript, project, this, uses, java]
+---
+
+**The solution for this is noted below**
+
+## This project uses AndroidX dependencies, but the `android.useAndroidX` property is not enabled.
+
+### Solution
+
+```javascript
+// old version fix
+// goto [project folder]/platforms/android
+// open gradle.properties
+// add or modify this lines
+android.useAndroidX=true
+android.enableJetifier=true
+
+// new version fix
+// if not work
+// try this
+cordova plugin add cordova-plugin-androidx
+```
+**Try other methods by searching on the site. That is if this doesn't work**

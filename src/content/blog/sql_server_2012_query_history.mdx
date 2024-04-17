@@ -1,0 +1,22 @@
+---
+title: 'sql server 2012 query history'
+description: 'sql server 2012 query history'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/sql.png'
+category: 'sql'
+tags: [history, sql, sql-server]
+---
+
+**The solution for this is noted below**
+
+## sql server 2012 query history
+
+### Solution
+
+```sql
+SELECT t.[text]
+FROM sys.dm_exec_cached_plans AS p
+CROSS APPLY sys.dm_exec_sql_text(p.plan_handle) AS t
+WHERE t.[text] LIKE N'%something unique about your query%';
+```
+**Try other methods by searching on the site. That is if this doesn't work**

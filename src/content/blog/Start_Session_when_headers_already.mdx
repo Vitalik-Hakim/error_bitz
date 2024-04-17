@@ -1,0 +1,21 @@
+---
+title: 'Start Session when headers already sent'
+description: 'Start Session when headers already sent'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/misc.png'
+category: 'whatever'
+tags: [session, whatever, when]
+---
+
+**The solution for this is noted below**
+
+## Start Session when headers already sent
+
+### Solution
+
+```whatever
+if( empty(session_id()) && !headers_sent()){
+    session_start();
+}
+```
+**Try other methods by searching on the site. That is if this doesn't work**

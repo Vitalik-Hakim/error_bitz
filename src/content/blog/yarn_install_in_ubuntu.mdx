@@ -1,0 +1,23 @@
+---
+title: 'yarn install in ubuntu'
+description: 'yarn install in ubuntu'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [shell, ubuntu, shel, download, downloa]
+---
+
+**The solution for this is noted below**
+
+## yarn install in ubuntu
+
+### Solution
+
+```shell
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update
+sudo apt install yarn
+yarn --version
+```
+**Try other methods by searching on the site. That is if this doesn't work**

@@ -1,0 +1,29 @@
+---
+title: 'remove unused dependencies in React Ask Question'
+description: 'remove unused dependencies in React Ask Question'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/JavaScript.png'
+category: 'javascript'
+tags: [dependencies, javascript]
+---
+
+**The solution for this is noted below**
+
+## remove unused dependencies in React Ask Question
+
+### Solution
+
+```javascript
+npm install -g depcheck
+
+depcheck react-project-FOLDER
+wait for it !
+result:
+  Unused dependencies
+  * ...
+  * react-bootstrap
+  Missing dependencies
+ 
+npm uninstall react-bootstrap
+```
+**Try other methods by searching on the site. That is if this doesn't work**

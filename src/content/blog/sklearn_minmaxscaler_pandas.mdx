@@ -1,0 +1,37 @@
+---
+title: 'sklearn minmaxscaler pandas'
+description: 'sklearn minmaxscaler pandas'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/python.jpg'
+category: 'python'
+tags: [pandas, python]
+---
+
+**The solution for this is noted below**
+
+## sklearn minmaxscaler pandas
+
+### Solution
+
+```python
+>>> import pandas as pd
+>>> from sklearn.preprocessing import MinMaxScaler
+
+
+>>> scaler = MinMaxScaler()
+
+>>> dfTest = pd.DataFrame({'A':[14.00,90.20,90.95,96.27,91.21],
+                           'B':[103.02,107.26,110.35,114.23,114.68],
+                           'C':['big','small','big','small','small']})
+
+>>> dfTest[['A', 'B']] = scaler.fit_transform(dfTest[['A', 'B']])
+
+>>> dfTest
+          A         B      C
+0  0.000000  0.000000    big
+1  0.926219  0.363636  small
+2  0.935335  0.628645    big
+3  1.000000  0.961407  small
+4  0.938495  1.000000  small
+```
+**Try other methods by searching on the site. That is if this doesn't work**

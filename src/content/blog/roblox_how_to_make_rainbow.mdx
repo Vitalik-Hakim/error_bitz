@@ -1,0 +1,33 @@
+---
+title: 'roblox how to make rainbow part'
+description: 'roblox how to make rainbow part'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/lua.png'
+category: 'lua'
+tags: [lua, luau, roblox]
+---
+
+**The solution for this is noted below**
+
+## roblox how to make rainbow part
+
+### Solution
+
+```lua
+local TweenService = game:GetService("TweenService")
+local part = workspace.ColorPart
+local red = Color3.fromHSV(0, 1, 1)
+local hue = 0
+part.Color = red
+local partColorTweenInfo = TweenInfo.new(1 --[[seconds]])
+while true do
+	hue += (360 / 12) / 360
+	if hue > 1 then
+		hue -= 1
+	end
+	local tweenPartColor = TweenService:Create(part, partColorTweenInfo, {Color = Color3.fromHSV(hue, 1, 1)})
+	tweenPartColor:Play()
+	tweenPartColor.Completed:Wait()
+end
+```
+**Try other methods by searching on the site. That is if this doesn't work**

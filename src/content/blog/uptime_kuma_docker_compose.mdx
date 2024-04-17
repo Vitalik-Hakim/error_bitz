@@ -1,0 +1,29 @@
+---
+title: 'uptime kuma docker compose'
+description: 'uptime kuma docker compose'
+pubDate: 'Apr 17 2024'
+heroImage: 'https://raw.githubusercontent.com/vitalik-hakim/TABLES404/main/error_b/SHELL.jpg'
+category: 'shell'
+tags: [docker-compose, kuma, shell, uptime]
+---
+
+**The solution for this is noted below**
+
+## uptime kuma docker compose
+
+### Solution
+
+```shell
+version: "3.9"
+services:
+  app:
+    container_name: uptime-kuma
+    image: louislam/uptime-kuma
+    ports:
+      - "3001:3001"
+    volumes:
+      - /opt/uptime-kuma:/app/data
+      #- /portainer/Files/AppData/uptime-kuma:/app/data
+    restart: unless-stopped
+```
+**Try other methods by searching on the site. That is if this doesn't work**
